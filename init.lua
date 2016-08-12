@@ -114,10 +114,12 @@ Technical:
 • P: Only useful for developers. Writes current stack traces]=]
 })
 
-doc.new_entry("basics", "damage", {
-	name="Damage",
+doc.new_entry("basics", "players", {
+	name="Players",
 	data=
-[=[Each player starts with 20 health points (often, but not always represented by 20 “half hearts”) and 10 breath points (often represented by bubbles).
+[=[Players (actually: “player characters”) are the characters which user control.
+
+Players are mortal beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points (often, but not always represented by 20 “half hearts”) and 10 breath points (often represented by bubbles).
 
 Players can take damage for a variety of reasons, here are some:
 • Taking fall damage
@@ -126,13 +128,12 @@ Players can take damage for a variety of reasons, here are some:
 • Being attacked by another player
 • Being attacked by a computer enemy
 
-At a health of 0, the player dies after which the player can just instantly respawn to the world, usually somewhere else.
-The actual consequences of death vary wildly between subgame, usually this means the loss of all items, the loss of a game and what
+At a health of 0, the player dies after which the player can just respawn in the world, usually somewhere else.
+Other consequences of death vary wildly between subgame. The player could lose all items, or lose the round in a competitive game.
 
 Breath is usually hidden unless it is reduced for being with the head inside some block which causes drowning. Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. As soon as player is outside of blocks that cause drowning, the breath points are very quickly restored.
 
-Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
-]=]})
+Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.]=]})
 
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",

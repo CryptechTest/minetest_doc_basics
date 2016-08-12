@@ -207,9 +207,9 @@ There are 2 minimap modes and 3 zoom levels.
 
 Surface mode is a top-down view of the world, roughly resembling the colors of the blocks this world is made on. It only shows the topmost blocks, everything below is hidden, like a satellite photo. Surface mode is useful if you got lost.
 
-Radar mode is more complicated. It displays the "denseness" of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. Currently, radar mode does not work in the tutorial. Sorry, you have to try it out in subgames.
+Radar mode is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more.
 
-There are also two different direction modes. Normally, "up" on the minimap is always pointing to the North. But if you press [Shift]+[F9], the minimap will instead rotate with your looking direction, so "up" is always your looking direction.
+There are also two different direction modes. Normally, “up” on the minimap is always pointing to the North. But if you press [Shift]+[F9], the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
 
 In some subgames, the minimap may be disabled.
 

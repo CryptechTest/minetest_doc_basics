@@ -2,6 +2,8 @@ doc.new_category("basics",
 {
 	name="Basics",
 	build_formspec = doc.entry_builders.text,
+	sorting = "custom",
+	sorting_data = {"minetest", "movement", "sneak", "controls", "cam", "minimap", "players", "inventory", "tools", "blocks", "craft", "online"},
 })
 
 

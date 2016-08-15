@@ -121,7 +121,8 @@ doc.new_entry("basics", "players", {
 	data=
 [=[Players (actually: “player characters”) are the characters which user control.
 
-Players are mortal beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points (often, but not always represented by 20 “half hearts”) and 10 breath points (often represented by bubbles).
+Players are living beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points and 10 breath points.
+Players are capable of walking, sneaking, jumping, climbing ladders, swimming, diving, mining, building, fighting and using tools and blocks.
 
 Players can take damage for a variety of reasons, here are some:
 • Taking fall damage
@@ -133,9 +134,11 @@ Players can take damage for a variety of reasons, here are some:
 At a health of 0, the player dies after which the player can just respawn in the world, usually somewhere else.
 Other consequences of death vary wildly between subgame. The player could lose all items, or lose the round in a competitive game.
 
-Breath is usually hidden unless it is reduced for being with the head inside some block which causes drowning. Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. As soon as player is outside of blocks that cause drowning, the breath points are very quickly restored.
+Breath is reduced for being with the head inside some block which causes drowning. Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. When being inside any other block, the breath is quickly restored.
 
-Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.]=]})
+Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
+
+In online multiplayer, the name of other players is written above their head.]=]})
 
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",

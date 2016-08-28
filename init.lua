@@ -18,7 +18,7 @@ A core concept of Minetest is a built-in modding capability, based on the Lua pr
 
 Minetest can be played alone or online together with multiple players. When playing online, from the player perspective all mods will work out of the box with no need for additional tools as they are entirely provided by the server.
 
-Minetest is usually bundled with a simple default game, named “Minetest Game”. You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums xhttps://forum.minetest.net/viewforum.php?f=48x.
+Minetest is usually bundled with a simple default game, named “Minetest Game”. You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
 
 Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.]=]
 })

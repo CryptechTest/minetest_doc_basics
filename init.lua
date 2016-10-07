@@ -260,15 +260,13 @@ Official homepage of Minetest: <http://minetest.net/>
 The main place to find the most recent version of Minetest.
 
 Community wiki: <http://wiki.minetest.net/>
-A community-based documentation website for Minetest. Anyone with an account can edit
-it! It also features a documentation of the default game, which was NOT covered by
-this tutorial.
+A community-based documentation website for Minetest. Anyone with an account can edit it! It also features a documentation of the default game.
 
 Webforums: <http://forums.minetest.net/>
 A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and subgames are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.
 
 Chat: <irc://irc.freenode.net#minetest>
-A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.]=]
+A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understad IRC, see the Community Wiki for help.]=]
 })
 
 

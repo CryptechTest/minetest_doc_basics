@@ -3,7 +3,7 @@ doc.new_category("basics",
 	name="Basics",
 	build_formspec = doc.entry_builders.text,
 	sorting = "custom",
-	sorting_data = {"minetest", "movement", "sneak", "controls", "cam", "minimap", "players", "inventory", "tools", "blocks", "craft", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "craft", "online"},
 })
 
 
@@ -21,21 +21,6 @@ Minetest can be played alone or online together with multiple players. When play
 Minetest is usually bundled with a simple default game, named “Minetest Game”. You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
 
 Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.]=]
-})
-
-doc.new_entry("basics", "movement", {
-	name="Basic movement",
-	data = [=[Basic movement:
-• Moving the mouse around: Look around
-• W: Move forwards
-• A: Move to the left
-• D: Move to the right
-• S: Move backwards
-• Space: Jump
-
-Hints:
-• Normally, you can jump just high enough to reach a block slightly above.
-• Unless you're very slow, you may walk over tiny gaps without jumping.]=]
 })
 
 doc.new_entry("basics", "sneak", {

@@ -3,8 +3,18 @@ doc.new_category("basics",
 	name="Basics",
 	build_formspec = doc.entry_builders.text,
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "craft", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "online"},
 })
+
+doc.new_category("online",
+{
+	name="Online multiplayer",
+	build_formspec = doc.entry_builders.text,
+	sorting = "custom",
+	sorting_data = {"intro", "commands", "privs"},
+})
+
+
 
 
 doc.new_entry("basics", "minetest", {
@@ -179,6 +189,13 @@ Blocks can have a wide range of different properties which determine mining time
 })
 
 -- TODO
+doc.new_entry("basics", "liquids", {
+	name = "Liquids",
+	data =
+[=[TO BE WRITTEN.]=]
+})
+
+-- TODO
 doc.new_entry("basics", "craft", {
 	name = "Crafting",
 	data =
@@ -254,4 +271,24 @@ Chat: <irc://irc.freenode.net#minetest>
 A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understad IRC, see the Community Wiki for help.]=]
 })
 
+-- TODO
+doc.new_entry("basics", "groups", {
+	name="Groups",
+	data = "TODO"
+})
+
+-- TODO
+doc.new_entry("online", "intro", {
+	name="Introduction to online multiplayer",
+	data="TODO"})
+
+-- TODO
+doc.new_entry("online", "commands", {
+	name="Server commands",
+	data="TODO"})
+
+-- TODO
+doc.new_entry("online", "privs", {
+	name="Privileges",
+	data="TODO"})
 

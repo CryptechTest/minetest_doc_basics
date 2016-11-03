@@ -285,7 +285,23 @@ doc.new_entry("online", "intro", {
 -- TODO
 doc.new_entry("online", "commands", {
 	name="Server commands",
-	data="TODO"})
+	data=
+[=[
+Server commands are special commands to the server that can be entered by any player via the chat to cause the server to do something. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server.
+
+To issue a command, simply type it like a chat message or use the console. All commands have to begin with “/”, for example “/mods”.
+
+Try it for yourselves: Close this window and say “/mods” in chat. This server will show you a list of mods installed on this server.
+
+In Minetest, there is a small set of basic commands which are always available. Additional commands may be added by mods. This means, on other servers you might have new commands.
+
+To help you get started, here are some basic commands:
+
+* /help all: Lists and describes all server commands
+* /privs: Lists your privileges
+* /help privs: Shows description about all privileges
+]=]
+})
 
 -- TODO
 doc.new_entry("online", "privs", {

@@ -1,0 +1,1 @@
+Adds some help texts for basic gameplay instructions.

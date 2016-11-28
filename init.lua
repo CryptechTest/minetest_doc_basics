@@ -305,9 +305,9 @@ In Minetest, there is a small set of basic commands which are always available. 
 
 To help you get started, here are some basic commands:
 
-* /help all: Lists and describes all server commands
-* /privs: Lists your privileges
-* /help privs: Shows description about all privileges
+• /help all: Lists and describes all server commands
+• /privs: Lists your privileges
+• /help privs: Shows description about all privileges
 ]=]
 })
 

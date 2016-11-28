@@ -79,15 +79,15 @@ World interaction:
 • Shift+Right mouse button: Build blocks without using pointed block
 • Roll mouse wheel: Select next/previous item in hotbar
 • 0-9: Select item in hotbar directly
-• Q: Drop entire wielded itemstack
-• Shift+Q: Drop single item of wielded itemstack
+• Q: Drop entire wielded item stack
+• Shift+Q: Drop single item of wielded item stack
 • I: Show/hide inventory menu 
 
 Inventory interaction:
 See the entry “Inventory”.
 
 Interface:
-• Esc: In the game: Opens menu window (pauses in singleplayer) or close current window. In the main menu: Quit Minetest.
+• Esc: In the game: Opens menu window (pauses in single-player mode) or close current window. In the main menu: Quit Minetest.
 • F1: Show/hide HUD
 • F2: Show/hide chat and the “Minetest” text at the top left
 • F7: Toggle camera mode
@@ -144,7 +144,7 @@ Any item which has some special use which can be directly used by its wielder is
 
 A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks.
 
-Other tools with special uses (usually accessed by punching or rightclick) may also be introduced.
+Other tools with special uses (usually accessed by punching or right-click) may also be introduced.
 
 Melee weapons deal damage by punching players and possibly other animate objects.
 
@@ -178,7 +178,7 @@ doc.new_entry("basics", "blocks", {
 	data=
 [=[The world of Minetest is made entirely out of blocks, or voxels, to be precise. Blocks can be added or removed with the correct tools.
 
-Blocks can have a wide range of different properties which determine mining times, behaviour, looks, shape, and much more. These are the most important attributes:
+Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. These are the most important attributes:
 
 • Collidability: With collidable blocks block the way for players and other things, they cannot be passed through and they are walked upon by players. Non-collidable blocks can be passed through freely.
 • Pointability: Pointable blocks will show a wireframe or a halo box when you point at them. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
@@ -268,7 +268,7 @@ Webforums: <http://forums.minetest.net/>
 A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and subgames are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.
 
 Chat: <irc://irc.freenode.net#minetest>
-A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understad IRC, see the Community Wiki for help.]=]
+A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.]=]
 })
 
 -- TODO
@@ -279,7 +279,7 @@ doc.new_entry("basics", "groups", {
 
 • Crafting recipes: Sometimes, slots in a crafting recipe do not require a specific item, but instead they require an item which is a member of a particular group, or multiple groups
 • Digging times: Diggable blocks belong to groups which are used to determine digging times. Mining tools are capable of digging blocks belonging to certain groups
-• Block behaviour: Blocks may behave in a special way and interact with other blocks when they belong to a particular group
+• Block behavior: Blocks may behave in a special way and interact with other blocks when they belong to a particular group
 • Damage and armor: Objects and players have armor groups, weapons have damage groups. A weapon is able to deal damage to things where at least one of its damage groups is also present at the attacked object. The actual damage depends on the weapon strength (stronger weapon means less damage) and the armor strength (stronger armor means less damage)
 • Other uses: Groups can be used for a few other things as well, which largely depends on the mods being used
 

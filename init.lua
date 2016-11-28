@@ -3,7 +3,7 @@ doc.new_category("basics",
 	name="Basics",
 	build_formspec = doc.entry_builders.text,
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "glossary", "online"},
 })
 
 doc.new_category("online",
@@ -284,6 +284,71 @@ doc.new_entry("basics", "groups", {
 • Other uses: Groups can be used for a few other things as well, which largely depends on the mods being used
 
 In the item help, most important groups of which an item is a member of are mentioned and explained.]=]})
+
+doc.new_entry("basics", "glossary", {
+	name = "Glossary",
+	data =
+[=[This is a list of commonly used terms in Minetest parlance:
+
+Controls:
+• Wielding: Holding an item in hand
+• Pointing: Looking with the crosshair at something in range
+• Dropping: Throwing an item or item stack to the ground
+• Punching: Attacking with leftclick, is also used on blocks
+• Sneaking: Walking slowly while (usually) avoiding to fall over edges
+• Climbing: Moving up or down a climbable block
+
+Blocks:
+• Block: Cubes that the worlds are made out of
+• Mining/digging: Using a mining tool to break a block
+• Building/placing: Putting a block somewhere
+• Drop: The items you (may) get after mining a block
+• Using a block: Rightclicking a block to access its special function
+
+Items:
+• Item: A single thing that players can possess
+• Item stack: A collection of items of the same kind
+• Maximum stack size: Maximum amount of items in an item stack
+• Slot / inventory slot: Can hold one item stack
+• Inventory: Provides several inventory slots for storage
+• Player inventory: The main inventory of a player
+• Tool: An item which you can use to do special things with when wielding
+• Range: How far away things can be to be pointed by an item when wielding it
+• Mining tool: A tool which allows to break blocks
+• Craft item: An item which is (primarily or only) used for crafting
+
+Gameplay:
+• “heart”: A single health symbol, indicates 2 HP
+• “bubble”: A single breath symbol, indicates 1 BP
+• HP: Hit point (equals half a “heart”)
+• BP: Breath point, indicates breath when swimming
+• Mob: Computer-controlled enemy
+• Crafting: Combining multiple items to create new ones
+• Crafting guide: A helper which shows available crafting recipes; provided by mods
+• Spawning: Appearing in the world
+• Respawning: Appearing again in the world after death
+• Group: Used to group similar things together; determines mining times, armor, damage, and more
+• noclip: Allows to fly through walls
+
+Interface
+• Hotbar: The inventory slots at the bottom which you can select for wielding
+• Statbar: Indicator made out of half-symbols, used for health and breath
+• Minimap: The map or radar at the top right
+• Crosshair: Seen in the middle, used to point to things
+
+Online multiplayer:
+• PvP: Player vs Player. Indicates that players can attack and deal damage to each other
+• Griefing: Destroying the buildings of other players against their will
+• Protection: Mechanism to own areas of the world, which only allows the owners to modify blocks inside
+
+Technical:
+• Minetest: This game engine
+• Minetest Game: A subgame for Minetest from the Minetest developers
+• Subgame: A complete playing experience to be used in Minetest; can be a game, a sandbox or something else
+• Mod: A single subsystem which adds or modifies functionality; is the basic building block of subgames and can be used to further enhance or modify them
+• Privilege: Allows a player to do something
+• Node: Other word for “block”
+]=]})
 
 -- TODO
 doc.new_entry("online", "intro", {

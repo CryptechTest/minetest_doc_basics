@@ -404,13 +404,29 @@ In Minetest, there is a small set of basic commands which are always available. 
 To help you get started, here are some basic commands:
 
 • /help all: Lists and describes all server commands
-• /privs: Lists your privileges
-• /help privs: Shows description about all privileges
-]=]
+• /privs: Lists your privileges]=]
 })
 
 -- TODO
 doc.new_entry("online", "privs", {
 	name="Privileges",
-	data="TODO"})
+	data=[=[Every player has a set of privileges, which differ from server to server. Roughly spoken, one’s privileges determine what one is able to do and what not. Each privilege has a name. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
+
+On a multiplayer server with a default configuration, new players start with the privileges called “interact” and “shout”. The interact privilege is required for the most basic gameplay actions such as building, mining, using, etc. The shout privilege allows the player to use the chat.
+
+Just like with server commands, there is a small set of core privileges which you'll find on every server, and other privileges might be added by mods.
+
+To view your own privileges, issue the server command “/privs”.
+
+Here are a few basic privilege-related commands:
+• /privs: Lists your privileges
+• /privs <player>: Lists the privileges of <player>
+• /help privs: Shows a list and description about all privileges
+
+Players with the “privs” privilege can modify privileges at will:
+• /grant <player> <privilege>: Grant <privilege> to <player>
+• /revoke <player> <privilege>: Revoke <privilege> from <player>
+
+In singleplayer mode, you can use the shortcut “/grant singleplayer all” to allow you to do everything (this is considered cheating).]=]
+})
 

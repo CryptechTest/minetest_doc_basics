@@ -353,7 +353,12 @@ Technical:
 -- TODO
 doc.new_entry("online", "intro", {
 	name="Introduction to online multiplayer",
-	data="TODO"})
+	data=
+[=[
+Every Minetest server is (more or less) different. A server can have any subgame and mods the server operator likes to.
+
+Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration neccessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.
+]=]
 
 -- TODO
 doc.new_entry("online", "commands", {

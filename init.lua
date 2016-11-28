@@ -131,7 +131,7 @@ Players can take damage for a variety of reasons, here are some:
 At a health of 0, the player dies after which the player can just respawn in the world, usually somewhere else.
 Other consequences of death vary wildly between subgame. The player could lose all items, or lose the round in a competitive game.
 
-Breath is reduced for being with the head inside some block which causes drowning. Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. When being inside any other block, the breath is quickly restored.
+Breath is reduced for being with the head inside some block which causes drowning damage (usually liquids, but really any block cause this). Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. When being inside any other block, the breath is quickly restored.
 
 Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
 
@@ -187,14 +187,41 @@ Blocks can have a wide range of different properties which determine mining time
 • Mining properties: Mining properties determine by which tool a block can be mined (if at all).
 • Climbability: While you are at a climbable block, you won't fall and you can climb and decent on it with the jump and sneak keys. Ladders are one example.
 • Group memberships: Blocks may be a member of any number of groups. Groups are used to group similar items and blocks together. Most importantly, group memberships are used for mining. They are also used for many other purposes like crafting or interactions between blocks.
+• Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=]
 })
 
--- TODO
 doc.new_entry("basics", "liquids", {
 	name = "Liquids",
 	data =
-[=[TO BE WRITTEN.]=]
+[=[Liquids are special dynamic blocks. Liquids like to spread and flow to their surrounding blocks. Players can swim and drown in them.
+
+Liquids usually come in two forms: In source form and in flowing form.
+Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. If no special event happens, a liquid source will keep its place forever and it will never drain out.
+Flowing liquids take a sloped form. Flowing liquids spread around the map until they drain. A flowing liquid can not sustain itself and always comes from a liquid source, either directly or indirectly. Without a liquid source, a flowing liquid will eventually drain out and disappear.
+
+All liquids share the following properties:
+• All properties of blocks (including drowning damage)
+• Renewability: Renewable liquids can create new sources (see below)
+• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will “spread”, ranges from 0 to 8. If 0, no flowing liquids are generated at all.
+• Viscosity: How slow players move through it and how fast new flowing liquids are created (i.e. how fast the liquid spreads)
+
+Renewable liquids create new liquid sources at open spaces. A new liquid source is created when:
+• Two renewable liquid blocks of the same type touch each other diagonally
+• These blocks are also on the same height
+• One of the two “corners” is open space which allows liquids to flow in
+
+When those criteria are met, the open space is filled with a new liquid source of the same type.
+
+Swimming in a liquid is fairly straightforward: The usual direction keys for basic movement, the jump key for rising and the sneak key for sinking.
+
+The physics for swimming and diving in a liquid are:
+• The higher the viscosity, the slower your movement speed
+• If you don't do anything, you will slowly sink
+• There is no fall damage for falling into a liquid as such
+• If you fall into a liquid, you will be slowed down on impact (but don't come instantly to a halt). The faster you fell, the deeper you'll get. The slow-down effect is much stronger for liquids with a high viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage
+
+Liquids are usually not pointable. However, all liquids can be pointed by special items.]=]
 })
 
 -- TODO

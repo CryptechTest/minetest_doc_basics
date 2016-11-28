@@ -1,14 +1,16 @@
 doc.new_category("basics",
 {
-	name="Basics",
+	name="Basics (WIP)",
 	build_formspec = doc.entry_builders.text,
+	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
 	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "glossary", "online"},
 })
 
 doc.new_category("online",
 {
-	name="Online multiplayer",
+	name="Online multiplayer (WIP)",
+	description = "Help about playing online with other players",
 	build_formspec = doc.entry_builders.text,
 	sorting = "custom",
 	sorting_data = {"intro", "commands", "privs"},

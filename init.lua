@@ -294,8 +294,7 @@ doc.new_entry("online", "intro", {
 doc.new_entry("online", "commands", {
 	name="Server commands",
 	data=
-[=[
-Server commands are special commands to the server that can be entered by any player via the chat to cause the server to do something. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server.
+[=[Server commands are special commands to the server that can be entered by any player via the chat to cause the server to do something. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server.
 
 To issue a command, simply type it like a chat message or use the console. All commands have to begin with “/”, for example “/mods”.
 

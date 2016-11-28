@@ -274,8 +274,16 @@ A generic Internet Relay Chat channel for everything related to Minetest where p
 -- TODO
 doc.new_entry("basics", "groups", {
 	name="Groups",
-	data = "TODO"
-})
+	data =
+[=[Items, players and objects (animate and inanimate) can be member of any number of groups. Groups serve multiple purposes:
+
+• Crafting recipes: Sometimes, slots in a crafting recipe do not require a specific item, but instead they require an item which is a member of a particular group, or multiple groups
+• Digging times: Diggable blocks belong to groups which are used to determine digging times. Mining tools are capable of digging blocks belonging to certain groups
+• Block behaviour: Blocks may behave in a special way and interact with other blocks when they belong to a particular group
+• Damage and armor: Objects and players have armor groups, weapons have damage groups. A weapon is able to deal damage to things where at least one of its damage groups is also present at the attacked object. The actual damage depends on the weapon strength (stronger weapon means less damage) and the armor strength (stronger armor means less damage)
+• Other uses: Groups can be used for a few other things as well, which largely depends on the mods being used
+
+In the item help, most important groups of which an item is a member of are mentioned and explained.]=]})
 
 -- TODO
 doc.new_entry("online", "intro", {

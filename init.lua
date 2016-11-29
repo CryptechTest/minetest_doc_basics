@@ -1,28 +1,25 @@
 doc.new_category("basics",
 {
 	name="Basics (WIP)",
-	build_formspec = doc.entry_builders.text,
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
 	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "glossary", "online"},
+	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
 doc.new_category("online",
 {
 	name="Online multiplayer (WIP)",
 	description = "Help about playing online with other players",
-	build_formspec = doc.entry_builders.text,
 	sorting = "custom",
 	sorting_data = {"intro", "commands", "privs"},
+	build_formspec = doc.entry_builders.text,
 })
-
-
-
 
 doc.new_entry("basics", "minetest", {
 	name="Minetest",
-	data =
-[=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
+	data = {
+text = [=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
 
 The basic idea of each game is always the same: The player is thrown into a huge world made out of cubes/blocks. Most of the time, these cubes make the landscape and these blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games (“subgames” in Minetest terms) in Minetest can, however, be much more complex than this.
 
@@ -33,11 +30,11 @@ Minetest can be played alone or online together with multiple players. When play
 Minetest is usually bundled with a simple default game, named “Minetest Game”. You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
 
 Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.]=]
-})
+}})
 
 doc.new_entry("basics", "sneak", {
 	name="Sneaking",
-	data=
+	data = { text =
 [=[Sneaking is a special move. As long as you sneak, you walk slower, but you are guaranteed to not accidentally fall off the edge of a block. This also allows you to “lean over” in a sense.
 To sneak, keep the sneak key pressed. As soon as you release the sneak key, you walk at normal speed again. Be careful not releasing the sneak key when you are at a ledge, you might fall!
 
@@ -48,11 +45,11 @@ Keep in mind that the [Shift] key is used for a large number of other things in 
 If you jump while holding the sneak key, you also jump slightly higher than usual.
 
 Note that in some subgames, sneaking might be disabled. If this is the case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=]
-})
+}})
 
 doc.new_entry("basics", "controls", {
 	name="Controls",
-	data = [=[Controls in Minetest are somewhat tricky and not everything can be configured. This entry lists all default controls in Minetest:
+	data = { text = [=[Controls in Minetest are somewhat tricky and not everything can be configured. This entry lists all default controls in Minetest:
 
 Basic movement:
 • Moving the mouse around: Look around
@@ -111,11 +108,11 @@ Technical:
 • F5: Enable/disable debug screen which also shows your coordinates
 • F6: Only useful for developers. Enables/disables profiler
 • P: Only useful for developers. Writes current stack traces]=]
-})
+}})
 
 doc.new_entry("basics", "players", {
 	name="Players",
-	data=
+	data = { text =
 [=[Players (actually: “player characters”) are the characters which user control.
 
 Players are living beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points and 10 breath points.
@@ -135,11 +132,11 @@ Breath is reduced for being with the head inside some block which causes drownin
 
 Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
 
-In online multiplayer, the name of other players is written above their head.]=]})
+In online multiplayer, the name of other players is written above their head.]=]}})
 
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",
-	data=
+	data = { text =
 [=[Some items may serve as a tool, melee weapon or both when wielded.
 
 Any item which has some special use which can be directly used by its wielder is considered a tool.
@@ -154,13 +151,13 @@ For melee weapons, another attribute is important: The full punch interval. This
 A melee weapon only deals its full damage when it has completely recovered. This can be seen by the animation of the wielded item. As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast one can deal punches, it rather limits the damage: Any hit done before the end of a full punch interval will deal reduced damage.
 
 When nothing is wielded, players use their hand which may or may not act as mining tool and melee weapon (depending on the subgame). The hand is always capable of collecting dropped items simply by punching them.]=]
-})
+}})
 
 
 
 doc.new_entry("basics", "cam", {
 	name="Camera",
-	data = 
+	data = { text =
 [=[Minetest has 3 different views which determine the way you see the world. The modes are:
 
 • First-person view (default)
@@ -173,11 +170,11 @@ There is also Cinematic Mode which can be toggled with [F8]. Normally, the camer
 
 • Switch camera mode: [F7]
 • Toggle Cinematic Mode: [F8]]=]
-})
+}})
 
 doc.new_entry("basics", "blocks", {
 	name="Blocks",
-	data=
+	data = { text =
 [=[The world of Minetest is made entirely out of blocks, or voxels, to be precise. Blocks can be added or removed with the correct tools.
 
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. These are the most important attributes:
@@ -189,14 +186,15 @@ Blocks can have a wide range of different properties which determine mining time
 • Group memberships: Blocks may be a member of any number of groups. Groups are used to group similar items and blocks together. Most importantly, group memberships are used for mining. They are also used for many other purposes like crafting or interactions between blocks.
 • Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=]
-})
+}})
 
 doc.new_entry("basics", "liquids", {
 	name = "Liquids",
-	data =
+	data = {
+		text =
 [=[Liquids are special dynamic blocks. Liquids like to spread and flow to their surrounding blocks. Players can swim and drown in them.
 
-Liquids usually come in two forms: In source form and in flowing form.
+Liquids usually come in two forms: In source form (S) and in flowing form (F).
 Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. If no special event happens, a liquid source will keep its place forever and it will never drain out.
 Flowing liquids take a sloped form. Flowing liquids spread around the map until they drain. A flowing liquid can not sustain itself and always comes from a liquid source, either directly or indirectly. Without a liquid source, a flowing liquid will eventually drain out and disappear.
 
@@ -221,23 +219,36 @@ The physics for swimming and diving in a liquid are:
 • There is no fall damage for falling into a liquid as such
 • If you fall into a liquid, you will be slowed down on impact (but don't come instantly to a halt). The faster you fell, the deeper you'll get. The slow-down effect is much stronger for liquids with a high viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage
 
-Liquids are usually not pointable. However, all liquids can be pointed by special items.]=]
+Liquids are usually not pointable. However, all liquids can be pointed by special items.]=],
+		images = {
+			{ image="doc_basics_liquids_renewable_1.png",
+			  caption="Renewable liquids need to be arranged like this to create a new source block" },
+			{ image="doc_basics_liquids_renewable_2.png",
+			  caption="A new liquid source is born" },
+			{ image="doc_basics_liquids_nonrenewable.png",
+			  caption="Non-renewable liquids creates a flowing liquid (F) instead" },
+			{ image="doc_basics_liquids_range.png",
+			  caption="Liquid with a flowing range of 2" },
+		},
+	},
 })
 
 -- TODO
 doc.new_entry("basics", "craft", {
 	name = "Crafting",
-	data =
+	data = {
+		text =
 [=[Crafting is the task of taking several items and combining them to form a new item. Crafting is another important task in Minetest.
 
 To craft something, you need a few items and a so-called crafting grid.
 
 TO BE WRITTEN.]=]
-})
+}})
 
 doc.new_entry("basics", "minimap", {
 	name="Minimap",
-	data = 
+	data = {
+		text =
 [=[Press the [F9] key to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels.
 
 There are 2 minimap modes and 3 zoom levels.
@@ -252,11 +263,12 @@ In some subgames, the minimap may be disabled.
 
 • Toggle minimap mode: [F9]
 • Toggle minimap rotating: [Shift]+[F9]]=]
-})
+}})
 
 doc.new_entry("basics", "inventory", {
 	name="Inventory",
-	data = 
+	data = {
+		text =
 [=[An inventory is primarily used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can be either empty or hold one item stack. Item stacks can be moved freely between slot and slot, given that the destination slot is either empty or of the same item type.
 You have your own inventory which is called your “player inventory”, you can open it with the inventory key (default: [I]). The first inventory slots are also used as slots in your hotbar.
 Blocks can also have their own inventory, for example, things like chests and furnaces.
@@ -280,11 +292,11 @@ Throwing away: If you hold an item stack and click with it somewhere outside the
 
 Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The inventories chosen for quick transfer are context-dependent, usually those are the inventories which are considered to be most useful in this context.
 • Sneak+Left click: Automatically transfer item stack.]=]
-})
+}})
 
 doc.new_entry("basics", "online", {
 	name="Online help",
-	data = 
+	data = { text=
 [=[You may want to check out these online resources related to Minetest:
 
 Official homepage of Minetest: <http://minetest.net/>
@@ -298,12 +310,13 @@ A web-based discussion platform where you can discuss everything related to Mine
 
 Chat: <irc://irc.freenode.net#minetest>
 A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.]=]
-})
+}})
 
 -- TODO
 doc.new_entry("basics", "groups", {
 	name="Groups",
-	data =
+	data = {
+		text =
 [=[Items, players and objects (animate and inanimate) can be member of any number of groups. Groups serve multiple purposes:
 
 • Crafting recipes: Sometimes, slots in a crafting recipe do not require a specific item, but instead they require an item which is a member of a particular group, or multiple groups
@@ -312,11 +325,12 @@ doc.new_entry("basics", "groups", {
 • Damage and armor: Objects and players have armor groups, weapons have damage groups. A weapon is able to deal damage to things where at least one of its damage groups is also present at the attacked object. The actual damage depends on the weapon strength (stronger weapon means less damage) and the armor strength (stronger armor means less damage)
 • Other uses: Groups can be used for a few other things as well, which largely depends on the mods being used
 
-In the item help, most important groups of which an item is a member of are mentioned and explained.]=]})
+In the item help, most important groups of which an item is a member of are mentioned and explained.]=]}})
 
 doc.new_entry("basics", "glossary", {
 	name = "Glossary",
-	data =
+	data = {
+		text =
 [=[This is a list of commonly used terms in Minetest parlance:
 
 Controls:
@@ -377,7 +391,10 @@ Technical:
 • Mod: A single subsystem which adds or modifies functionality; is the basic building block of subgames and can be used to further enhance or modify them
 • Privilege: Allows a player to do something
 • Node: Other word for “block”
-]=]})
+]=]}})
+
+
+
 
 -- TODO
 doc.new_entry("online", "intro", {

@@ -292,7 +292,7 @@ Inventory controls:
 
 Taking: You can take items from an occupied slot if the cursor holds nothing.
 • Left click: take entire item stack
-• Right click: take half from the item stack (rounding up if uneven)
+• Right click: take half from the item stack (rounding up if odd number)
 • Middle click: take 10 items from the item stack 
 
 Dropping: You can drop items onto a slot if the cursor holds 1 or more items and the slot is either empty or contains an item stack of the same item type.

@@ -19,7 +19,8 @@ doc.new_category("online",
 doc.new_entry("basics", "minetest", {
 	name="Minetest",
 	data = {
-text = [=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
+		text =
+[=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
 
 The basic idea of each game is always the same: The player is thrown into a huge world made out of cubes/blocks. Most of the time, these cubes make the landscape and these blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games (“subgames” in Minetest terms) in Minetest can, however, be much more complex than this.
 
@@ -27,9 +28,11 @@ A core concept of Minetest is a built-in modding capability, based on the Lua pr
 
 Minetest can be played alone or online together with multiple players. When playing online, from the player perspective all mods will work out of the box with no need for additional tools as they are entirely provided by the server.
 
-Minetest is usually bundled with a simple default game, named “Minetest Game”. You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
+Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
 
-Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.]=]
+Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.]=],
+		images = {{image="doc_basics_gameplay_mtg_1.png"}, {image="doc_basics_gameplay_mtg_2.png"}, {image="doc_basics_gameplay_carbone_ng.png"}, {image="doc_basics_gameplay_lott.png"}, {image="doc_basics_gameplay_pixture.png"}, {image="doc_basics_gameplay_outback.png"}, {image="doc_basics_gameplay_moontest.png"},
+{image="doc_basics_gameplay_hades.png"}, {image="doc_basics_gameplay_xtraores_xtension.png"},}
 }})
 
 doc.new_entry("basics", "sneak", {
@@ -44,7 +47,8 @@ Keep in mind that the [Shift] key is used for a large number of other things in 
 
 If you jump while holding the sneak key, you also jump slightly higher than usual.
 
-Note that in some subgames, sneaking might be disabled. If this is the case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=]
+Note that in some subgames, sneaking might be disabled. If this is the case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=],
+		images = { { image = "doc_basics_sneak.png" } },
 }})
 
 doc.new_entry("basics", "controls", {
@@ -174,7 +178,8 @@ There is also Cinematic Mode which can be toggled with [F8]. Normally, the camer
 
 doc.new_entry("basics", "blocks", {
 	name="Blocks",
-	data = { text =
+	data = {
+		text =
 [=[The world of Minetest is made entirely out of blocks, or voxels, to be precise. Blocks can be added or removed with the correct tools.
 
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. These are the most important attributes:
@@ -185,7 +190,8 @@ Blocks can have a wide range of different properties which determine mining time
 • Climbability: While you are at a climbable block, you won't fall and you can climb and decent on it with the jump and sneak keys. Ladders are one example.
 • Group memberships: Blocks may be a member of any number of groups. Groups are used to group similar items and blocks together. Most importantly, group memberships are used for mining. They are also used for many other purposes like crafting or interactions between blocks.
 • Drowning damage: See the entry “Basics > Player”.
-• Liquids: See the entry “Basics > Liquids”.]=]
+• Liquids: See the entry “Basics > Liquids”.]=],
+		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_repair.png" }, }
 }})
 
 doc.new_entry("basics", "liquids", {

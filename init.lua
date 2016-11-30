@@ -275,7 +275,8 @@ There are also two different direction modes. Normally, “up” on the minimap 
 In some subgames, the minimap may be disabled.
 
 • Toggle minimap mode: [F9]
-• Toggle minimap rotating: [Shift]+[F9]]=]
+• Toggle minimap rotating: [Shift]+[F9]]=],
+		images = {{image="doc_basics_minimap_map.png"}, {image="doc_basics_minimap_radar.png"}},
 }})
 
 doc.new_entry("basics", "inventory", {

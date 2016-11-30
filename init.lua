@@ -164,7 +164,8 @@ When nothing is wielded, players use their hand which may or may not act as mini
 
 doc.new_entry("basics", "cam", {
 	name="Camera",
-	data = { text =
+	data = {
+		text =
 [=[Minetest has 3 different views which determine the way you see the world. The modes are:
 
 • First-person view (default)
@@ -176,7 +177,8 @@ You can change the camera mode by pressing [F7] (but you have to close this wind
 There is also Cinematic Mode which can be toggled with [F8]. Normally, the camera moves instantly as you move your mouse around. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.
 
 • Switch camera mode: [F7]
-• Toggle Cinematic Mode: [F8]]=]
+• Toggle Cinematic Mode: [F8]]=],
+		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})
 
 doc.new_entry("basics", "blocks", {

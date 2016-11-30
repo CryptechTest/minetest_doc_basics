@@ -221,6 +221,8 @@ The physics for swimming and diving in a liquid are:
 
 Liquids are usually not pointable. However, all liquids can be pointed by special items.]=],
 		images = {
+			{ image="doc_basics_liquids_types.png",
+			  caption="A source liquid and its flowing liquids" },
 			{ image="doc_basics_liquids_renewable_1.png",
 			  caption="Renewable liquids need to be arranged like this to create a new source block" },
 			{ image="doc_basics_liquids_renewable_2.png",

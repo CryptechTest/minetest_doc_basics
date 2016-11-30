@@ -295,10 +295,10 @@ Taking: You can take items from an occupied slot if the cursor holds nothing.
 • Right click: take half from the item stack (rounding up if odd number)
 • Middle click: take 10 items from the item stack 
 
-Dropping: You can drop items onto a slot if the cursor holds 1 or more items and the slot is either empty or contains an item stack of the same item type.
-• Left click: drop entire item stack
-• Right click: drop 1 item of the item stack
-• Middle click: drop 10 items of the item stack 
+Putting: You can put items onto a slot if the cursor holds 1 or more items and the slot is either empty or contains an item stack of the same item type.
+• Left click: put entire item stack
+• Right click: put 1 item of the item stack
+• Middle click: put 10 items of the item stack 
 
 Exchanging: You can exchange items if the cursor holds 1 or more items and the destination slot is occupied by a different item type.
 • Left, middle and right click: exchange item stacks from cursor and from selected item slot 

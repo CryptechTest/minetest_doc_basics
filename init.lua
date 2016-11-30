@@ -196,7 +196,6 @@ Blocks can have a wide range of different properties which determine mining time
 • Group memberships: Blocks may be a member of any number of groups. Groups are used to group similar items and blocks together. Most importantly, group memberships are used for mining. They are also used for many other purposes like crafting or interactions between blocks.
 • Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=],
-		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_repair.png" }, }
 }})
 
 doc.new_entry("basics", "liquids", {
@@ -255,7 +254,8 @@ doc.new_entry("basics", "craft", {
 
 To craft something, you need a few items and a so-called crafting grid.
 
-TO BE WRITTEN.]=]
+TO BE WRITTEN.]=],
+		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_repair.png" }, }
 }})
 
 doc.new_entry("basics", "minimap", {

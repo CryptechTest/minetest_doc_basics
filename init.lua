@@ -116,7 +116,8 @@ Technical:
 
 doc.new_entry("basics", "players", {
 	name="Players",
-	data = { text =
+	data = {
+		text =
 [=[Players (actually: “player characters”) are the characters which user control.
 
 Players are living beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points and 10 breath points.
@@ -136,7 +137,9 @@ Breath is reduced for being with the head inside some block which causes drownin
 
 Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
 
-In online multiplayer, the name of other players is written above their head.]=]}})
+In online multiplayer, the name of other players is written above their head.]=],
+		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
+}})
 
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",

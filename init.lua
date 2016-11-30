@@ -157,7 +157,8 @@ Melee weapons deal damage by punching players and possibly other animate objects
 For melee weapons, another attribute is important: The full punch interval. This is basically the time it takes for completely recovering from a punch with this weapon. 
 A melee weapon only deals its full damage when it has completely recovered. This can be seen by the animation of the wielded item. As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast one can deal punches, it rather limits the damage: Any hit done before the end of a full punch interval will deal reduced damage.
 
-When nothing is wielded, players use their hand which may or may not act as mining tool and melee weapon (depending on the subgame). The hand is always capable of collecting dropped items simply by punching them.]=]
+When nothing is wielded, players use their hand which may or may not act as mining tool and melee weapon (depending on the subgame). The hand is always capable of collecting dropped items simply by punching them.]=],
+		images = {{image="doc_basics_tools.png"}},
 }})
 
 

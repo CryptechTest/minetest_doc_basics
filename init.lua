@@ -53,7 +53,7 @@ Note that in some subgames, sneaking might be disabled. If this is the case, you
 
 doc.new_entry("basics", "controls", {
 	name="Controls",
-	data = { text = [=[Controls in Minetest are somewhat tricky and not everything can be configured. This entry lists all default controls in Minetest:
+	data = { text = [=[This entry lists all default controls in Minetest:
 
 Basic movement:
 • Moving the mouse around: Look around

@@ -158,7 +158,7 @@ For melee weapons, another attribute is important: The full punch interval. This
 A melee weapon only deals its full damage when it has completely recovered. This can be seen by the animation of the wielded item. As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast one can deal punches, it rather limits the damage: Any hit done before the end of a full punch interval will deal reduced damage.
 
 When nothing is wielded, players use their hand which may or may not act as mining tool and melee weapon (depending on the subgame). The hand is always capable of collecting dropped items simply by punching them.]=],
-		images = {{image="doc_basics_tools.png"}},
+		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
 
@@ -256,7 +256,7 @@ doc.new_entry("basics", "craft", {
 To craft something, you need a few items and a so-called crafting grid.
 
 TO BE WRITTEN.]=],
-		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_repair.png" }, }
+		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_shaped.png"}, { image = "doc_basics_craft_repair.png" }, }
 }})
 
 doc.new_entry("basics", "hotbar", {
@@ -271,7 +271,7 @@ You can change the selected item with the mouse wheel, or the number keys.
 • Select item in hotbar directly: [0]-[9]
 
 The selected item is also your wielded item.]=],
-		images = {{image="doc_basics_hotbar.png"}},
+		images = {{image="doc_basics_hotbar.png"}, {image="doc_basics_hotbar_relations.png"}},
 }})
 
 doc.new_entry("basics", "minimap", {

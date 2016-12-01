@@ -321,7 +321,8 @@ Exchanging: You can exchange items if the cursor holds 1 or more items and the d
 Throwing away: If you hold an item stack and click with it somewhere outside the menu, the item stack gets thrown away into the environment.
 
 Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The inventories chosen for quick transfer are context-dependent, usually those are the inventories which are considered to be most useful in this context.
-• Sneak+Left click: Automatically transfer item stack.]=]
+• Sneak+Left click: Automatically transfer item stack.]=],
+		images = {{image="doc_basics_inventory.png"}, {image="doc_basics_inventory_detail.png"}},
 }})
 
 doc.new_entry("basics", "online", {

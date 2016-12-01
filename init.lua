@@ -3,7 +3,7 @@ doc.new_category("basics",
 	name="Basics (WIP)",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "groups", "settings","glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -246,18 +246,50 @@ Liquids are usually not pointable. However, all liquids can be pointed by specia
 	},
 })
 
--- TODO
 doc.new_entry("basics", "craft", {
 	name = "Crafting",
 	data = {
 		text =
 [=[Crafting is the task of taking several items and combining them to form a new item. Crafting is another important task in Minetest.
 
-To craft something, you need a few items and a so-called crafting grid.
+To craft something, you need a few items and a so-called crafting grid (C). A crafting grid behaves like a normal inventory, with the addition that it can be used for crafting. In order to craft, items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items in a valid arrangement. Note this is initially just a preview.
 
-TO BE WRITTEN.]=],
-		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_shaped.png"}, { image = "doc_basics_craft_repair.png" }, }
+To complete the craft, take the result item from the output slot (like you would take items from other inventory slots), which will consume items from the crafting grid and creates a new item. It is not possible to place items into the output slot directly.
+
+The description on how to craft a particular item is called a “crafting recipe”. In order to craft, you have to know some crafting recipes beforehand. Crafting guides contain a list of available crafting recipes. Some subgames provide so-called crafting guides, some subgame's don't. There are also some mods which you can download online for installing a crafting guide.
+Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
+
+There are multiple kinds of crafting recipes: Shaped, shapeless, cooking and repairing.
+
+• Shaped recipe (image 2): Items need to be placed in a particular shape
+• Shapeless recipe (images 4 and 5): Items need to be placed in the crafting grid, but their positions don't matter (the images show the same recipe)
+• Cooking: Explained in “Basics > Cooking”
+• Repairing (image 6): Place two damaged tools of the same kind into the crafting grid anywhere, which gives you a new tool which is repaired by a certain percentage. This recipe may not be available in all subgames
+
+In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). Such recipes offer a bit more freedom in the input items. Images 7 and 8 show a group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items. Both images show the same crafting recipe.
+
+Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.
+]=],
+-- TODO: Replace image 3
+-- TODO: Maybe add images demonstrating replacements
+		images = {
+			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"}, {image="doc_basics_craft_shaped.png"},
+			{image="doc_basics_craft_repair.png"}, {image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"},
+			{image="doc_basics_craft_groups_1.png"}, {image="doc_basics_craft_groups_2.png"}, {image="doc_basics_craft_groups_3.png"},
+		},
 }})
+
+-- TODO
+doc.new_entry("basics", "cook", {
+	name = "Cooking",
+	data = {
+		text =
+[=[Cooking (or smelting) is a form of crafting, which does not involve a crafting grid. Cooking is done with a special block (usually a furnace), an cookable item, a fuel item and time in order to yield a new item.
+
+Each fuel item has a burning time. This is the time a single item of the fuel keeps a furnce burning.
+Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the entirety of its cooking time to actually yield the result.
+
+How cooking works in detail depends on the subgame and mods.]=]}})
 
 doc.new_entry("basics", "hotbar", {
 	name="Hotbar",

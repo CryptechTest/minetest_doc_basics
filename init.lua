@@ -256,7 +256,8 @@ To craft something, you need a few items and a so-called crafting grid (C). A cr
 
 To complete the craft, take the result item from the output slot (like you would take items from other inventory slots), which will consume items from the crafting grid and creates a new item. It is not possible to place items into the output slot directly.
 
-The description on how to craft a particular item is called a “crafting recipe”. In order to craft, you have to know some crafting recipes beforehand. Crafting guides contain a list of available crafting recipes. Some subgames provide so-called crafting guides, some subgame's don't. There are also some mods which you can download online for installing a crafting guide.
+The description on how to craft a particular item is called a “crafting recipe”. In order to craft, you have to know some crafting recipes beforehand. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide such crafting guides. There are also some mods which you can download online for installing a crafting guide.
+
 Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
 
 There are multiple kinds of crafting recipes: Shaped, shapeless, cooking and repairing.
@@ -286,7 +287,7 @@ doc.new_entry("basics", "cook", {
 		text =
 [=[Cooking (or smelting) is a form of crafting, which does not involve a crafting grid. Cooking is done with a special block (usually a furnace), an cookable item, a fuel item and time in order to yield a new item.
 
-Each fuel item has a burning time. This is the time a single item of the fuel keeps a furnce burning.
+Each fuel item has a burning time. This is the time a single item of the fuel keeps a furnace burning.
 Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the entirety of its cooking time to actually yield the result.
 
 How cooking works in detail depends on the subgame and mods.]=]}})
@@ -368,7 +369,7 @@ The main place to find the most recent version of Minetest.
 Community wiki: <http://wiki.minetest.net/>
 A community-based documentation website for Minetest. Anyone with an account can edit it! It also features a documentation of Minetest Game.
 
-Webforums: <http://forums.minetest.net/>
+Web forums: <http://forums.minetest.net/>
 A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and subgames are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.
 
 Chat: <irc://irc.freenode.net#minetest>
@@ -400,7 +401,7 @@ Controls:
 • Wielding: Holding an item in hand
 • Pointing: Looking with the crosshair at something in range
 • Dropping: Throwing an item or item stack to the ground
-• Punching: Attacking with leftclick, is also used on blocks
+• Punching: Attacking with left-click, is also used on blocks
 • Sneaking: Walking slowly while (usually) avoiding to fall over edges
 • Climbing: Moving up or down a climbable block
 
@@ -409,7 +410,7 @@ Blocks:
 • Mining/digging: Using a mining tool to break a block
 • Building/placing: Putting a block somewhere
 • Drop: The items you (may) get after mining a block
-• Using a block: Rightclicking a block to access its special function
+• Using a block: Right-clicking a block to access its special function
 
 Items:
 • Item: A single thing that players can possess
@@ -480,7 +481,7 @@ doc.new_entry("online", "intro", {
 [=[
 Every Minetest server is (more or less) different. A server can have any subgame and mods the server operator likes to.
 
-Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration neccessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.
+Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration necessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.
 ]=]})
 
 -- TODO
@@ -521,6 +522,6 @@ Players with the “privs” privilege can modify privileges at will:
 • /grant <player> <privilege>: Grant <privilege> to <player>
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
-In singleplayer mode, you can use the shortcut “/grant singleplayer all” to allow you to do everything (this is considered cheating).]=]
+In single-player mode, you can use the shortcut “/grant singleplayer all” to allow you to do everything (this is considered cheating).]=]
 })
 

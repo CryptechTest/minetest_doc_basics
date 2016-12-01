@@ -3,7 +3,7 @@ doc.new_category("basics",
 	name="Basics (WIP)",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "tools", "blocks", "liquids", "craft", "groups", "glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "groups", "settings","glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -259,6 +259,21 @@ TO BE WRITTEN.]=],
 		images = { { image = "doc_basics_craft_grid.png" }, { image = "doc_basics_craft_repair.png" }, }
 }})
 
+doc.new_entry("basics", "hotbar", {
+	name="Hotbar",
+	data = {
+		text =
+[=[At the bottom of the screen you see some squares aligned horizontally. This is called the “hotbar”. The hotbar allows you to quickly access the first items from your player inventory.
+You can change the selected item with the mouse wheel, or the number keys.
+
+• Select previous item in hotbar: [Mouse wheel up]
+• Select next item in hotbar: [Mouse wheel down]
+• Select item in hotbar directly: [0]-[9]
+
+The selected item is also your wielded item.]=],
+		images = {{image="doc_basics_hotbar.png"}},
+}})
+
 doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
@@ -408,7 +423,21 @@ Technical:
 • Node: Other word for “block”
 ]=]}})
 
+-- TODO
+doc.new_entry("basics", "settings", {
+	name="Settings",
+	data = {
+		text =
+[=[There is a large variety of settings to configure Minetest. Pretty much every aspect can be changed that way.
 
+These are a few of the most important gameplay settings:
+
+• Damage enabled (enable_damage): Enables the health and breath attributes for all players. If disabled, players are immortal
+• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning mostly depends on subgames but usually this means that you can access almost all items for free, can dig faster and some other “creative” changes
+• PvP (enable_pvp): Short for “Player vs Player”. If enabled, players can deal damage to each other
+
+For a full list of all available settings, use the “Advanced settings” dialog in the main menu.]=]
+}})
 
 
 -- TODO

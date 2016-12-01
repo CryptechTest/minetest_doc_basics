@@ -43,11 +43,11 @@ To sneak, keep the sneak key pressed. As soon as you release the sneak key, you 
 
 • Sneak: [Shift]
 
-Keep in mind that the [Shift] key is used for a large number of other things in Minetest. Sneaking only works when you are not in a liquid, stand on solid ground and are not at a ladder.
+Sneaking only works when you are not in a liquid, stand on solid ground and are not at a ladder.
 
 If you jump while holding the sneak key, you also jump slightly higher than usual.
 
-Note that in some subgames, sneaking might be disabled. If this is the case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=],
+Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=],
 		images = { { image = "doc_basics_sneak.png" } },
 }})
 
@@ -118,7 +118,7 @@ doc.new_entry("basics", "players", {
 	name="Players",
 	data = {
 		text =
-[=[Players (actually: “player characters”) are the characters which user control.
+[=[Players (actually: “player characters”) are the characters which users control.
 
 Players are living beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points and 10 breath points.
 Players are capable of walking, sneaking, jumping, climbing ladders, swimming, diving, mining, building, fighting and using tools and blocks.
@@ -148,9 +148,7 @@ doc.new_entry("basics", "tools", {
 
 Any item which has some special use which can be directly used by its wielder is considered a tool.
 
-A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks.
-
-Other tools with special uses (usually accessed by punching or right-click) may also be introduced.
+A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. There might be other tools with special uses (usually accessed by punching or right-click).
 
 Melee weapons deal damage by punching players and possibly other animate objects.
 

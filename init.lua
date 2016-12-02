@@ -1,3 +1,10 @@
+--[[
+- TODO: Items and item stacks
+- TODO: Write about noclip, fast and fly modes
+- TODO: Consider adding more categories if entry count gets too high
+]]
+
+
 doc.new_category("basics",
 {
 	name="Basics",
@@ -141,6 +148,7 @@ In online multiplayer, the name of other players is written above their head.]=]
 		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
 }})
 
+-- TODO: Complete rewrite, better distinction between
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",
 	data = { text =

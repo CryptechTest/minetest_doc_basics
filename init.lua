@@ -256,22 +256,22 @@ doc.new_entry("basics", "craft", {
 	name = "Crafting",
 	data = {
 		text =
-[=[Crafting is the task of taking several items and combining them to form a new item. Crafting is another important task in Minetest.
+[=[Crafting is the task of taking several items and combining them to form a new item.
 
-To craft something, you need a few items and a so-called crafting grid (C). A crafting grid behaves like a normal inventory, with the addition that it can be used for crafting. In order to craft, items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items in a valid arrangement. Note this is initially just a preview.
+To craft something, you need one or more items, crafting grid (C) and a crafting recipe. A crafting grid behaves like a normal inventory, with the addition that it can be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items in a valid arrangement. Note this is initially just a preview. Crafting grids come in different sizes, the most common is 3×3 slots. The crafting grid size limits what you can craft: A 4×4 crafting recipe can only be crafted in a 4×4 crafting grid or larger.
 
-To complete the craft, take the result item from the output slot (like you would take items from other inventory slots), which will consume items from the crafting grid and creates a new item. It is not possible to place items into the output slot directly.
+To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place item into the output slot.
 
-The description on how to craft a particular item is called a “crafting recipe”. In order to craft, you have to know some crafting recipes beforehand. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide such crafting guides. There are also some mods which you can download online for installing a crafting guide.
+A description on how to craft a particular item is called a “crafting recipe”. Without this knowledge, you can't craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide such crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the on-line manual of the subgame (if one is available).
 
 Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
 
 There are multiple kinds of crafting recipes: Shaped, shapeless, cooking and repairing.
 
-• Shaped recipe (image 2): Items need to be placed in a particular shape
-• Shapeless recipe (images 4 and 5): Items need to be placed in the crafting grid, but their positions don't matter (the images show the same recipe)
+• Shaped (image 2): Items need to be placed in a particular shape
+• Shapeless (images 4 and 5): Items need to be placed somehow, but their positions don't matter (images 4 and 5 show the same recipe)
 • Cooking: Explained in “Basics > Cooking”
-• Repairing (image 6): Place two damaged tools of the same kind into the crafting grid anywhere, which gives you a new tool which is repaired by a certain percentage. This recipe may not be available in all subgames
+• Repairing (image 6): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
 
 In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). Such recipes offer a bit more freedom in the input items. Images 7 and 8 show a group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items. Both images show the same crafting recipe.
 

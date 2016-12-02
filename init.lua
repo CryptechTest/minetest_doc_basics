@@ -317,13 +317,13 @@ doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
 		text =
-[=[Press the [F9] key to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels.
+[=[Press the [F9] key to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels. The minimap also shows the positions of other players.
 
 There are 2 minimap modes and 3 zoom levels.
 
-Surface mode is a top-down view of the world, roughly resembling the colors of the blocks this world is made on. It only shows the topmost blocks, everything below is hidden, like a satellite photo. Surface mode is useful if you got lost.
+Surface mode (image 1) is a top-down view of the world, roughly resembling the colors of the blocks this world is made on. It only shows the topmost blocks, everything below is hidden, like a satellite photo. Surface mode is useful if you got lost.
 
-Radar mode is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more.
+Radar mode (image 2) is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. The rectangular shapes in image 2 clearly expose the position of a dungeon.
 
 There are also two different direction modes. Normally, “up” on the minimap is always pointing to the North. But if you press [Shift]+[F9], the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
 

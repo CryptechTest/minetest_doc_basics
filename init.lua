@@ -1,5 +1,4 @@
 --[[
-- TODO: Building
 - TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high
 ]]
@@ -10,7 +9,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "point", "items", "inventory", "hotbar", "tools", "blocks", "mine", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "point", "items", "inventory", "hotbar", "tools", "blocks", "mine", "build", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -235,6 +234,7 @@ Blocks can have a wide range of different properties which determine mining time
 • Liquids: See the entry “Basics > Liquids”.]=],
 }})
 
+-- TODO: Screenshot
 doc.new_entry("basics", "mine", {
 	name = "Mining",
 	data = {
@@ -258,6 +258,22 @@ After mining, a block will leave a “drop” behind. This is a set of items you
 • Drops items based on probability
 • Drops nothing]=],
 }})
+
+-- TODO: Screenshot
+doc.new_entry("basics", "build", {
+	name = "Building",
+	data = {
+		text =
+[=[Allmost all blocks can be built (or placed). Building is very simple and always happens instantanously.
+
+Building is done by pointing to another block and rightclicking on it. To build at a block which is usable (i.e. it reacts on a right-click), you have to hold down the sneak key when rightclicking.
+
+Blocks can almost always be built at any pointable blocks. One exception are blocks which are attached to the floor; these can only be placed on the floor.
+
+Normally, blocks are built in front of the pointed side of the pointed block. This is different for a few blocks, which are instead replaced when you try to build at them.]=],
+}})
+
+
 
 doc.new_entry("basics", "liquids", {
 	name = "Liquids",

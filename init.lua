@@ -257,6 +257,7 @@ After mining, a block will leave a “drop” behind. This is a set of items you
 • Always drops one or more items
 • Drops items based on probability
 • Drops nothing]=],
+		images = {{image="doc_basics_tools_mining.png"}},
 }})
 
 -- TODO: Screenshot

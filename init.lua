@@ -1,4 +1,6 @@
 --[[
+- TODO: Pointing
+- TODO: Building/mining
 - TODO: Items and item stacks
 - TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high

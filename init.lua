@@ -1,7 +1,5 @@
 --[[
-- TODO: Pointing
 - TODO: Building/mining
-- TODO: Items and item stacks
 - TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high
 ]]
@@ -12,7 +10,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "point", "items", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -150,6 +148,26 @@ In online multiplayer, the name of other players is written above their head.]=]
 		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
 }})
 
+-- TODO: Screenshots
+doc.new_entry("basics", "items", {
+	name="Items",
+	data = {
+		text =
+[=[Items are things you can carry along and store in inventories. They serve a variety of purposes, such as crafting, smelting, building, mining, and more. Types of items include blocks, tools and weapons.
+
+An item stack is a collection of items of the exact same type which fits into a single item slot. Item stacks can be dropped on the ground Items which drop into the same coordinates will automatically form an item stack.
+
+Items have several properties, including the following:
+
+• Maximum stack size: Number of items which fits on a single stack of this item
+• Pointing range: How close things must be to be pointed while wielding this item
+• Group memberships: An item can be a member of any number of groups (see “Basics > Groups”)
+• May be used for crafting or cooking
+
+A dropped item stack can be collected by punching it.
+]=]
+}})
+
 -- TODO: Complete rewrite, better distinction between
 doc.new_entry("basics", "tools", {
 	name="Tools and weapons",
@@ -169,7 +187,17 @@ When nothing is wielded, players use their hand which may or may not act as mini
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
+-- TODO: Screenshot(s)
+doc.new_entry("basics", "point", {
+	name="Pointing",
+	data = {
+		text =
+[=[“Pointing” refers the task of looking at something in range with the crosshair. Pointing is required to interact with the world, like mining, punching, using, etc. Pointable things include blocks, dropped items, players, computer enemies and objects.
 
+To point something, it must be in the pointing range (also just called “range”) which is determined by your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.
+
+A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can not be pointed at all. Other blocks, like liquids can only be pointed when wielding a special item.]=]
+}})
 
 doc.new_entry("basics", "cam", {
 	name="Camera",

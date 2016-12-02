@@ -188,11 +188,11 @@ doc.new_entry("basics", "blocks", {
 
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. These are the most important attributes:
 
-• Collidability: With collidable blocks block the way for players and other things, they cannot be passed through and they are walked upon by players. Non-collidable blocks can be passed through freely.
+• Collidability: Collidable blocks can normally not be passed through; players can walk on them. Non-collidable blocks can be passed through freely.
 • Pointability: Pointable blocks will show a wireframe or a halo box when you point at them. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
-• Mining properties: Mining properties determine by which tool a block can be mined (if at all).
+• Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast.
 • Climbability: While you are at a climbable block, you won't fall and you can climb and decent on it with the jump and sneak keys. Ladders are one example.
-• Group memberships: Blocks may be a member of any number of groups. Groups are used to group similar items and blocks together. Most importantly, group memberships are used for mining. They are also used for many other purposes like crafting or interactions between blocks.
+• Group memberships: Blocks can be member of any number of groups. Group memberships are used to determine mining properties. There are other purposes like crafting or interactions between blocks.
 • Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=],
 }})

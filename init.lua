@@ -1,5 +1,5 @@
 --[[
-- TODO: Building/mining
+- TODO: Building
 - TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high
 ]]
@@ -10,7 +10,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "point", "items", "inventory", "hotbar", "tools", "blocks", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "cam", "minimap", "players", "point", "items", "inventory", "hotbar", "tools", "blocks", "mine", "liquids", "craft", "cook", "groups", "settings","glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -233,6 +233,30 @@ Blocks can have a wide range of different properties which determine mining time
 • Group memberships: Blocks can be member of any number of groups. Group memberships are used to determine mining properties. There are other purposes like crafting or interactions between blocks.
 • Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=],
+}})
+
+doc.new_entry("basics", "mine", {
+	name = "Mining",
+	data = {
+		text =
+[=[Mining (or digging) is the process of breaking blocks to remove them
+
+Some blocks can not be mined, and some blocks can always be mined. Usually, blocks require a certain type of mining tool to be mined. When in doubt, just try out all your available mining tools on a block and see how efficient they are.
+
+Mineable blocks have mining properties (based on groups) and a mining level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of mining ratings.
+
+In order to mine a block at all, these conditions need to be met:
+• The block and tool share at least one mining property for which the have a matching mining rating
+• The tool's mining level is equal or less than the block's mining level.
+
+The time it takes to mine a block depends on the mining ratings and the mining level. Mining usually wears off tools. Mining blocks with a higher mining level will wear out your tools faster.
+
+Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a mining level of 0 or larger.
+
+After mining, a block will leave a “drop” behind. This is a set of items you receive in your inventory after mining it. Blocks usually drop themselves. The following drop types are possible:
+• Always drops one or more items
+• Drops items based on probability
+• Drops nothing]=],
 }})
 
 doc.new_entry("basics", "liquids", {

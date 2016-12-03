@@ -288,16 +288,16 @@ Flowing liquids take a sloped form. Flowing liquids spread around the map until 
 
 All liquids share the following properties:
 • All properties of blocks (including drowning damage)
-• Renewability: Renewable liquids can create new sources (see below)
-• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will “spread”, ranges from 0 to 8. If 0, no flowing liquids are generated at all.
+• Renewability: Renewable liquids can create new sources
+• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will “spread”, ranges from 0 to 8. If 0, no flowing liquids are generated at all. Image 5 shows a liquid of flowing range 2
 • Viscosity: How slow players move through it and how fast new flowing liquids are created (i.e. how fast the liquid spreads)
 
-Renewable liquids create new liquid sources at open spaces. A new liquid source is created when:
+Renewable liquids create new liquid sources at open spaces (image 2). A new liquid source is created when:
 • Two renewable liquid blocks of the same type touch each other diagonally
 • These blocks are also on the same height
 • One of the two “corners” is open space which allows liquids to flow in
 
-When those criteria are met, the open space is filled with a new liquid source of the same type.
+When those criteria are met, the open space is filled with a new liquid source of the same type (image 3).
 
 Swimming in a liquid is fairly straightforward: The usual direction keys for basic movement, the jump key for rising and the sneak key for sinking.
 
@@ -305,7 +305,7 @@ The physics for swimming and diving in a liquid are:
 • The higher the viscosity, the slower your movement speed
 • If you don't do anything, you will slowly sink
 • There is no fall damage for falling into a liquid as such
-• If you fall into a liquid, you will be slowed down on impact (but don't come instantly to a halt). The faster you fell, the deeper you'll get. The slow-down effect is much stronger for liquids with a high viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage
+• If you fall into a liquid, you will be slowed down on impact (but don't come instantly to a halt). Your impact depth is determined by your speed and the liquid viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage.
 
 Liquids are usually not pointable. However, all liquids can be pointed by special items.]=],
 		images = {

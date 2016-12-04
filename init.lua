@@ -565,19 +565,41 @@ Servers provide ALL gameplay functionality (subgame, mods) and media files out o
 doc.new_entry("online", "commands", {
 	name="Server commands",
 	data=
-[=[Server commands are special commands to the server that can be entered by any player via the chat to cause the server to do something. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server.
+[=[Server commands (also called “chat commands”) are little helpers for somewhat advanced users. You will normally not need to use these commands in normal gameplay, but they might come in handy to perform some more “technical” tasks. Server commands work both in multi-player and single-player mode.
 
-To issue a command, simply type it like a chat message or use the console. All commands have to begin with “/”, for example “/mods”.
+Server commands can be entered by any player via the chat to perform a special server action. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server. In Minetest, there is a small set of basic commands which are always available, other commands can be added by mods.
 
-Try it for yourselves: Close this window and say “/mods” in chat. This server will show you a list of mods installed on this server.
+To issue a command, simply type it like a chat message or press the Minetest command key (default: “/”). All commands have to begin with “/”, for example “/mods”. The Minetest command key is the same as the chat key, except that the slash is already entered.
+ Commands may or may not give a response in the chat log, but errors will generally be shown in the chat. Try it for yourselves: Close this window and type in the “/mods” command. This will give you the list of available mods on this server.
 
-In Minetest, there is a small set of basic commands which are always available. Additional commands may be added by mods. This means, on other servers you might have new commands.
+“/help all” is a very important command: You get a list of all available commands on the server, a short explanation and the allowed parameters. This command is also important because the available commands often differ per server.
 
-To help you get started, here are some basic commands:
+Commands are followed by zero or more parameters.
 
-• /help all: Lists and describes all server commands
-• /privs: Lists your privileges]=]
-})
+In the command reference, you see some placeholders which you need to replace with an actual value. These are the rules:
+
+• Text in greater-than and lower-than signs (e.g. “<param>”): Placeholder for a parameter
+• Anything in square brackets (e.g. “[text]”) is optional and can be omitted
+• Pipe or slash (e.g. “text1 | text2 | text3”): Alternation. One of multiple texts (e.g. “text2”).
+• Parenthesis: (e.g. “(word1 word2) | word3”): Groups multiple words together, used for alternations
+• Everything else is to be read as literal text
+
+Here are some examples to illustrate the command syntax:
+
+• /mods: No parameters. Just enter “/mods”
+• /me <action>: 1 parameter. You have to enter “/me ” followed by any text you like, e.g. “/me orders pizza”
+• /give <name> <ItemString>: Two parameters. Valid example: “/give Player default:apple”
+• /help [all|privs|<cmd>]: Valid inputs are “/help”, “/help all”, “/help privs”, or “/help ” followed by a command name, like “/help time”
+• /spawnentity <EntityName> [<X>,<Y>,<Z>]: Valid inputs include “/spawnentity boats:boat” and “/spawnentity boats:boat 0,0,0”
+
+
+
+Some final remarks:
+
+• For /give and /giveme, you need an itemstring. This is an internally used unique item identifier which you have to learn from somewhere
+• For /spawnentity you need an entity name, which is another identifier]=]})
+-- TODO: Expose itemstring by default
+
 
 -- TODO
 doc.new_entry("online", "privs", {

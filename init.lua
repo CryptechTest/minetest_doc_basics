@@ -9,7 +9,6 @@
    - Coordinates and cardinal directions, world structure?
    - Itemstrings
    - Sneak Glitch?
-   - Light level
    - Rendering (far view, etc.)
    - Day/night cycle
    - Maybe move liquids and groups to advanced
@@ -30,7 +29,7 @@ doc.new_category("advanced",
 	name = "Advanced usage",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	sorting_data = {"commands", "privs", "movement_modes", "settings", "online"},
+	sorting_data = {"light", "commands", "privs", "movement_modes", "settings", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -658,4 +657,26 @@ Players with the “privs” privilege can modify privileges at will:
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
 In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
+}})
+
+doc.new_entry("advanced", "light", {
+	name = "Light",
+	data = { text =
+[=[As the world is entirely block-based, so is the light in the world. Each block has its own brightness. The brightness of a block is expressed in a “light level” which ranges from 0 (total darkness) to 15 (as bright as the sun).
+
+There are two types of light: Sunlight and artificial light.
+
+Artificial light is emitteed by luminous blocks. Artificial light has a light level from 1-14.
+Sunlight is the brightest light and always goes perfectly straight down from the sky at each time of the day. blocks. At night, the sunlight will become moonlight instead, which still provides a small amount of light. The light level of sunlight is 15.
+
+Blocks have 3 levels of transparency:
+
+• Transparent: Sunlight goes through limitless, artificial light goes through with losses
+• Semi-transparent: Sunlight and artificial light go through with losses
+• Opaque: No light passes through
+
+Artificial light will lose one level of brightness for each transparent or semi-transparent block it passes through, until only darkness remains.
+Sunlight will preserve its brightness as long it only passes fully transparent blocks. When it passes through a semi-transparent block, it turns to artificial light.
+
+Note that “transparency” here does not always mean you can see through a block. It only means that the block is able to carry brightness from its neighboring blocks.]=]
 }})

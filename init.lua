@@ -1,6 +1,7 @@
 --[[
 - TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high
+- TODO: Add API for subgame-specific changes so the entries are not too awfully generic
 ]]
 
 
@@ -44,16 +45,16 @@ Minetest as well as Minetest Game are both unfinished at the moment, so please f
 doc.new_entry("basics", "sneak", {
 	name="Sneaking",
 	data = { text =
-[=[Sneaking is a special move. As long as you sneak, you walk slower, but you are guaranteed to not accidentally fall off the edge of a block. This also allows you to “lean over” in a sense.
-To sneak, keep the sneak key pressed. As soon as you release the sneak key, you walk at normal speed again. Be careful not releasing the sneak key when you are at a ledge, you might fall!
+[=[Sneaking is a special move. Sneaking makes you walk slower and prevents you from falling off the edge of a block.
+To sneak, keep the sneak key (default: [Shift]) pressed. When you release it, stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!
 
 • Sneak: [Shift]
 
-Sneaking only works when you are not in a liquid, stand on solid ground and are not at a ladder.
+Sneaking only works when you stand on solid ground, are not in a liquid and don't climb.
 
 If you jump while holding the sneak key, you also jump slightly higher than usual.
 
-Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be prevented from falling off ledges.]=],
+Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be stopped at ledges.]=],
 		images = { { image = "doc_basics_sneak.png" } },
 }})
 
@@ -70,7 +71,7 @@ Basic movement:
 
 While standing on solid ground:
 • Space: Jump
-• Shift: Sneak (You walk slower and can't fall over the edge of a block) 
+• Shift: Sneak
 
 While on a ladder, swimming in a liquid or fly mode is active
 • Space: Move up
@@ -83,35 +84,35 @@ Extended movement (requires privileges):
 • E: Walk fast in fast mode
 
 World interaction:
-• Left mouse button: Punch, mine blocks or collect dropped items
-• Right mouse button: Use pointed block if applicable (e.g. open chest); build blocks otherwise
+• Left mouse button: Punch / mine blocks / take items
+• Right mouse button: Use pointed block (if applicable); build block otherwise
 • Shift+Right mouse button: Build blocks without using pointed block
 • Roll mouse wheel: Select next/previous item in hotbar
 • 0-9: Select item in hotbar directly
-• Q: Drop entire wielded item stack
-• Shift+Q: Drop single item of wielded item stack
+• Q: Drop wielded item stack
+• Shift+Q: Drop 1 item of wielded item stack
 • I: Show/hide inventory menu 
 
 Inventory interaction:
 See the entry “Inventory”.
 
 Interface:
-• Esc: In the game: Opens menu window (pauses in single-player mode) or close current window. In the main menu: Quit Minetest.
+• Esc: Open menu window (pauses in single-player mode) or close current window
 • F1: Show/hide HUD
 • F2: Show/hide chat and the “Minetest” text at the top left
 • F7: Toggle camera mode
 • F8: Toggle cinematic mode
 • F9: Toggle minimap, minimap mode and zoom
 • Shift+F9: Toggle minimap shape (square or circle)
-• F10: open/close console/chat log
-• F12: Take a screenshot (as a PNG image) 
+• F10: Open/close console/chat log
+• F12: Take a screenshot
 
 Server interaction:
-• T: Open chat window (You require the “shout” privilege to chat.)
+• T: Open chat window (chat requires the “shout” privilege)
 • /: Start issuing a server command 
 
 Technical:
-• R: Toggle far view (disables all fog and allows viewing far away, may cause massive FPS drop)
+• R: Toggle far view (disables all fog and allows viewing far away, can make game very slow)
 • + (numpad): Increase minimal viewing distance
 • - (numpad): Decrease minimal viewing distance
 • F3: Enable/disable fog
@@ -126,7 +127,7 @@ doc.new_entry("basics", "players", {
 		text =
 [=[Players (actually: “player characters”) are the characters which users control.
 
-Players are living beings which occupy a space of roughly 1×2×1 cubes and start with 20 health points and 10 breath points.
+Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).
 Players are capable of walking, sneaking, jumping, climbing ladders, swimming, diving, mining, building, fighting and using tools and blocks.
 
 Players can take damage for a variety of reasons, here are some:
@@ -136,14 +137,14 @@ Players can take damage for a variety of reasons, here are some:
 • Being attacked by another player
 • Being attacked by a computer enemy
 
-At a health of 0, the player dies after which the player can just respawn in the world, usually somewhere else.
-Other consequences of death vary wildly between subgame. The player could lose all items, or lose the round in a competitive game.
+At a health of 0, the player dies. The player can just respawn in the world, usually somewhere else.
+Other consequences of death depend on the subgame. The player could lose all items, or lose the round in a competitive game.
 
-Breath is reduced for being with the head inside some block which causes drowning damage (usually liquids, but really any block cause this). Such blocks reduce the breath by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. When being inside any other block, the breath is quickly restored.
+Breath is reduced while being with the head inside a block which causes drowning damage (usually liquids). Such blocks reduce the breath points by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. Breath is quickly restored in any other block.
 
-Damage can be disabled on any world. Without damage, players are basically immortal. Health and breath don't play a role anymore and are hidden.
+Damage can be disabled on any world. Without damage, players are immortal and health and breath are unimportant.
 
-In online multiplayer, the name of other players is written above their head.]=],
+In multi-player mode, the name of other players is written above their head.]=],
 		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
 }})
 
@@ -154,11 +155,11 @@ doc.new_entry("basics", "items", {
 		text =
 [=[Items are things you can carry along and store in inventories. They serve a variety of purposes, such as crafting, smelting, building, mining, and more. Types of items include blocks, tools and weapons.
 
-An item stack is a collection of items of the exact same type which fits into a single item slot. Item stacks can be dropped on the ground Items which drop into the same coordinates will automatically form an item stack.
+An item stack is a collection of items of the same type which fits into a single item slot. Item stacks can be dropped on the ground. Items which drop into the same coordinates will form an item stack.
 
 Items have several properties, including the following:
 
-• Maximum stack size: Number of items which fits on a single stack of this item
+• Maximum stack size: Number of items which fit on a single stack of this item
 • Pointing range: How close things must be to be pointed while wielding this item
 • Group memberships: An item can be a member of any number of groups (see “Basics > Groups”)
 • May be used for crafting or cooking
@@ -191,11 +192,11 @@ doc.new_entry("basics", "point", {
 	name="Pointing",
 	data = {
 		text =
-[=[“Pointing” refers the task of looking at something in range with the crosshair. Pointing is required to interact with the world, like mining, punching, using, etc. Pointable things include blocks, dropped items, players, computer enemies and objects.
+[=[“Pointing” means looking at something in range with the crosshair. Pointing is needed for interaction, like mining, punching, using, etc. Pointable things include blocks, dropped items, players, computer enemies and objects.
 
 To point something, it must be in the pointing range (also just called “range”) which is determined by your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.
 
-A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can not be pointed at all. Other blocks, like liquids can only be pointed when wielding a special item.]=]
+A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.]=]
 }})
 
 doc.new_entry("basics", "cam", {
@@ -204,13 +205,13 @@ doc.new_entry("basics", "cam", {
 		text =
 [=[Minetest has 3 different views which determine the way you see the world. The modes are:
 
-• First-person view (default)
-• Third-person view from behind
-• Third-person view from the front
+• 1: First-person view (default)
+• 2: Third-person view from behind
+• 3: Third-person view from the front
 
 You can change the camera mode by pressing [F7] (but you have to close this window first).
 
-There is also Cinematic Mode which can be toggled with [F8]. Normally, the camera moves instantly as you move your mouse around. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.
+There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.
 
 • Switch camera mode: [F7]
 • Toggle Cinematic Mode: [F8]]=],
@@ -223,13 +224,13 @@ doc.new_entry("basics", "blocks", {
 		text =
 [=[The world of Minetest is made entirely out of blocks, or voxels, to be precise. Blocks can be added or removed with the correct tools.
 
-Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. These are the most important attributes:
+Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. Their properties include:
 
 • Collidability: Collidable blocks can normally not be passed through; players can walk on them. Non-collidable blocks can be passed through freely.
-• Pointability: Pointable blocks will show a wireframe or a halo box when you point at them. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
+• Pointability: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
 • Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast.
-• Climbability: While you are at a climbable block, you won't fall and you can climb and decent on it with the jump and sneak keys. Ladders are one example.
-• Group memberships: Blocks can be member of any number of groups. Group memberships are used to determine mining properties. There are other purposes like crafting or interactions between blocks.
+• Climbability: While you are at a climbable block, you won't fall and you can move up and down with the jump and sneak keys. Ladders are one example.
+• Group memberships: Blocks can be member of any number of groups. Group memberships are used to determine mining properties, crafting, interactions between blocks and more.
 • Drowning damage: See the entry “Basics > Player”.
 • Liquids: See the entry “Basics > Liquids”.]=],
 }})
@@ -239,9 +240,9 @@ doc.new_entry("basics", "mine", {
 	name = "Mining",
 	data = {
 		text =
-[=[Mining (or digging) is the process of breaking blocks to remove them
+[=[Mining (or digging) is the process of breaking blocks to remove them. To mine a block, point it and hold down the left mouse button until it breaks.
 
-Some blocks can not be mined, and some blocks can always be mined. Usually, blocks require a certain type of mining tool to be mined. When in doubt, just try out all your available mining tools on a block and see how efficient they are.
+Some blocks can not be mined, and some blocks can always be mined. Usually, blocks require a certain type of mining tool to be mined. When in doubt, just try out different mining tools on a block and see what happens.
 
 Mineable blocks have mining properties (based on groups) and a mining level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of mining ratings.
 
@@ -253,7 +254,7 @@ The time it takes to mine a block depends on the mining ratings and the mining l
 
 Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a mining level of 0 or larger.
 
-After mining, a block will leave a “drop” behind. This is a set of items you receive in your inventory after mining it. Blocks usually drop themselves. The following drop types are possible:
+After mining, a block will leave a “drop” behind. This is a number of items you get after mining. Blocks usually drop themselves. The following drop types are possible:
 • Always drops one or more items
 • Drops items based on probability
 • Drops nothing]=],
@@ -265,13 +266,13 @@ doc.new_entry("basics", "build", {
 	name = "Building",
 	data = {
 		text =
-[=[Allmost all blocks can be built (or placed). Building is very simple and always happens instantanously.
+[=[Allmost all blocks can be built (or placed). Building is very simple and has no delay.
 
-Building is done by pointing to another block and rightclicking on it. To build at a block which is usable (i.e. it reacts on a right-click), you have to hold down the sneak key when rightclicking.
+To build your wielded block, pointing at a block and right-click. If the pointed block reacts on a right-click, hold down the sneak key while clicking to build.
 
-Blocks can almost always be built at any pointable blocks. One exception are blocks which are attached to the floor; these can only be placed on the floor.
+Blocks can almost always be built at pointable blocks. One exception are blocks attached to the floor; these can only be built on the floor.
 
-Normally, blocks are built in front of the pointed side of the pointed block. This is different for a few blocks, which are instead replaced when you try to build at them.]=],
+Normally, blocks are built in front of the pointed side of the pointed block. A few blocks are different: When you try to build at them, they are replaced.]=]
 }})
 
 
@@ -329,15 +330,15 @@ doc.new_entry("basics", "craft", {
 		text =
 [=[Crafting is the task of taking several items and combining them to form a new item.
 
-To craft something, you need one or more items, crafting grid (C) and a crafting recipe. A crafting grid behaves like a normal inventory, with the addition that it can be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items in a valid arrangement. Note this is initially just a preview. Crafting grids come in different sizes, the most common is 3×3 slots. The crafting grid size limits what you can craft: A 4×4 crafting recipe can only be crafted in a 4×4 crafting grid or larger.
+To craft something, you need one or more items, a crafting grid (C) and a crafting recipe. A crafting grid is like a normal inventory which can also be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items correctly. Note this is initially just a preview. Crafting grids come in different sizes, the most common is 3×3 slots. The crafting grid size limits what you can craft: A 4×4 crafting recipe can only be crafted in a 4×4 crafting grid or larger.
 
 To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place item into the output slot.
 
-A description on how to craft a particular item is called a “crafting recipe”. Without this knowledge, you can't craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide such crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the on-line manual of the subgame (if one is available).
+A description on how to craft a particular item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the on-line manual of the subgame (if one is available).
 
 Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
 
-There are multiple kinds of crafting recipes: Shaped, shapeless, cooking and repairing.
+There are multiple types of crafting recipes: Shaped, shapeless, cooking and repairing.
 
 • Shaped (image 2): Items need to be placed in a particular shape
 • Shapeless (images 4 and 5): Items need to be placed somehow, but their positions don't matter (images 4 and 5 show the same recipe)
@@ -346,8 +347,7 @@ There are multiple kinds of crafting recipes: Shaped, shapeless, cooking and rep
 
 In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). Such recipes offer a bit more freedom in the input items. Images 7 and 8 show a group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items. Both images show the same crafting recipe.
 
-Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.
-]=],
+Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
 -- TODO: Replace image 3
 -- TODO: Maybe add images demonstrating replacements
 		images = {
@@ -373,8 +373,8 @@ doc.new_entry("basics", "hotbar", {
 	name="Hotbar",
 	data = {
 		text =
-[=[At the bottom of the screen you see some squares aligned horizontally. This is called the “hotbar”. The hotbar allows you to quickly access the first items from your player inventory.
-You can change the selected item with the mouse wheel, or the number keys.
+[=[At the bottom of the screen you see some squares. This is called the “hotbar”. The hotbar allows you to quickly access the first items from your player inventory.
+You can change the selected item with the mouse wheel or the number keys.
 
 • Select previous item in hotbar: [Mouse wheel up]
 • Select next item in hotbar: [Mouse wheel down]
@@ -384,6 +384,7 @@ The selected item is also your wielded item.]=],
 		images = {{image="doc_basics_hotbar.png"}, {image="doc_basics_hotbar_relations.png"}},
 }})
 
+-- FIXME: Be careful when talking about “North”
 doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
@@ -409,7 +410,7 @@ doc.new_entry("basics", "inventory", {
 	name="Inventory",
 	data = {
 		text =
-[=[An inventory is primarily used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can be either empty or hold one item stack. Item stacks can be moved freely between slot and slot, given that the destination slot is either empty or of the same item type.
+[=[An inventory is used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can either be empty or hold one item stack. Item stacks can be moved freely between most slots.
 You have your own inventory which is called your “player inventory”, you can open it with the inventory key (default: [I]). The first inventory slots are also used as slots in your hotbar.
 Blocks can also have their own inventory, for example, things like chests and furnaces.
 
@@ -417,7 +418,7 @@ Inventory controls:
 
 Taking: You can take items from an occupied slot if the cursor holds nothing.
 • Left click: take entire item stack
-• Right click: take half from the item stack (rounding up if odd number)
+• Right click: take half from the item stack (rounded up)
 • Middle click: take 10 items from the item stack 
 
 Putting: You can put items onto a slot if the cursor holds 1 or more items and the slot is either empty or contains an item stack of the same item type.
@@ -430,7 +431,7 @@ Exchanging: You can exchange items if the cursor holds 1 or more items and the d
 
 Throwing away: If you hold an item stack and click with it somewhere outside the menu, the item stack gets thrown away into the environment.
 
-Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The inventories chosen for quick transfer are context-dependent, usually those are the inventories which are considered to be most useful in this context.
+Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The target inventory is generally the most relevant inventory in this context.
 • Sneak+Left click: Automatically transfer item stack.]=],
 		images = {{image="doc_basics_inventory.png"}, {image="doc_basics_inventory_detail.png"}},
 }})
@@ -458,15 +459,15 @@ doc.new_entry("basics", "groups", {
 	name="Groups",
 	data = {
 		text =
-[=[Items, players and objects (animate and inanimate) can be member of any number of groups. Groups serve multiple purposes:
+[=[Items, players and objects (animate and inanimate) can be members of any number of groups. Groups serve multiple purposes:
 
-• Crafting recipes: Sometimes, slots in a crafting recipe do not require a specific item, but instead they require an item which is a member of a particular group, or multiple groups
+• Crafting recipes: Slots in a crafting recipe may not require a specific item, but instead an item which is a member of a particular group, or multiple groups
 • Digging times: Diggable blocks belong to groups which are used to determine digging times. Mining tools are capable of digging blocks belonging to certain groups
 • Block behavior: Blocks may behave in a special way and interact with other blocks when they belong to a particular group
 • Damage and armor: Objects and players have armor groups, weapons have damage groups. A weapon is able to deal damage to things where at least one of its damage groups is also present at the attacked object. The actual damage depends on the weapon strength (stronger weapon means less damage) and the armor strength (stronger armor means less damage)
-• Other uses: Groups can be used for a few other things as well, which largely depends on the mods being used
+• Other uses: Groups can be used for a few other things as well
 
-In the item help, most important groups of which an item is a member of are mentioned and explained.]=]}})
+In the item help, the most important groups are usually mentioned and explained.]=]}})
 
 doc.new_entry("basics", "glossary", {
 	name = "Glossary",
@@ -555,11 +556,9 @@ For a full list of all available settings, use the “Advanced settings” dialo
 doc.new_entry("online", "intro", {
 	name="Introduction to online multiplayer",
 	data=
-[=[
-Every Minetest server is (more or less) different. A server can have any subgame and mods the server operator likes to.
+[=[Each Minetest server is (more or less) different. A server can have any subgame and mods the server operator likes to.
 
-Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration necessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.
-]=]})
+Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration necessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.]=]})
 
 -- TODO
 doc.new_entry("online", "commands", {
@@ -604,23 +603,25 @@ Some final remarks:
 -- TODO
 doc.new_entry("online", "privs", {
 	name="Privileges",
-	data=[=[Every player has a set of privileges, which differ from server to server. Roughly spoken, one’s privileges determine what one is able to do and what not. Each privilege has a name. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
+	data=[=[Every player has a set of privileges, which differ from server to server. Your privileges determine what you can and can't do. Each privilege has a name. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
 
-On a multiplayer server with a default configuration, new players start with the privileges called “interact” and “shout”. The interact privilege is required for the most basic gameplay actions such as building, mining, using, etc. The shout privilege allows the player to use the chat.
+On a multiplayer server with the default configuration, new players start with the privileges called “interact” and “shout”. The interact privilege is required for the most basic gameplay actions such as building, mining, using, etc. The shout privilege allows to chat.
 
-Just like with server commands, there is a small set of core privileges which you'll find on every server, and other privileges might be added by mods.
+There is a small set of core privileges which you'll find on every server, other privileges might be added by mods.
 
 To view your own privileges, issue the server command “/privs”.
 
 Here are a few basic privilege-related commands:
+
 • /privs: Lists your privileges
 • /privs <player>: Lists the privileges of <player>
 • /help privs: Shows a list and description about all privileges
 
 Players with the “privs” privilege can modify privileges at will:
+
 • /grant <player> <privilege>: Grant <privilege> to <player>
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
-In single-player mode, you can use the shortcut “/grant singleplayer all” to allow you to do everything (this is considered cheating).]=]
+In single-player mode, you can use “/grant singleplayer all” to allow you to do everything (which is considered cheating).]=]
 })
 

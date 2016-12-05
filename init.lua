@@ -10,7 +10,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "settings", "glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "settings", "glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -168,24 +168,38 @@ A dropped item stack can be collected by punching it.
 ]=]
 }})
 
--- TODO: Complete rewrite, better distinction between
 doc.new_entry("basics", "tools", {
-	name="Tools and weapons",
+	name="Tools",
 	data = { text =
-[=[Some items may serve as a tool, melee weapon or both when wielded.
+[=[Some items may serve as a tool when wielded. Any item which has some special use which can be directly used by its wielder is considered a tool.
 
-Any item which has some special use which can be directly used by its wielder is considered a tool.
+A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. Weapons are a kind of tool in Minetest. There are of course many other possibl tools. Special actions of tools are usually done with clicks.
 
-A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. There might be other tools with special uses (usually accessed by punching or right-click).
+When nothing is wielded, players use their hand which may or may not act as tool and weapon (depending on the subgame). The hand is capable of collecting dropped items by punching.
 
-Melee weapons deal damage by punching players and possibly other animate objects.
-
-For melee weapons, another attribute is important: The full punch interval. This is basically the time it takes for completely recovering from a punch with this weapon. 
-A melee weapon only deals its full damage when it has completely recovered. This can be seen by the animation of the wielded item. As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast one can deal punches, it rather limits the damage: Any hit done before the end of a full punch interval will deal reduced damage.
-
-When nothing is wielded, players use their hand which may or may not act as mining tool and melee weapon (depending on the subgame). The hand is always capable of collecting dropped items simply by punching them.]=],
+Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar. If no damage bar is shown, the tool is in mit condition. Tools may be repairable by crafting, see “Basics > Crafting”.]=],
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
+
+-- TODO: Check the facts on damage groups!
+-- TODO: Screenshot
+doc.new_entry("basics", "weapons", {
+	name="Weapons",
+	data = { text =
+[=[Some items are useable as a melee weapon when wielded. Weapons share most of the properties of tools.
+
+Melee weapons deal damage by punching players and other animate objects. There are two ways to attack:
+• Single punch: Left-click once to deal a single punch
+• Quick punching: Hold down the left mouse button to deal repeated punches as fast as you can, but the damage of each hit will be low
+
+The two core attributes of melee weapons are maximum damage and the full punch interval. The maximum dmage is dealt after a hit when the weapon was fully recovered. The full punch interval is the time it takes for completely recovering from a punch with this weapon. 
+
+Look at your weapon closely: As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast you can attack, it rather limits the damage: Any hit done before the end of the full punch interval will deal reduced damage.
+
+There is a rule which sometimes makes attacks impossible: Players, animate objects and weapons belong to damage groups. A weapon only deals damage to those who share at least one damage group with it. So if you're using the wrong weapon, you might not deal any damage at all.]=]
+}})
+
+
 
 -- TODO: Screenshot(s)
 doc.new_entry("basics", "point", {

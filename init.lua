@@ -29,7 +29,7 @@ doc.new_category("advanced",
 	name = "Advanced usage",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	sorting_data = {"light", "commands", "privs", "movement_modes", "settings", "online"},
+	sorting_data = {"light", "console", "commands", "privs", "movement_modes", "settings", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -593,6 +593,37 @@ Noclip mode:
 • Description: Allows you to move through walls. Only works when fly mode is enabled, too.
 • Default key: H
 • Required privilege: noclip]=]
+}})
+
+doc.new_entry("advanced", "console", {
+	name = "Chat/console",
+	data = { text =
+[=[With [F10] you can open and close the console. The main use of the console is to show the chat log and enter chat messages or server commands.
+Using the chat or server command key also opens the console, but it is smaller and will be closed after you sent a message.
+
+Use the chat to communicate to other players. This requires you to have the “shout” privilege.
+Just type in the message and hit [Enter]. Chat messages can not begin with “/”.
+
+Write “/msg <player> <message>” to write “<message>” to <player> which can only be seen by <player>.
+
+There are some special controls while the console is open:
+
+• [F10] Open/close console
+• [Enter]: Send chat message or server command
+• [Tabulator]: Try to auto-complete a partially-entered player name
+• [Ctrl]+[Left]: Move cursor to the beginning of the previous word
+• [Ctrl]+[Right]: Move cursor to the beginning of the next word
+• [Ctrl]+[Backspace]: Delete previous word
+• [Ctrl]+[Delete]: Delete next word
+• [Ctrl]+[U]: Delete all text before the cursor
+• [Ctrl]+[K]: Delete all text after the cursor
+• [Page up]: Scroll up
+• [Page down]: Scroll down
+
+There is also an input history. Minetest saves your previous console inputs which you can quickly access later:
+
+• [Up]: Go to previous entry in history
+• [Down]: Go to next entry in history]=]
 }})
 
 -- TODO

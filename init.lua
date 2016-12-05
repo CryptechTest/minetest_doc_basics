@@ -1,5 +1,4 @@
 --[[
-- TODO: Write about noclip, fast and fly modes
 - TODO: Consider adding more categories if entry count gets too high
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
 ]]
@@ -10,7 +9,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "settings", "glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "movement_modes", "settings", "glossary", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -564,6 +563,29 @@ These are a few of the most important gameplay settings:
 For a full list of all available settings, use the “Advanced settings” dialog in the main menu.]=]
 }})
 
+doc.new_entry("basics", "movement_modes", {
+	name = "Movement modes",
+	data = {
+		text =
+[=[If you have the requiried privileges, you can use up to three special movement modes. Using the movement modes is generally considered cheating.
+
+Fast mode:
+• Description: Allows you to move much faster. When not in fly mode, you can use the “Use” key [E] to run faster. In the client configuration, you can further customize fast mode.
+• Default key: J
+• Required privilege: fast
+
+Fly mode:
+• Description: While enabled, you are not subject to gravity anymore and can move freely in all directions. Use the jump key to rise and the sneak key to sink.
+• Default key: K
+• Required privilege: fly
+
+Noclip mode:
+• Description: Allows you to move through walls. Only works when fly mode is enabled, too.
+• Default key: H
+• Required privilege: noclip]=]
+}})
+
+
 
 -- TODO
 doc.new_entry("online", "intro", {
@@ -634,4 +656,3 @@ Players with the “privs” privilege can modify privileges at will:
 
 In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
 })
-

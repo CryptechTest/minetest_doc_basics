@@ -1,4 +1,5 @@
 --[[
+- TODO: Write a easy-to-read intro page
 - TODO: Consider adding more categories if entry count gets too high
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
 ]]
@@ -9,17 +10,17 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "movement_modes", "settings", "glossary", "online"},
+	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "glossary"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
-doc.new_category("online",
+doc.new_category("advanced",
 {
-	name="Online multiplayer",
-	description = "Help about playing online with other players",
+	name = "Advanced usage",
+	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	sorting_data = {"intro", "commands", "privs"},
-	build_formspec = doc.entry_builders.text,
+	sorting_data = {"commands", "privs", "movement_modes", "settings", "online"},
+	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
 doc.new_entry("basics", "minetest", {
@@ -449,7 +450,7 @@ Quick transfer: You can quickly transfer an item stack to/from the player invent
 		images = {{image="doc_basics_inventory.png"}, {image="doc_basics_inventory_detail.png"}},
 }})
 
-doc.new_entry("basics", "online", {
+doc.new_entry("advanced", "online", {
 	name="Online help",
 	data = { text=
 [=[You may want to check out these online resources related to Minetest:
@@ -548,7 +549,7 @@ Technical:
 ]=]}})
 
 -- TODO
-doc.new_entry("basics", "settings", {
+doc.new_entry("advanced", "settings", {
 	name="Settings",
 	data = {
 		text =
@@ -563,10 +564,9 @@ These are a few of the most important gameplay settings:
 For a full list of all available settings, use the “Advanced settings” dialog in the main menu.]=]
 }})
 
-doc.new_entry("basics", "movement_modes", {
+doc.new_entry("advanced", "movement_modes", {
 	name = "Movement modes",
-	data = {
-		text =
+	data = { text =
 [=[If you have the requiried privileges, you can use up to three special movement modes. Using the movement modes is generally considered cheating.
 
 Fast mode:
@@ -585,20 +585,10 @@ Noclip mode:
 • Required privilege: noclip]=]
 }})
 
-
-
 -- TODO
-doc.new_entry("online", "intro", {
-	name="Introduction to online multiplayer",
-	data=
-[=[Each Minetest server is (more or less) different. A server can have any subgame and mods the server operator likes to.
-
-Servers provide ALL gameplay functionality (subgame, mods) and media files out of the box, no additional configuration necessary. You only need to make sure to have a recent Minetest version to be able to connect to most servers.]=]})
-
--- TODO
-doc.new_entry("online", "commands", {
+doc.new_entry("advanced", "commands", {
 	name="Server commands",
-	data=
+	data = { text =
 [=[Server commands (also called “chat commands”) are little helpers for somewhat advanced users. You will normally not need to use these commands in normal gameplay, but they might come in handy to perform some more “technical” tasks. Server commands work both in multi-player and single-player mode.
 
 Server commands can be entered by any player via the chat to perform a special server action. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server. In Minetest, there is a small set of basic commands which are always available, other commands can be added by mods.
@@ -631,11 +621,13 @@ Here are some examples to illustrate the command syntax:
 Some final remarks:
 
 • For /give and /giveme, you need an itemstring. This is an internally used unique item identifier which you have to learn from somewhere
-• For /spawnentity you need an entity name, which is another identifier]=]})
+• For /spawnentity you need an entity name, which is another identifier]=]
+}})
 
-doc.new_entry("online", "privs", {
+doc.new_entry("advanced", "privs", {
 	name="Privileges",
-	data=[=[Each player has a set of privileges, which differs from server to server. Your privileges determine what you can and can't do. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
+	data= { text =
+[=[Each player has a set of privileges, which differs from server to server. Your privileges determine what you can and can't do. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
 
 On a multiplayer server with the default configuration, new players start with the privileges called “interact” and “shout”. The “interact” privilege is required for the most basic gameplay actions such as building, mining, using, etc. The “shout” privilege allows to chat.
 
@@ -655,4 +647,4 @@ Players with the “privs” privilege can modify privileges at will:
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
 In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
-})
+}})

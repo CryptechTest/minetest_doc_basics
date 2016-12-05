@@ -631,7 +631,7 @@ Here are some examples to illustrate the command syntax:
 
 Some final remarks:
 
-• For /give and /giveme, you need an itemstring. This is an internally used unique item identifier which you have to learn from somewhere
+• For /give and /giveme, you need an itemstring. This is an internally used unique item identifier
 • For /spawnentity you need an entity name, which is another identifier]=]
 }})
 

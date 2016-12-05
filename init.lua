@@ -610,15 +610,12 @@ Some final remarks:
 
 • For /give and /giveme, you need an itemstring. This is an internally used unique item identifier which you have to learn from somewhere
 • For /spawnentity you need an entity name, which is another identifier]=]})
--- TODO: Expose itemstring by default
 
-
--- TODO
 doc.new_entry("online", "privs", {
 	name="Privileges",
-	data=[=[Every player has a set of privileges, which differ from server to server. Your privileges determine what you can and can't do. Each privilege has a name. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
+	data=[=[Each player has a set of privileges, which differs from server to server. Your privileges determine what you can and can't do. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.
 
-On a multiplayer server with the default configuration, new players start with the privileges called “interact” and “shout”. The interact privilege is required for the most basic gameplay actions such as building, mining, using, etc. The shout privilege allows to chat.
+On a multiplayer server with the default configuration, new players start with the privileges called “interact” and “shout”. The “interact” privilege is required for the most basic gameplay actions such as building, mining, using, etc. The “shout” privilege allows to chat.
 
 There is a small set of core privileges which you'll find on every server, other privileges might be added by mods.
 
@@ -635,6 +632,6 @@ Players with the “privs” privilege can modify privileges at will:
 • /grant <player> <privilege>: Grant <privilege> to <player>
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
-In single-player mode, you can use “/grant singleplayer all” to allow you to do everything (which is considered cheating).]=]
+In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
 })
 

@@ -376,10 +376,10 @@ doc.new_entry("basics", "cook", {
 	name = "Cooking",
 	data = {
 		text =
-[=[Cooking (or smelting) is a form of crafting, which does not involve a crafting grid. Cooking is done with a special block (usually a furnace), an cookable item, a fuel item and time in order to yield a new item.
+[=[Cooking (or smelting) is a form of crafting which does not involve a crafting grid. Cooking is done with a special block (usually a furnace), an cookable item, a fuel item and time in order to yield a new item.
 
 Each fuel item has a burning time. This is the time a single item of the fuel keeps a furnace burning.
-Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the entirety of its cooking time to actually yield the result.
+Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the whole cooking time to actually yield the result.
 
 How cooking works in detail depends on the subgame and mods.]=]}})
 
@@ -403,7 +403,7 @@ doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
 		text =
-[=[Press the [F9] key to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels. The minimap also shows the positions of other players.
+[=[Press [F9] to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels. The minimap also shows the positions of other players.
 
 There are 2 minimap modes and 3 zoom levels.
 
@@ -468,7 +468,6 @@ Chat: <irc://irc.freenode.net#minetest>
 A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.]=]
 }})
 
--- TODO
 doc.new_entry("basics", "groups", {
 	name="Groups",
 	data = {
@@ -477,11 +476,11 @@ doc.new_entry("basics", "groups", {
 
 • Crafting recipes: Slots in a crafting recipe may not require a specific item, but instead an item which is a member of a particular group, or multiple groups
 • Digging times: Diggable blocks belong to groups which are used to determine digging times. Mining tools are capable of digging blocks belonging to certain groups
-• Block behavior: Blocks may behave in a special way and interact with other blocks when they belong to a particular group
-• Damage and armor: Objects and players have armor groups, weapons have damage groups. A weapon is able to deal damage to things where at least one of its damage groups is also present at the attacked object. The actual damage depends on the weapon strength (stronger weapon means less damage) and the armor strength (stronger armor means less damage)
-• Other uses: Groups can be used for a few other things as well
+• Block behavior: Blocks may show a special behaviour and interact with other blocks when they belong to a particular group
+• Damage and armor: Objects and players have armor groups, weapons have damage groups. See also: “Basics > Weapons”
+• Other uses
 
-In the item help, the most important groups are usually mentioned and explained.]=]}})
+In the item help, many important groups are usually mentioned and explained.]=]}})
 
 doc.new_entry("basics", "glossary", {
 	name = "Glossary",

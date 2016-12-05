@@ -2,6 +2,17 @@
 - TODO: Write a easy-to-read intro page
 - TODO: Consider adding more categories if entry count gets too high
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
+   - Support for landing page
+   - Support to modify some parts of existing entries
+- TODO: Add introduction to online play (if possible)
+- TODO: Ideas for advanced entries:
+   - Coordinates and cardinal directions, world structure?
+   - Itemstrings
+   - Sneak Glitch?
+   - Light level
+   - Rendering (far view, etc.)
+   - Day/night cycle
+   - Maybe move liquids and groups to advanced
 ]]
 
 

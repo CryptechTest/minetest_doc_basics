@@ -122,8 +122,8 @@ Server interaction:
 
 Technical:
 • R: Toggle far view (disables all fog and allows viewing far away, can make game very slow)
-• + (numpad): Increase minimal viewing distance
-• - (numpad): Decrease minimal viewing distance
+• +: Increase minimal viewing distance
+• -: Decrease minimal viewing distance
 • F3: Enable/disable fog
 • F5: Enable/disable debug screen which also shows your coordinates
 • F6: Only useful for developers. Enables/disables profiler

@@ -19,7 +19,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "players", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "light", "groups", "glossary"},
+	sorting_data = {"minetest", "controls", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "players", "liquids", "light", "groups", "glossary"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 

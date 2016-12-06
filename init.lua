@@ -520,38 +520,38 @@ Items:
 • Inventory: Provides several inventory slots for storage
 • Player inventory: The main inventory of a player
 • Tool: An item which you can use to do special things with when wielding
-• Range: How far away things can be to be pointed by an item when wielding it
+• Range: How far away things can be to be pointed by an item
 • Mining tool: A tool which allows to break blocks
 • Craft item: An item which is (primarily or only) used for crafting
 
 Gameplay:
 • “heart”: A single health symbol, indicates 2 HP
 • “bubble”: A single breath symbol, indicates 1 BP
-• HP: Hit point (equals half a “heart”)
+• HP: Hit point (equals half 1 “heart”)
 • BP: Breath point, indicates breath when swimming
 • Mob: Computer-controlled enemy
 • Crafting: Combining multiple items to create new ones
-• Crafting guide: A helper which shows available crafting recipes; provided by mods
+• Crafting guide: A helper which shows available crafting recipes
 • Spawning: Appearing in the world
 • Respawning: Appearing again in the world after death
-• Group: Used to group similar things together; determines mining times, armor, damage, and more
+• Group: Puts similar things together, often affects gameplay
 • noclip: Allows to fly through walls
 
 Interface
-• Hotbar: The inventory slots at the bottom which you can select for wielding
+• Hotbar: Inventory slots at the bottom
 • Statbar: Indicator made out of half-symbols, used for health and breath
 • Minimap: The map or radar at the top right
 • Crosshair: Seen in the middle, used to point to things
 
 Online multiplayer:
-• PvP: Player vs Player. Indicates that players can attack and deal damage to each other
+• PvP: Player vs Player. If avtive, players can deal damage to each other
 • Griefing: Destroying the buildings of other players against their will
 • Protection: Mechanism to own areas of the world, which only allows the owners to modify blocks inside
 
-Technical:
+Technical terms:
 • Minetest: This game engine
 • Minetest Game: A subgame for Minetest from the Minetest developers
-• Subgame: A complete playing experience to be used in Minetest; can be a game, a sandbox or something else
+• Subgame: A complete playing experience to be used in Minetest; such as a game or sandbox or similar
 • Mod: A single subsystem which adds or modifies functionality; is the basic building block of subgames and can be used to further enhance or modify them
 • Privilege: Allows a player to do something
 • Node: Other word for “block”

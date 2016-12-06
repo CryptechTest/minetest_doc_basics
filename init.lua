@@ -595,7 +595,7 @@ Noclip mode:
 }})
 
 doc.new_entry("advanced", "console", {
-	name = "Chat/console",
+	name = "Console",
 	data = { text =
 [=[With [F10] you can open and close the console. The main use of the console is to show the chat log and enter chat messages or server commands.
 Using the chat or server command key also opens the console, but it is smaller and will be closed after you sent a message.

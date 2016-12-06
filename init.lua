@@ -38,9 +38,9 @@ doc.new_entry("basics", "minetest", {
 		text =
 [=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
 
-The basic idea of each game is always the same: The player is thrown into a huge world made out of cubes/blocks. Most of the time, these cubes make the landscape and these blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games (“subgames” in Minetest terms) in Minetest can, however, be much more complex than this.
+The player is thrown into a huge world made out of cubes or blocks. These cubes usually make the landscape they blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games in Minetest (also called “subgames”) can, however, be much more complex than this.
 
-A core concept of Minetest is a built-in modding capability, based on the Lua programming language. Mods allow one or more certain aspects of an existing game to be modified. Minetest mods can be as simple as adding a few decorational blocks or very complex by (for example) introducing complex new gameplay concepts or generating a completely different kind of world, and many other things. For the player, using a new mod requires to copy or extract some files into a certain location and pressing some buttons in Minetest's interface.
+A core feature of Minetest is the built-in modding capability. Mods allow one or more certain aspects of an existing game to be modified. Minetest mods can be as simple as adding a few decorational blocks or very complex by e.g. introducing new gameplay concepts, generating a completely different kind of world, and many other things.
 
 Minetest can be played alone or online together with multiple players. When playing online, from the player perspective all mods will work out of the box with no need for additional tools as they are entirely provided by the server.
 
@@ -108,7 +108,7 @@ See the entry “Inventory”.
 Interface:
 • Esc: Open menu window (pauses in single-player mode) or close current window
 • F1: Show/hide HUD
-• F2: Show/hide chat and the “Minetest” text at the top left
+• F2: Show/hide chat and the “Minetest” text
 • F7: Toggle camera mode
 • F8: Toggle cinematic mode
 • F9: Toggle minimap, minimap mode and zoom
@@ -146,10 +146,10 @@ Players can take damage for a variety of reasons, here are some:
 • Being attacked by another player
 • Being attacked by a computer enemy
 
-At a health of 0, the player dies. The player can just respawn in the world, usually somewhere else.
+At a health of 0, the player dies. The player can just respawn in the world.
 Other consequences of death depend on the subgame. The player could lose all items, or lose the round in a competitive game.
 
-Breath is reduced while being with the head inside a block which causes drowning damage (usually liquids). Such blocks reduce the breath points by 1 for every 2 seconds and start to cause damage every 2 seconds when the player has lost all breath. Breath is quickly restored in any other block.
+Some blocks reduce breath. While being with the head in a block which causes drowning, the breah points are reduced by 1 for every 2 seconds. If all breath is gone, the player starts to suffer drowning damage. Breath is quickly restored in any other block.
 
 Damage can be disabled on any world. Without damage, players are immortal and health and breath are unimportant.
 

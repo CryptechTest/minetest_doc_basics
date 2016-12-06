@@ -11,7 +11,6 @@
    - Sneak Glitch?
    - Rendering (far view, etc.)
    - Day/night cycle
-   - Maybe move liquids and groups to advanced
 ]]
 
 
@@ -20,7 +19,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "sneak", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "groups", "players", "minimap", "cam", "glossary"},
+	sorting_data = {"minetest", "controls", "players", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "liquids", "mine", "build", "craft", "cook", "players", "minimap", "sneak", "light", "groups", "cam", "glossary"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -29,7 +28,7 @@ doc.new_category("advanced",
 	name = "Advanced usage",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	sorting_data = {"light", "console", "commands", "privs", "movement_modes", "settings", "online"},
+	sorting_data = {"console", "commands", "privs", "movement_modes", "settings", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -690,7 +689,7 @@ Players with the “privs” privilege can modify privileges at will:
 In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
 }})
 
-doc.new_entry("advanced", "light", {
+doc.new_entry("basics", "light", {
 	name = "Light",
 	data = { text =
 [=[As the world is entirely block-based, so is the light in the world. Each block has its own brightness. The brightness of a block is expressed in a “light level” which ranges from 0 (total darkness) to 15 (as bright as the sun).

@@ -40,7 +40,7 @@ doc.new_entry("basics", "minetest", {
 
 The player is thrown into a huge world made out of cubes or blocks. These cubes usually make the landscape they blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games in Minetest (also called “subgames”) can, however, be much more complex than this.
 
-A core feature of Minetest is the built-in modding capability. Mods allow one or more certain aspects of an existing game to be modified. Minetest mods can be as simple as adding a few decorational blocks or very complex by e.g. introducing new gameplay concepts, generating a completely different kind of world, and many other things.
+A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.
 
 Minetest can be played alone or online together with multiple players. When playing online, from the player perspective all mods will work out of the box with no need for additional tools as they are entirely provided by the server.
 
@@ -94,12 +94,12 @@ Extended movement (requires privileges):
 
 World interaction:
 • Left mouse button: Punch / mine blocks / take items
-• Right mouse button: Use pointed block (if applicable); build block otherwise
-• Shift+Right mouse button: Build blocks without using pointed block
+• Right mouse button: Use pointed block or build
+• Shift+Right mouse button: Build
 • Roll mouse wheel: Select next/previous item in hotbar
 • 0-9: Select item in hotbar directly
-• Q: Drop wielded item stack
-• Shift+Q: Drop 1 item of wielded item stack
+• Q: Drop item stack
+• Shift+Q: Drop 1 item
 • I: Show/hide inventory menu 
 
 Inventory interaction:
@@ -108,11 +108,11 @@ See the entry “Inventory”.
 Interface:
 • Esc: Open menu window (pauses in single-player mode) or close current window
 • F1: Show/hide HUD
-• F2: Show/hide chat and the “Minetest” text
+• F2: Show/hide chat
 • F7: Toggle camera mode
 • F8: Toggle cinematic mode
 • F9: Toggle minimap, minimap mode and zoom
-• Shift+F9: Toggle minimap shape (square or circle)
+• Shift+F9: Toggle minimap shape
 • F10: Open/close console/chat log
 • F12: Take a screenshot
 
@@ -168,9 +168,9 @@ An item stack is a collection of items of the same type which fits into a single
 
 Items have several properties, including the following:
 
-• Maximum stack size: Number of items which fit on a single stack of this item
+• Maximum stack size: Number of items which fit on 1 item stack
 • Pointing range: How close things must be to be pointed while wielding this item
-• Group memberships: An item can be a member of any number of groups (see “Basics > Groups”)
+• Group memberships: See “Basics > Groups”
 • May be used for crafting or cooking
 
 A dropped item stack can be collected by punching it.]=]
@@ -278,8 +278,9 @@ The time it takes to mine a block depends on the mining ratings and the mining l
 
 Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a mining level of 0 or larger.
 
-After mining, a block will leave a “drop” behind. This is a number of items you get after mining. Blocks usually drop themselves. The following drop types are possible:
-• Always drops one or more items
+After mining, a block will leave a “drop” behind. This is a number of items you get after mining. The following drop types are possible:
+• Always drops itself (most common)
+• Always drops the same items
 • Drops items based on probability
 • Drops nothing]=],
 		images = {{image="doc_basics_tools_mining.png"}},
@@ -292,7 +293,7 @@ doc.new_entry("basics", "build", {
 		text =
 [=[Allmost all blocks can be built (or placed). Building is very simple and has no delay.
 
-To build your wielded block, pointing at a block and right-click. If the pointed block reacts on a right-click, hold down the sneak key while clicking to build.
+To build your wielded block, point at a block in the world and right-click. If this is not possible because the pointed block has a special right-click action, hold down the sneak key before right-clicking.
 
 Blocks can almost always be built at pointable blocks. One exception are blocks attached to the floor; these can only be built on the floor.
 
@@ -352,20 +353,20 @@ doc.new_entry("basics", "craft", {
 	name = "Crafting",
 	data = {
 		text =
-[=[Crafting is the task of taking several items and combining them to form a new item.
+[=[Crafting is the task of combining several items to form a new item.
 
-To craft something, you need one or more items, a crafting grid (C) and a crafting recipe. A crafting grid is like a normal inventory which can also be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O), in which the result of a craft appears when you placed items correctly. Note this is initially just a preview. Crafting grids come in different sizes, the most common is 3×3 slots. The crafting grid size limits what you can craft: A 4×4 crafting recipe can only be crafted in a 4×4 crafting grid or larger.
+To craft something, you need one or more items, a crafting grid (C) and a crafting recipe. A crafting grid is like a normal inventory which can also be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O). Here the result will appear when you placed items correctly. This is just a preview, not the actual item. Crafting grids can come in different sizes which limits the possible recipes you can craft.
 
 To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place item into the output slot.
 
-A description on how to craft a particular item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the on-line manual of the subgame (if one is available).
+A description on how to craft a particular item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the online manual of the subgame (if one is available).
 
 Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
 
-There are multiple types of crafting recipes: Shaped, shapeless, cooking and repairing.
+There are multiple types of crafting recipes:
 
 • Shaped (image 2): Items need to be placed in a particular shape
-• Shapeless (images 4 and 5): Items need to be placed somehow, but their positions don't matter (images 4 and 5 show the same recipe)
+• Shapeless (images 4 and 5): Items need to be placed somewhere in input (images 4 and 5 show the same recipe)
 • Cooking: Explained in “Basics > Cooking”
 • Repairing (image 6): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
 

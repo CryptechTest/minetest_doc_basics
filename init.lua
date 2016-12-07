@@ -162,7 +162,7 @@ doc.new_entry("basics", "items", {
 	name="Items",
 	data = {
 		text =
-[=[Items are things you can carry along and store in inventories. They serve a variety of purposes, such as crafting, smelting, building, mining, and more. Types of items include blocks, tools and weapons.
+[=[Items are things you can carry along and store in inventories. They can be used for crafting, smelting, building, mining, and more. Types of items include blocks, tools, weapons and items for crafing only.
 
 An item stack is a collection of items of the same type which fits into a single item slot. Item stacks can be dropped on the ground. Items which drop into the same coordinates will form an item stack.
 
@@ -173,8 +173,7 @@ Items have several properties, including the following:
 • Group memberships: An item can be a member of any number of groups (see “Basics > Groups”)
 • May be used for crafting or cooking
 
-A dropped item stack can be collected by punching it.
-]=]
+A dropped item stack can be collected by punching it.]=]
 }})
 
 doc.new_entry("basics", "tools", {
@@ -182,11 +181,11 @@ doc.new_entry("basics", "tools", {
 	data = { text =
 [=[Some items may serve as a tool when wielded. Any item which has some special use which can be directly used by its wielder is considered a tool.
 
-A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. Weapons are a kind of tool in Minetest. There are of course many other possibl tools. Special actions of tools are usually done with clicks.
+A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. Weapons are a kind of tool in Minetest. There are of course many other possible tools. Special actions of tools are usually done by left-click or right-click.
 
-When nothing is wielded, players use their hand which may or may not act as tool and weapon (depending on the subgame). The hand is capable of collecting dropped items by punching.
+When nothing is wielded, players use their hand which may act as tool and weapon. The hand is capable of collecting dropped items by punching.
 
-Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar. If no damage bar is shown, the tool is in mit condition. Tools may be repairable by crafting, see “Basics > Crafting”.]=],
+Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar below the tool icon. If no damage bar is shown, the tool is in mit condition. Tools may be repairable by crafting, see “Basics > Crafting”.]=],
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
@@ -201,7 +200,9 @@ Melee weapons deal damage by punching players and other animate objects. There a
 • Single punch: Left-click once to deal a single punch
 • Quick punching: Hold down the left mouse button to deal repeated punches as fast as you can, but the damage of each hit will be low
 
-The two core attributes of melee weapons are maximum damage and the full punch interval. The maximum dmage is dealt after a hit when the weapon was fully recovered. The full punch interval is the time it takes for completely recovering from a punch with this weapon. 
+There are two core attributes of melee weapons:
+• Maximum damage: Damage which is dealt after a hit when the weapon was fully recovered
+• Full punch interval: Time it takes for fully recovering from a punch
 
 Look at your weapon closely: As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast you can attack, it rather limits the damage: Any hit done before the end of the full punch interval will deal reduced damage.
 
@@ -217,7 +218,7 @@ doc.new_entry("basics", "point", {
 		text =
 [=[“Pointing” means looking at something in range with the crosshair. Pointing is needed for interaction, like mining, punching, using, etc. Pointable things include blocks, dropped items, players, computer enemies and objects.
 
-To point something, it must be in the pointing range (also just called “range”) which is determined by your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.
+To point something, it must be in the pointing range (also just called “range”) of your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.
 
 A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.]=]
 }})
@@ -232,7 +233,7 @@ doc.new_entry("basics", "cam", {
 • 2: Third-person view from behind
 • 3: Third-person view from the front
 
-You can change the camera mode by pressing [F7] (but you have to close this window first).
+You can change the camera mode by pressing [F7].
 
 There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.
 
@@ -245,7 +246,7 @@ doc.new_entry("basics", "blocks", {
 	name="Blocks",
 	data = {
 		text =
-[=[The world of Minetest is made entirely out of blocks, or voxels, to be precise. Blocks can be added or removed with the correct tools.
+[=[The world of Minetest is made entirely out of blocks (voxels, to be precise). Blocks can be added or removed with the correct tools.
 
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. Their properties include:
 
@@ -253,9 +254,9 @@ Blocks can have a wide range of different properties which determine mining time
 • Pointability: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
 • Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast.
 • Climbability: While you are at a climbable block, you won't fall and you can move up and down with the jump and sneak keys. Ladders are one example.
-• Group memberships: Blocks can be member of any number of groups. Group memberships are used to determine mining properties, crafting, interactions between blocks and more.
 • Drowning damage: See the entry “Basics > Player”.
-• Liquids: See the entry “Basics > Liquids”.]=],
+• Liquids: See the entry “Basics > Liquids”.
+• Group memberships: Group memberships are used to determine mining properties, crafting, interactions between blocks and more.]=],
 }})
 
 -- TODO: Screenshot
@@ -368,14 +369,14 @@ There are multiple types of crafting recipes: Shaped, shapeless, cooking and rep
 • Cooking: Explained in “Basics > Cooking”
 • Repairing (image 6): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
 
-In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). Such recipes offer a bit more freedom in the input items. Images 7 and 8 show a group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items. Both images show the same crafting recipe.
+In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 7-9 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
 
 Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
 -- TODO: Replace image 3
 -- TODO: Maybe add images demonstrating replacements
 		images = {
 			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"}, {image="doc_basics_craft_shaped.png"},
-			{image="doc_basics_craft_repair.png"}, {image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"},
+			{image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"}, {image="doc_basics_craft_repair.png"},
 			{image="doc_basics_craft_groups_1.png"}, {image="doc_basics_craft_groups_2.png"}, {image="doc_basics_craft_groups_3.png"},
 		},
 }})
@@ -416,7 +417,7 @@ doc.new_entry("basics", "minimap", {
 
 There are 2 minimap modes and 3 zoom levels.
 
-Surface mode (image 1) is a top-down view of the world, roughly resembling the colors of the blocks this world is made on. It only shows the topmost blocks, everything below is hidden, like a satellite photo. Surface mode is useful if you got lost.
+Surface mode (image 1) is a top-down view of the world, roughly resembling the colors of the blocks this world is made of. It only shows the topmost blocks, everything below is hidden, like a satellite photo. Surface mode is useful if you got lost.
 
 Radar mode (image 2) is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. The rectangular shapes in image 2 clearly expose the position of a dungeon.
 
@@ -450,7 +451,7 @@ Putting: You can put items onto a slot if the cursor holds 1 or more items and t
 • Middle click: put 10 items of the item stack 
 
 Exchanging: You can exchange items if the cursor holds 1 or more items and the destination slot is occupied by a different item type.
-• Left, middle and right click: exchange item stacks from cursor and from selected item slot 
+• Click: exchange item stacks from cursor and from selected item slot
 
 Throwing away: If you hold an item stack and click with it somewhere outside the menu, the item stack gets thrown away into the environment.
 

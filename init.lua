@@ -19,7 +19,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"minetest", "controls", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "players", "liquids", "light", "groups", "glossary"},
+	sorting_data = {"quick_start", "minetest", "controls", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "players", "liquids", "light", "groups", "glossary"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -31,6 +31,28 @@ doc.new_category("advanced",
 	sorting_data = {"console", "commands", "privs", "movement_modes", "settings", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
+
+doc.new_entry("basics", "quick_start", {
+	name = "Quick start",
+	data = { text =
+[=[This is a very brief introduction to the basic gameplay:
+
+• Move mouse to look
+• [W], [A], [S] and [D] to move
+• [Space] to jump or go up
+• [Shift] to sneak or go down
+• Mouse wheel or [0]-[9] to select item
+• Left-click to mine blocks or attack
+• Recover from swings to deal full damage
+• Right-click to build blocks and use things
+• [I] for the inventory
+• First items in inventory appear in hotbar below
+• [F9] for the minimap
+• Put items into crafting grid (usually 3×3 grid) to craft
+• Use a crafting guide mod to learn crafting recipes or visit <http://wiki.minetest.net/wiki/Crafting>
+• Read entries in this Documentation System to learn the rest
+• [Esc] to close this window]=]
+}})
 
 doc.new_entry("basics", "minetest", {
 	name="Minetest",

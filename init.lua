@@ -3,6 +3,7 @@
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
    - Support for landing page
    - Support to modify some parts of existing entries
+   - Custom Creative Mode page
 - TODO: Add introduction to online play (if possible)
 - TODO: Ideas for advanced entries:
    - Coordinates and cardinal directions, world structure?
@@ -27,7 +28,8 @@ doc.new_category("advanced",
 	name = "Advanced usage",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	sorting_data = {"console", "commands", "privs", "movement_modes", "settings", "online"},
+	-- "creative" is supposed to be added by a mod which implements Creative Mode in order to explain it
+	sorting_data = {"console", "commands", "privs", "movement_modes", "settings", "creative", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -577,7 +579,6 @@ Technical terms:
 • Node: Other word for “block”
 ]=]}})
 
--- TODO
 doc.new_entry("advanced", "settings", {
 	name="Settings",
 	data = {
@@ -587,7 +588,7 @@ doc.new_entry("advanced", "settings", {
 These are a few of the most important gameplay settings:
 
 • Damage enabled (enable_damage): Enables the health and breath attributes for all players. If disabled, players are immortal
-• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning mostly depends on subgames but usually this means that you can access almost all items for free, can dig faster and some other “creative” changes
+• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning depends on the subgame; usual changes are: Reduced dig times, easy access to almost all items, tools never wear off, etc.
 • PvP (enable_pvp): Short for “Player vs Player”. If enabled, players can deal damage to each other
 
 For a full list of all available settings, use the “Advanced settings” dialog in the main menu.]=]

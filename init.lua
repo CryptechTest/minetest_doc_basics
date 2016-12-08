@@ -5,8 +5,6 @@
    - Custom Creative Mode page
 - TODO: Add introduction to online play (if possible)
 - TODO: Ideas for advanced entries:
-   - Coordinates and cardinal directions, world structure?
-   - Itemstrings
    - Sneak Glitch?
    - Rendering (far view, etc.)
    - Day/night cycle
@@ -28,7 +26,7 @@ doc.new_category("advanced",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
 	-- "creative" is supposed to be added by a mod which implements Creative Mode in order to explain it
-	sorting_data = {"console", "commands", "privs", "movement_modes", "settings", "creative", "online"},
+	sorting_data = {"console", "commands", "privs", "movement_modes", "coordinates", "settings", "creative", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -729,4 +727,26 @@ Sunlight will preserve its brightness as long it only passes fully transparent b
 
 Note that “transparency” here does not always mean you can see through a block. It only means that the block is able to carry brightness from its neighboring blocks.]=],
 		images = {{image="doc_basics_light_torch.png"}, {image="doc_basics_light_test.png"}}
+}})
+
+doc.new_entry("advanced", "coordinates", {
+	name = "Coordinates",
+	data = { text =
+[=[The Minetest world is a large cube. And because of this, a position in the world can be easily expressed with cartesian coordinates. That is, for each position in the world, there are 3 values X, Y and Z.
+
+Like this: (5, 45, -12)
+
+This refers to the position where X=5, Y=45 and Z=-12. The 3 letters are called “axes”: Y is for the height. X and Z are for the horizontal position.
+
+The values for X, Y and Z work like this:
+
+• If you go up, Y increases
+• If you go down, Y decreases
+• If you follow the sun, X increases
+• If you go to the reverse direction, X decreases
+• Follow the sun, then go right: Z increases
+• Follow the sun, then go left: Z decreases
+• The side length of a full cube is 1
+
+You can view your current position in the debug screen (open with [F5]). This is considered cheating in some games.]=]
 }})

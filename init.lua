@@ -1,13 +1,12 @@
 --[[
+- TODO: Allow to disable images to save bandwidth
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
    - Support for landing page
    - Support to modify some parts of existing entries
-   - Custom Creative Mode page
 - TODO: Add introduction to online play (if possible)
 - TODO: Ideas for advanced entries:
    - Sneak Glitch?
    - Rendering (far view, etc.)
-   - Day/night cycle
 ]]
 
 
@@ -391,7 +390,6 @@ There are multiple types of crafting recipes:
 In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
 
 Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
--- TODO: Maybe add images demonstrating replacements
 		images = {
 			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"},
 			{image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"}, {image="doc_basics_craft_repair.png"},

@@ -1,5 +1,4 @@
 --[[
-- TODO: Consider adding more categories if entry count gets too high
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
    - Support for landing page
    - Support to modify some parts of existing entries
@@ -402,7 +401,7 @@ Rarely, crafting recipes have replacements. This means, whenever you perform a c
 		},
 }})
 
--- TODO
+-- TODO: This entry is too vague. Rewrite!
 doc.new_entry("basics", "cook", {
 	name = "Cooking",
 	data = {

@@ -36,8 +36,8 @@ doc.new_entry("basics", "quick_start", {
 
 • Move mouse to look
 • [W], [A], [S] and [D] to move
-• [Space] to jump or go up
-• [Shift] to sneak or go down
+• [Space] to jump or move upwards
+• [Shift] to sneak or move downwards
 • Mouse wheel or [0]-[9] to select item
 • Left-click to mine blocks or attack
 • Recover from swings to deal full damage
@@ -113,7 +113,7 @@ Extended movement (requires privileges):
 
 World interaction:
 • Left mouse button: Punch / mine blocks / take items
-• Right mouse button: Use pointed block or build
+• Right mouse button: Build or use pointed block
 • Shift+Right mouse button: Build
 • Roll mouse wheel: Select next/previous item in hotbar
 • 0-9: Select item in hotbar directly
@@ -122,10 +122,10 @@ World interaction:
 • I: Show/hide inventory menu 
 
 Inventory interaction:
-See the entry “Inventory”.
+See the entry “Basics > Inventory”.
 
 Interface:
-• Esc: Open menu window (pauses in single-player mode) or close current window
+• Esc: Open menu window (pauses in single-player mode) or close window
 • F1: Show/hide HUD
 • F2: Show/hide chat
 • F7: Toggle camera mode
@@ -156,7 +156,7 @@ doc.new_entry("basics", "players", {
 [=[Players (actually: “player characters”) are the characters which users control.
 
 Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).
-Players are capable of walking, sneaking, jumping, climbing ladders, swimming, diving, mining, building, fighting and using tools and blocks.
+Players are capable of walking, sneaking, jumping, climbing, swimming, diving, mining, building, fighting and using tools and blocks.
 
 Players can take damage for a variety of reasons, here are some:
 • Taking fall damage
@@ -217,13 +217,13 @@ doc.new_entry("basics", "weapons", {
 
 Melee weapons deal damage by punching players and other animate objects. There are two ways to attack:
 • Single punch: Left-click once to deal a single punch
-• Quick punching: Hold down the left mouse button to deal repeated punches as fast as you can, but the damage of each hit will be low
+• Quick punching: Hold down the left mouse button to deal quick repeated punches
 
 There are two core attributes of melee weapons:
 • Maximum damage: Damage which is dealt after a hit when the weapon was fully recovered
 • Full punch interval: Time it takes for fully recovering from a punch
 
-Look at your weapon closely: As long it is still moving, the full punch interval is not over yet. The full punch interval does not limit how fast you can attack, it rather limits the damage: Any hit done before the end of the full punch interval will deal reduced damage.
+A weapon only deals full damage when it has fully recovered from a previous punch. Otherwise, the weapon will deal only reduced damage. This means, quick punching is very fast, but also deals rather low damage. Note the full punch inverval does not limit how fast you can attack.
 
 There is a rule which sometimes makes attacks impossible: Players, animate objects and weapons belong to damage groups. A weapon only deals damage to those who share at least one damage group with it. So if you're using the wrong weapon, you might not deal any damage at all.]=]
 }})
@@ -268,13 +268,13 @@ doc.new_entry("basics", "blocks", {
 
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. Their properties include:
 
-• Collidability: Collidable blocks can normally not be passed through; players can walk on them. Non-collidable blocks can be passed through freely.
-• Pointability: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools.
-• Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast.
-• Climbability: While you are at a climbable block, you won't fall and you can move up and down with the jump and sneak keys. Ladders are one example.
-• Drowning damage: See the entry “Basics > Player”.
-• Liquids: See the entry “Basics > Liquids”.
-• Group memberships: Group memberships are used to determine mining properties, crafting, interactions between blocks and more.]=],
+• Collidable: Collidable blocks can not be passed through; players can walk on them. Non-collidable blocks can be passed through freely
+• Pointable: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools
+• Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast
+• Climbable: While you are at a climbable block, you won't fall and you can move up and down with the jump and sneak keys
+• Drowning damage: See the entry “Basics > Player”
+• Liquids: See the entry “Basics > Liquids”
+• Group memberships: Group memberships are used to determine mining properties, crafting, interactions between blocks and more]=],
 }})
 
 doc.new_entry("basics", "mine", {
@@ -326,14 +326,14 @@ doc.new_entry("basics", "liquids", {
 [=[Liquids are special dynamic blocks. Liquids like to spread and flow to their surrounding blocks. Players can swim and drown in them.
 
 Liquids usually come in two forms: In source form (S) and in flowing form (F).
-Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. If no special event happens, a liquid source will keep its place forever and it will never drain out.
-Flowing liquids take a sloped form. Flowing liquids spread around the map until they drain. A flowing liquid can not sustain itself and always comes from a liquid source, either directly or indirectly. Without a liquid source, a flowing liquid will eventually drain out and disappear.
+Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. A long it is left alone, a liquid source will normally keep its place and does not drain out.
+Flowing liquids take a sloped form. Flowing liquids spread around the world until they drain. A flowing liquid can not sustain itself and always comes from a liquid source, either directly or indirectly. Without a liquid source, a flowing liquid will eventually drain out and disappear.
 
 All liquids share the following properties:
 • All properties of blocks (including drowning damage)
 • Renewability: Renewable liquids can create new sources
-• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will “spread”, ranges from 0 to 8. If 0, no flowing liquids are generated at all. Image 5 shows a liquid of flowing range 2
-• Viscosity: How slow players move through it and how fast new flowing liquids are created (i.e. how fast the liquid spreads)
+• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will spread. Possible are ranges from 0 to 8. At 0, no flowing liquids will be created. Image 5 shows a liquid of flowing range 2
+• Viscosity: How slow players move through it and how slow the liquid spreads
 
 Renewable liquids create new liquid sources at open spaces (image 2). A new liquid source is created when:
 • Two renewable liquid blocks of the same type touch each other diagonally
@@ -345,12 +345,12 @@ When those criteria are met, the open space is filled with a new liquid source o
 Swimming in a liquid is fairly straightforward: The usual direction keys for basic movement, the jump key for rising and the sneak key for sinking.
 
 The physics for swimming and diving in a liquid are:
-• The higher the viscosity, the slower your movement speed
-• If you don't do anything, you will slowly sink
+• The higher the viscosity, the slower you move
+• If you rest, you'll slowly sink
 • There is no fall damage for falling into a liquid as such
-• If you fall into a liquid, you will be slowed down on impact (but don't come instantly to a halt). Your impact depth is determined by your speed and the liquid viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage.
+• If you fall into a liquid, you will be slowed down on impact (but don't stop instantly). Your impact depth is determined by your speed and the liquid viscosity. For a safe high drop into a liquid, make sure there is enough liquid above the ground, otherwise you might hit the ground and take fall damage
 
-Liquids are usually not pointable. However, all liquids can be pointed by special items.]=],
+Liquids are often not pointable. But some special items are able to point all liquids.]=],
 		images = {
 			{ image="doc_basics_liquids_types.png",
 			  caption="A source liquid and its flowing liquids" },
@@ -374,9 +374,9 @@ doc.new_entry("basics", "craft", {
 
 To craft something, you need one or more items, a crafting grid (C) and a crafting recipe. A crafting grid is like a normal inventory which can also be used for crafting. Items need to be put in a certain pattern into the crafting grid. Next to the crafting grid is an output slot (O). Here the result will appear when you placed items correctly. This is just a preview, not the actual item. Crafting grids can come in different sizes which limits the possible recipes you can craft.
 
-To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place item into the output slot.
+To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place items into the output slot.
 
-A description on how to craft a particular item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn about crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the online manual of the subgame (if one is available).
+A description on how to craft an item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the online manual of the subgame (if one is available).
 
 Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.
 
@@ -387,9 +387,9 @@ There are multiple types of crafting recipes:
 • Cooking: Explained in “Basics > Cooking”
 • Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
 
-In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
+In some crafting recipes, some input items do not need to be a concrete item, instead they need to be a member of a group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
 
-Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
+Rarely, crafting recipes have replacements. This means, whenever you perform a craft, some items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
 		images = {
 			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"},
 			{image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"}, {image="doc_basics_craft_repair.png"},
@@ -397,17 +397,15 @@ Rarely, crafting recipes have replacements. This means, whenever you perform a c
 		},
 }})
 
--- TODO: This entry is too vague. Rewrite!
 doc.new_entry("basics", "cook", {
 	name = "Cooking",
 	data = {
 		text =
-[=[Cooking (or smelting) is a form of crafting which does not involve a crafting grid. Cooking is done with a special block (usually a furnace), an cookable item, a fuel item and time in order to yield a new item.
+[=[Cooking (or smelting) is a form of crafting which does not involve a crafting grid. Cooking is done with a special block (like a furnace), an cookable item, a fuel item and time in order to yield a new item.
 
 Each fuel item has a burning time. This is the time a single item of the fuel keeps a furnace burning.
-Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the whole cooking time to actually yield the result.
 
-How cooking works in detail depends on the subgame and mods.]=]}})
+Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the whole cooking time to actually yield the result.]=]}})
 
 doc.new_entry("basics", "hotbar", {
 	name="Hotbar",
@@ -450,7 +448,7 @@ doc.new_entry("basics", "inventory", {
 	name="Inventory",
 	data = {
 		text =
-[=[An inventory is used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can either be empty or hold one item stack. Item stacks can be moved freely between most slots.
+[=[Inventories are used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can either be empty or hold one item stack. Item stacks can be moved freely between most slots.
 You have your own inventory which is called your “player inventory”, you can open it with the inventory key (default: [I]). The first inventory slots are also used as slots in your hotbar.
 Blocks can also have their own inventory, for example, things like chests and furnaces.
 
@@ -467,12 +465,12 @@ Putting: You can put items onto a slot if the cursor holds 1 or more items and t
 • Middle click: put 10 items of the item stack 
 
 Exchanging: You can exchange items if the cursor holds 1 or more items and the destination slot is occupied by a different item type.
-• Click: exchange item stacks from cursor and from selected item slot
+• Click: exchange item stacks
 
 Throwing away: If you hold an item stack and click with it somewhere outside the menu, the item stack gets thrown away into the environment.
 
 Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The target inventory is generally the most relevant inventory in this context.
-• Sneak+Left click: Automatically transfer item stack.]=],
+• Sneak+Left click: Automatically transfer item stack]=],
 		images = {{image="doc_basics_inventory.png"}}
 }})
 
@@ -503,7 +501,7 @@ doc.new_entry("basics", "groups", {
 • Crafting recipes: Slots in a crafting recipe may not require a specific item, but instead an item which is a member of a particular group, or multiple groups
 • Digging times: Diggable blocks belong to groups which are used to determine digging times. Mining tools are capable of digging blocks belonging to certain groups
 • Block behavior: Blocks may show a special behaviour and interact with other blocks when they belong to a particular group
-• Damage and armor: Objects and players have armor groups, weapons have damage groups. See also: “Basics > Weapons”
+• Damage and armor: Objects and players have armor groups, weapons have damage groups. These groups determine damage. See also: “Basics > Weapons”
 • Other uses
 
 In the item help, many important groups are usually mentioned and explained.]=]}})
@@ -512,7 +510,7 @@ doc.new_entry("basics", "glossary", {
 	name = "Glossary",
 	data = {
 		text =
-[=[This is a list of commonly used terms in Minetest parlance:
+[=[This is a list of commonly used terms in Minetest:
 
 Controls:
 • Wielding: Holding an item in hand
@@ -526,7 +524,7 @@ Blocks:
 • Block: Cubes that the worlds are made out of
 • Mining/digging: Using a mining tool to break a block
 • Building/placing: Putting a block somewhere
-• Drop: The items you (may) get after mining a block
+• Drop: Items you get after mining a block
 • Using a block: Right-clicking a block to access its special function
 
 Items:
@@ -539,13 +537,13 @@ Items:
 • Tool: An item which you can use to do special things with when wielding
 • Range: How far away things can be to be pointed by an item
 • Mining tool: A tool which allows to break blocks
-• Craft item: An item which is (primarily or only) used for crafting
+• Craftitem: An item which is (primarily or only) used for crafting
 
 Gameplay:
 • “heart”: A single health symbol, indicates 2 HP
 • “bubble”: A single breath symbol, indicates 1 BP
 • HP: Hit point (equals half 1 “heart”)
-• BP: Breath point, indicates breath when swimming
+• BP: Breath point, indicates breath when diving
 • Mob: Computer-controlled enemy
 • Crafting: Combining multiple items to create new ones
 • Crafting guide: A helper which shows available crafting recipes
@@ -558,7 +556,7 @@ Interface
 • Hotbar: Inventory slots at the bottom
 • Statbar: Indicator made out of half-symbols, used for health and breath
 • Minimap: The map or radar at the top right
-• Crosshair: Seen in the middle, used to point to things
+• Crosshair: Seen in the middle, used to point at things
 
 Online multiplayer:
 • PvP: Player vs Player. If active, players can deal damage to each other
@@ -592,21 +590,21 @@ For a full list of all available settings, use the “Advanced settings” dialo
 doc.new_entry("advanced", "movement_modes", {
 	name = "Movement modes",
 	data = { text =
-[=[If you have the required privileges, you can use up to three special movement modes. Using the movement modes is generally considered cheating.
+[=[If you have the required privileges, you can use up to three special movement modes. Using these may be considered cheating.
 
 Fast mode:
-• Description: Allows you to move much faster. When not in fly mode, you can use the “Use” key [E] to run faster. In the client configuration, you can further customize fast mode.
-• Default key: J
+• Description: Allows you to move much faster. Hold down the the “Use” key [E] to move faster. In the client configuration, you can further customize fast mode.
+• Default key: [J]
 • Required privilege: fast
 
 Fly mode:
-• Description: While enabled, you are not subject to gravity anymore and can move freely in all directions. Use the jump key to rise and the sneak key to sink.
-• Default key: K
+• Description: Gravity doesn't affect you and you can move freely in all directions. Use the jump key to rise and the sneak key to sink.
+• Default key: [K]
 • Required privilege: fly
 
 Noclip mode:
 • Description: Allows you to move through walls. Only works when fly mode is enabled, too.
-• Default key: H
+• Default key: [H]
 • Required privilege: noclip]=]
 }})
 
@@ -616,16 +614,16 @@ doc.new_entry("advanced", "console", {
 [=[With [F10] you can open and close the console. The main use of the console is to show the chat log and enter chat messages or server commands.
 Using the chat or server command key also opens the console, but it is smaller and will be closed after you sent a message.
 
-Use the chat to communicate to other players. This requires you to have the “shout” privilege.
-Just type in the message and hit [Enter]. Chat messages can not begin with “/”.
+Use the chat to communicate with other players. This requires you to have the “shout” privilege.
+Just type in the message and hit [Enter]. Public chat messages can not begin with “/”.
 
-Write “/msg <player> <message>” to write “<message>” to <player> which can only be seen by <player>.
+You can send private messages: Say “/msg <player> <message>” in chat to send “<message>” which can only be seend by <player>.
 
-There are some special controls while the console is open:
+There are some special controls for the console:
 
 • [F10] Open/close console
-• [Enter]: Send chat message or server command
-• [Tabulator]: Try to auto-complete a partially-entered player name
+• [Enter]: Send message or command
+• [Tab]: Try to auto-complete a partially-entered player name
 • [Ctrl]+[Left]: Move cursor to the beginning of the previous word
 • [Ctrl]+[Right]: Move cursor to the beginning of the next word
 • [Ctrl]+[Backspace]: Delete previous word
@@ -678,6 +676,7 @@ Some final remarks:
 • For /give and /giveme, you need an itemstring. This is an internally used unique item identifier
 • For /spawnentity you need an entity name, which is another identifier]=]
 }})
+-- TODO: Better help on how to get an itemstring
 
 doc.new_entry("advanced", "privs", {
 	name="Privileges",
@@ -701,7 +700,7 @@ Players with the “privs” privilege can modify privileges at will:
 • /grant <player> <privilege>: Grant <privilege> to <player>
 • /revoke <player> <privilege>: Revoke <privilege> from <player>
 
-In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is considered cheating).]=]
+In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is often considered cheating).]=]
 }})
 
 doc.new_entry("basics", "light", {
@@ -723,7 +722,7 @@ Blocks have 3 levels of transparency:
 Artificial light will lose one level of brightness for each transparent or semi-transparent block it passes through, until only darkness remains (image 1).
 Sunlight will preserve its brightness as long it only passes fully transparent blocks. When it passes through a semi-transparent block, it turns to artificial light. Image 2 shows the difference.
 
-Note that “transparency” here does not always mean you can see through a block. It only means that the block is able to carry brightness from its neighboring blocks.]=],
+Note that “transparency” here only means that the block is able to carry brightness from its neighboring blocks. It is possible for a block to be transparent to light but you can't see trough the other side.]=],
 		images = {{image="doc_basics_light_torch.png"}, {image="doc_basics_light_test.png"}}
 }})
 

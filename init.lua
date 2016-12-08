@@ -169,7 +169,7 @@ Players can take damage for a variety of reasons, here are some:
 At a health of 0, the player dies. The player can just respawn in the world.
 Other consequences of death depend on the subgame. The player could lose all items, or lose the round in a competitive game.
 
-Some blocks reduce breath. While being with the head in a block which causes drowning, the breah points are reduced by 1 for every 2 seconds. If all breath is gone, the player starts to suffer drowning damage. Breath is quickly restored in any other block.
+Some blocks reduce breath. While being with the head in a block which causes drowning, the breath points are reduced by 1 for every 2 seconds. When all breath is gone, the player starts to suffer drowning damage. Breath is quickly restored in any other block.
 
 Damage can be disabled on any world. Without damage, players are immortal and health and breath are unimportant.
 
@@ -181,7 +181,7 @@ doc.new_entry("basics", "items", {
 	name="Items",
 	data = {
 		text =
-[=[Items are things you can carry along and store in inventories. They can be used for crafting, smelting, building, mining, and more. Types of items include blocks, tools, weapons and items for crafing only.
+[=[Items are things you can carry along and store in inventories. They can be used for crafting, smelting, building, mining, and more. Types of items include blocks, tools, weapons and items only used for crafting.
 
 An item stack is a collection of items of the same type which fits into a single item slot. Item stacks can be dropped on the ground. Items which drop into the same coordinates will form an item stack.
 
@@ -205,7 +205,7 @@ A common tool in Minetest are, of course, mining tools. These are important to b
 
 When nothing is wielded, players use their hand which may act as tool and weapon. The hand is capable of collecting dropped items by punching.
 
-Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar below the tool icon. If no damage bar is shown, the tool is in mit condition. Tools may be repairable by crafting, see “Basics > Crafting”.]=],
+Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar below the tool icon. If no damage bar is shown, the tool is in mint condition. Tools may be repairable by crafting, see “Basics > Crafting”.]=],
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
@@ -214,7 +214,7 @@ Many tools will wear off when using them and may eventually get destroyed. The d
 doc.new_entry("basics", "weapons", {
 	name="Weapons",
 	data = { text =
-[=[Some items are useable as a melee weapon when wielded. Weapons share most of the properties of tools.
+[=[Some items are usable as a melee weapon when wielded. Weapons share most of the properties of tools.
 
 Melee weapons deal damage by punching players and other animate objects. There are two ways to attack:
 • Single punch: Left-click once to deal a single punch
@@ -308,7 +308,7 @@ doc.new_entry("basics", "build", {
 	name = "Building",
 	data = {
 		text =
-[=[Allmost all blocks can be built (or placed). Building is very simple and has no delay.
+[=[Almost all blocks can be built (or placed). Building is very simple and has no delay.
 
 To build your wielded block, point at a block in the world and right-click. If this is not possible because the pointed block has a special right-click action, hold down the sneak key before right-clicking.
 
@@ -563,7 +563,7 @@ Interface
 • Crosshair: Seen in the middle, used to point to things
 
 Online multiplayer:
-• PvP: Player vs Player. If avtive, players can deal damage to each other
+• PvP: Player vs Player. If active, players can deal damage to each other
 • Griefing: Destroying the buildings of other players against their will
 • Protection: Mechanism to own areas of the world, which only allows the owners to modify blocks inside
 
@@ -594,7 +594,7 @@ For a full list of all available settings, use the “Advanced settings” dialo
 doc.new_entry("advanced", "movement_modes", {
 	name = "Movement modes",
 	data = { text =
-[=[If you have the requiried privileges, you can use up to three special movement modes. Using the movement modes is generally considered cheating.
+[=[If you have the required privileges, you can use up to three special movement modes. Using the movement modes is generally considered cheating.
 
 Fast mode:
 • Description: Allows you to move much faster. When not in fly mode, you can use the “Use” key [E] to run faster. In the client configuration, you can further customize fast mode.
@@ -732,7 +732,7 @@ Note that “transparency” here does not always mean you can see through a blo
 doc.new_entry("advanced", "coordinates", {
 	name = "Coordinates",
 	data = { text =
-[=[The Minetest world is a large cube. And because of this, a position in the world can be easily expressed with cartesian coordinates. That is, for each position in the world, there are 3 values X, Y and Z.
+[=[The Minetest world is a large cube. And because of this, a position in the world can be easily expressed with Cartesian coordinates. That is, for each position in the world, there are 3 values X, Y and Z.
 
 Like this: (5, 45, -12)
 

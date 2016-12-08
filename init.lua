@@ -645,34 +645,33 @@ There is also an input history. Minetest saves your previous console inputs whic
 • [Down]: Go to next entry in history]=]
 }})
 
--- TODO
 doc.new_entry("advanced", "commands", {
 	name="Server commands",
 	data = { text =
-[=[Server commands (also called “chat commands”) are little helpers for somewhat advanced users. You will normally not need to use these commands in normal gameplay, but they might come in handy to perform some more “technical” tasks. Server commands work both in multi-player and single-player mode.
+[=[Server commands (also called “chat commands”) are little helpers for advanced users. You don't need to use these commands when playing. But they might come in handy to perform some more technical tasks. Server commands work both in multi-player and single-player mode.
 
-Server commands can be entered by any player via the chat to perform a special server action. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server. In Minetest, there is a small set of basic commands which are always available, other commands can be added by mods.
+Server commands can be entered by players using the chat to perform a special server action. There are a few commands which can be issued by everyone, but some commands only work if you have certain privileges granted on the server. There is a small set of basic commands which are always available, other commands can be added by mods.
 
-To issue a command, simply type it like a chat message or press the Minetest command key (default: “/”). All commands have to begin with “/”, for example “/mods”. The Minetest command key is the same as the chat key, except that the slash is already entered.
- Commands may or may not give a response in the chat log, but errors will generally be shown in the chat. Try it for yourselves: Close this window and type in the “/mods” command. This will give you the list of available mods on this server.
+To issue a command, simply type it like a chat message or press Minetest's command key (default: [/]). All commands have to begin with “/”, for example “/mods”. The Minetest command key does the same as the chat key, except that the slash is already entered.
+Commands may or may not give a response in the chat log, but errors will generally be shown in the chat. Try it for yourselves: Close this window and type in the “/mods” command. This will give you the list of available mods on this server.
 
 “/help all” is a very important command: You get a list of all available commands on the server, a short explanation and the allowed parameters. This command is also important because the available commands often differ per server.
 
 Commands are followed by zero or more parameters.
 
-In the command reference, you see some placeholders which you need to replace with an actual value. These are the rules:
+In the command reference, you see some placeholders which you need to replace with an actual value. Here's an explanation:
 
 • Text in greater-than and lower-than signs (e.g. “<param>”): Placeholder for a parameter
 • Anything in square brackets (e.g. “[text]”) is optional and can be omitted
-• Pipe or slash (e.g. “text1 | text2 | text3”): Alternation. One of multiple texts (e.g. “text2”).
+• Pipe or slash (e.g. “text1 | text2 | text3”): Alternation. One of multiple texts must be used (e.g. “text2”)
 • Parenthesis: (e.g. “(word1 word2) | word3”): Groups multiple words together, used for alternations
 • Everything else is to be read as literal text
 
 Here are some examples to illustrate the command syntax:
 
 • /mods: No parameters. Just enter “/mods”
-• /me <action>: 1 parameter. You have to enter “/me ” followed by any text you like, e.g. “/me orders pizza”
-• /give <name> <ItemString>: Two parameters. Valid example: “/give Player default:apple”
+• /me <action>: 1 parameter. You have to enter “/me ” followed by any text, e.g. “/me orders pizza”
+• /give <name> <ItemString>: Two parameters. Example: “/give Player default:apple”
 • /help [all|privs|<cmd>]: Valid inputs are “/help”, “/help all”, “/help privs”, or “/help ” followed by a command name, like “/help time”
 • /spawnentity <EntityName> [<X>,<Y>,<Z>]: Valid inputs include “/spawnentity boats:boat” and “/spawnentity boats:boat 0,0,0”
 

@@ -1,5 +1,4 @@
 --[[
-- TODO: Write a easy-to-read intro page
 - TODO: Consider adding more categories if entry count gets too high
 - TODO: Add API for subgame-specific changes so the entries are not too awfully generic
    - Support for landing page
@@ -179,7 +178,6 @@ In multi-player mode, the name of other players is written above their head.]=],
 		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
 }})
 
--- TODO: Screenshots
 doc.new_entry("basics", "items", {
 	name="Items",
 	data = {
@@ -195,7 +193,8 @@ Items have several properties, including the following:
 • Group memberships: See “Basics > Groups”
 • May be used for crafting or cooking
 
-A dropped item stack can be collected by punching it.]=]
+A dropped item stack can be collected by punching it.]=],
+		images = {{image="doc_basics_inventory_detail.png"}, {image="doc_basics_items_dropped.png"}},
 }})
 
 doc.new_entry("basics", "tools", {
@@ -232,8 +231,6 @@ There is a rule which sometimes makes attacks impossible: Players, animate objec
 }})
 
 
-
--- TODO: Screenshot(s)
 doc.new_entry("basics", "point", {
 	name="Pointing",
 	data = {
@@ -242,7 +239,8 @@ doc.new_entry("basics", "point", {
 
 To point something, it must be in the pointing range (also just called “range”) of your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.
 
-A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.]=]
+A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.]=],
+		images = {{ image = "doc_basics_pointing.png" }},
 }})
 
 doc.new_entry("basics", "cam", {
@@ -281,7 +279,6 @@ Blocks can have a wide range of different properties which determine mining time
 • Group memberships: Group memberships are used to determine mining properties, crafting, interactions between blocks and more.]=],
 }})
 
--- TODO: Screenshot
 doc.new_entry("basics", "mine", {
 	name = "Mining",
 	data = {
@@ -308,7 +305,6 @@ After mining, a block will leave a “drop” behind. This is a number of items 
 		images = {{image="doc_basics_tools_mining.png"}},
 }})
 
--- TODO: Screenshot
 doc.new_entry("basics", "build", {
 	name = "Building",
 	data = {
@@ -319,7 +315,8 @@ To build your wielded block, point at a block in the world and right-click. If t
 
 Blocks can almost always be built at pointable blocks. One exception are blocks attached to the floor; these can only be built on the floor.
 
-Normally, blocks are built in front of the pointed side of the pointed block. A few blocks are different: When you try to build at them, they are replaced.]=]
+Normally, blocks are built in front of the pointed side of the pointed block. A few blocks are different: When you try to build at them, they are replaced.]=],
+		images = {{image="doc_basics_build.png"}},
 }})
 
 
@@ -388,17 +385,16 @@ Crafting recipes consist of at least one input item and exactly one stack of out
 There are multiple types of crafting recipes:
 
 • Shaped (image 2): Items need to be placed in a particular shape
-• Shapeless (images 4 and 5): Items need to be placed somewhere in input (images 4 and 5 show the same recipe)
+• Shapeless (images 3 and 4): Items need to be placed somewhere in input (both images show the same recipe)
 • Cooking: Explained in “Basics > Cooking”
-• Repairing (image 6): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
+• Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames
 
-In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 7-9 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
+In some crafting recipes, some or all input item do not need to be a concrete item, instead it needs to be a member of a particular group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.
 
 Rarely, crafting recipes have replacements. This means, whenever you perform a craft, particular items in the crafting grid will not be consumed, but instead will be replaced by another item.]=],
--- TODO: Replace image 3
 -- TODO: Maybe add images demonstrating replacements
 		images = {
-			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"}, {image="doc_basics_craft_shaped.png"},
+			{image="doc_basics_craft_grid.png"}, {image="doc_basics_craft_shaped.png"},
 			{image="doc_basics_craft_shapeless_1.png"}, {image="doc_basics_craft_shapeless_2.png"}, {image="doc_basics_craft_repair.png"},
 			{image="doc_basics_craft_groups_1.png"}, {image="doc_basics_craft_groups_2.png"}, {image="doc_basics_craft_groups_3.png"},
 		},
@@ -480,7 +476,7 @@ Throwing away: If you hold an item stack and click with it somewhere outside the
 
 Quick transfer: You can quickly transfer an item stack to/from the player inventory to/from another item's inventory slot like a furnace, chest, or any other item with an inventory slot when that item's inventory is accessed. The target inventory is generally the most relevant inventory in this context.
 • Sneak+Left click: Automatically transfer item stack.]=],
-		images = {{image="doc_basics_inventory.png"}, {image="doc_basics_inventory_detail.png"}},
+		images = {{image="doc_basics_inventory.png"}}
 }})
 
 doc.new_entry("advanced", "online", {
@@ -729,8 +725,9 @@ Blocks have 3 levels of transparency:
 • Semi-transparent: Sunlight and artificial light go through with losses
 • Opaque: No light passes through
 
-Artificial light will lose one level of brightness for each transparent or semi-transparent block it passes through, until only darkness remains.
-Sunlight will preserve its brightness as long it only passes fully transparent blocks. When it passes through a semi-transparent block, it turns to artificial light.
+Artificial light will lose one level of brightness for each transparent or semi-transparent block it passes through, until only darkness remains (image 1).
+Sunlight will preserve its brightness as long it only passes fully transparent blocks. When it passes through a semi-transparent block, it turns to artificial light. Image 2 shows the difference.
 
-Note that “transparency” here does not always mean you can see through a block. It only means that the block is able to carry brightness from its neighboring blocks.]=]
+Note that “transparency” here does not always mean you can see through a block. It only means that the block is able to carry brightness from its neighboring blocks.]=],
+		images = {{image="doc_basics_light_torch.png"}, {image="doc_basics_light_test.png"}}
 }})

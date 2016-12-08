@@ -713,7 +713,7 @@ doc.new_entry("basics", "light", {
 
 There are two types of light: Sunlight and artificial light.
 
-Artificial light is emitteed by luminous blocks. Artificial light has a light level from 1-14.
+Artificial light is emitted by luminous blocks. Artificial light has a light level from 1-14.
 Sunlight is the brightest light and always goes perfectly straight down from the sky at each time of the day. blocks. At night, the sunlight will become moonlight instead, which still provides a small amount of light. The light level of sunlight is 15.
 
 Blocks have 3 levels of transparency:

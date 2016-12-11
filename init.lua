@@ -432,12 +432,12 @@ Surface mode (image 1) is a top-down view of the world, roughly resembling the c
 
 Radar mode (image 2) is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. The rectangular shapes in image 2 clearly expose the position of a dungeon.
 
-There are also two different direction modes. In “square mode”, the rotation of the minimap are fixed. But if you press [Shift]+[F9] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
+There are also two different rotation modes. In “square mode”, the rotation of the minimap is fixed. If you press [Shift]+[F9] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
 
 In some subgames, the minimap may be disabled.
 
 • Toggle minimap mode: [F9]
-• Toggle minimap rotating: [Shift]+[F9]]=],
+• Toggle minimap rotation mode: [Shift]+[F9]]=],
 		images = {{image="doc_basics_minimap_map.png"}, {image="doc_basics_minimap_radar.png"}, {image="doc_basics_minimap_round.png"}},
 }})
 

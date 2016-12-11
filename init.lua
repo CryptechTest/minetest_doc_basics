@@ -55,13 +55,13 @@ doc.new_entry("basics", "minetest", {
 	name="Minetest",
 	data = {
 		text =
-[=[Minetest is a free software game engine to create various games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
+[=[Minetest is a free software game engine for games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).
 
 The player is thrown into a huge world made out of cubes or blocks. These cubes usually make the landscape they blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games in Minetest (also called “subgames”) can, however, be much more complex than this.
 
-A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.
+A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or be very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.
 
-Minetest can be played alone or online together with multiple players. When playing online, from the player perspective all mods will work out of the box with no need for additional tools as they are entirely provided by the server.
+Minetest can be played alone or online together with multiple players. Online play will work out of the box with any mods, with no need for additional software as they are entirely provided by the server.
 
 Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.
 
@@ -73,8 +73,8 @@ Minetest as well as Minetest Game are both unfinished at the moment, so please f
 doc.new_entry("basics", "sneak", {
 	name="Sneaking",
 	data = { text =
-[=[Sneaking is a special move. Sneaking makes you walk slower and prevents you from falling off the edge of a block.
-To sneak, keep the sneak key (default: [Shift]) pressed. When you release it, stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!
+[=[Sneaking makes you walk slower and prevents you from falling off the edge of a block.
+To sneak, hold down the sneak key (default: [Shift]). When you release it, you stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!
 
 • Sneak: [Shift]
 
@@ -88,7 +88,7 @@ Sneaking might be disabled by mods. In this case, you still walk slower by sneak
 
 doc.new_entry("basics", "controls", {
 	name="Controls",
-	data = { text = [=[This entry lists all default controls in Minetest:
+	data = { text = [=[These are the default controls:
 
 Basic movement:
 • Moving the mouse around: Look around
@@ -131,7 +131,7 @@ Interface:
 • F7: Toggle camera mode
 • F8: Toggle cinematic mode
 • F9: Toggle minimap, minimap mode and zoom
-• Shift+F9: Toggle minimap shape
+• Shift+F9: Toggle minimap rotation mode
 • F10: Open/close console/chat log
 • F12: Take a screenshot
 
@@ -267,7 +267,7 @@ doc.new_entry("basics", "nodes", {
 Blocks can have a wide range of different properties which determine mining times, behavior, looks, shape, and much more. Their properties include:
 
 • Collidable: Collidable blocks can not be passed through; players can walk on them. Non-collidable blocks can be passed through freely
-• Pointable: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks as if they were not there. Liquids are usually non-pointable but they can be pointed at by some special tools
+• Pointable: Pointable blocks show a wireframe or a halo box when pointed. But you will just point through non-pointable blocks. Liquids are usually non-pointable but they can be pointed at by some special tools
 • Mining properties: Mining properties determine by which tools a block can be mined (if at all) and how fast
 • Climbable: While you are at a climbable block, you won't fall and you can move up and down with the jump and sneak keys
 • Drowning damage: See the entry “Basics > Player”
@@ -425,7 +425,7 @@ doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
 		text =
-[=[Press [F9] to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to toggle through different minimap modes and zoom levels. The minimap also shows the positions of other players.
+[=[Press [F9] to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to select different minimap modes and zoom levels. The minimap also shows the positions of other players.
 
 There are 2 minimap modes and 3 zoom levels.
 
@@ -448,7 +448,7 @@ doc.new_entry("basics", "inventory", {
 		text =
 [=[Inventories are used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can either be empty or hold one item stack. Item stacks can be moved freely between most slots.
 You have your own inventory which is called your “player inventory”, you can open it with the inventory key (default: [I]). The first inventory slots are also used as slots in your hotbar.
-Blocks can also have their own inventory, for example, things like chests and furnaces.
+Blocks can also have their own inventory, e.g. chests and furnaces.
 
 Inventory controls:
 
@@ -519,7 +519,7 @@ Controls:
 • Climbing: Moving up or down a climbable block
 
 Blocks:
-• Block: Cubes that the worlds are made out of
+• Block: Cubes that the worlds are made of
 • Mining/digging: Using a mining tool to break a block
 • Building/placing: Putting a block somewhere
 • Drop: Items you get after mining a block
@@ -563,7 +563,7 @@ Online multiplayer:
 
 Technical terms:
 • Minetest: This game engine
-• Minetest Game: A subgame for Minetest from the Minetest developers
+• Minetest Game: A subgame for Minetest by the Minetest developers
 • Subgame: A complete playing experience to be used in Minetest; such as a game or sandbox or similar
 • Mod: A single subsystem which adds or modifies functionality; is the basic building block of subgames and can be used to further enhance or modify them
 • Privilege: Allows a player to do something

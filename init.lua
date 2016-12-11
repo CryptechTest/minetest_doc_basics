@@ -221,7 +221,7 @@ There are two core attributes of melee weapons:
 • Maximum damage: Damage which is dealt after a hit when the weapon was fully recovered
 • Full punch interval: Time it takes for fully recovering from a punch
 
-A weapon only deals full damage when it has fully recovered from a previous punch. Otherwise, the weapon will deal only reduced damage. This means, quick punching is very fast, but also deals rather low damage. Note the full punch inverval does not limit how fast you can attack.
+A weapon only deals full damage when it has fully recovered from a previous punch. Otherwise, the weapon will deal only reduced damage. This means, quick punching is very fast, but also deals rather low damage. Note the full punch interval does not limit how fast you can attack.
 
 There is a rule which sometimes makes attacks impossible: Players, animate objects and weapons belong to damage groups. A weapon only deals damage to those who share at least one damage group with it. So if you're using the wrong weapon, you might not deal any damage at all.]=]
 }})
@@ -614,7 +614,7 @@ Using the chat or server command key also opens the console, but it is smaller a
 Use the chat to communicate with other players. This requires you to have the “shout” privilege.
 Just type in the message and hit [Enter]. Public chat messages can not begin with “/”.
 
-You can send private messages: Say “/msg <player> <message>” in chat to send “<message>” which can only be seend by <player>.
+You can send private messages: Say “/msg <player> <message>” in chat to send “<message>” which can only be seen by <player>.
 
 There are some special controls for the console:
 

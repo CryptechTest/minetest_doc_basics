@@ -15,7 +15,7 @@ doc.new_category("basics",
 	name="Basics",
 	description = "Everything you need to know about Minetest to get started with playing",
 	sorting = "custom",
-	sorting_data = {"quick_start", "minetest", "controls", "point", "items", "inventory", "hotbar", "tools", "weapons", "blocks", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "players", "liquids", "light", "groups", "glossary"},
+	sorting_data = {"quick_start", "minetest", "controls", "point", "items", "inventory", "hotbar", "tools", "weapons", "nodes", "mine", "build", "craft", "cook", "minimap", "cam", "sneak", "players", "liquids", "light", "groups", "glossary"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
@@ -258,7 +258,7 @@ There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode
 		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})
 
-doc.new_entry("basics", "blocks", {
+doc.new_entry("basics", "nodes", {
 	name="Blocks",
 	data = {
 		text =
@@ -273,6 +273,7 @@ Blocks can have a wide range of different properties which determine mining time
 • Drowning damage: See the entry “Basics > Player”
 • Liquids: See the entry “Basics > Liquids”
 • Group memberships: Group memberships are used to determine mining properties, crafting, interactions between blocks and more]=],
+		images = {{image="doc_basics_nodes.png"}}
 }})
 
 doc.new_entry("basics", "mine", {

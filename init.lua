@@ -208,8 +208,6 @@ Many tools will wear off when using them and may eventually get destroyed. The d
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
--- TODO: Check the facts on damage groups!
--- TODO: Screenshot
 doc.new_entry("basics", "weapons", {
 	name="Weapons",
 	data = { text =
@@ -422,7 +420,6 @@ The selected item is also your wielded item.]=],
 		images = {{image="doc_basics_hotbar.png"}, {image="doc_basics_hotbar_relations.png"}},
 }})
 
--- FIXME: Be careful when talking about “North”
 doc.new_entry("basics", "minimap", {
 	name="Minimap",
 	data = {
@@ -435,7 +432,7 @@ Surface mode (image 1) is a top-down view of the world, roughly resembling the c
 
 Radar mode (image 2) is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less "dense" it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. The rectangular shapes in image 2 clearly expose the position of a dungeon.
 
-There are also two different direction modes. Normally, “up” on the minimap is always pointing to the North. But if you press [Shift]+[F9], the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
+There are also two different direction modes. In “square mode”, the rotation of the minimap are fixed. But if you press [Shift]+[F9] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.
 
 In some subgames, the minimap may be disabled.
 
@@ -673,10 +670,9 @@ Here are some examples to illustrate the command syntax:
 
 Some final remarks:
 
-• For /give and /giveme, you need an itemstring. This is an internally used unique item identifier
+• For /give and /giveme, you need an itemstring. This is an internally used unique item identifier which you may find in the item help if you have the “give” or “debug” privilege
 • For /spawnentity you need an entity name, which is another identifier]=]
 }})
--- TODO: Better help on how to get an itemstring
 
 doc.new_entry("advanced", "privs", {
 	name="Privileges",

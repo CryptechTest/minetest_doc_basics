@@ -47,7 +47,7 @@ doc.new_entry("basics", "quick_start", {
 • [F9] for the minimap
 • Put items into crafting grid (usually 3×3 grid) to craft
 • Use a crafting guide mod to learn crafting recipes or visit <http://wiki.minetest.net/wiki/Crafting>
-• Read entries in this Documentation System to learn the rest
+• Read entries in this help to learn the rest
 • [Esc] to close this window]=]
 }})
 

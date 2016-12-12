@@ -7,6 +7,7 @@
 - TODO: Ideas for advanced entries:
    - Sneak Glitch?
    - Rendering (far view, etc.)
+-- TODO: Better (official) support for customizable creative page
 ]]
 
 
@@ -24,8 +25,7 @@ doc.new_category("advanced",
 	name = "Advanced usage",
 	description = "Advanced information about Minetest which may be nice to know, but is not crucial to gameplay",
 	sorting = "custom",
-	-- "creative" is supposed to be added by a mod which implements Creative Mode in order to explain it
-	sorting_data = {"console", "commands", "privs", "movement_modes", "coordinates", "settings", "creative", "online"},
+	sorting_data = {"console", "commands", "privs", "movement_modes", "coordinates", "settings", "online"},
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 

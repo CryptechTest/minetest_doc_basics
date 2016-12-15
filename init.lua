@@ -285,25 +285,25 @@ doc.new_entry("basics", "mine", {
 
 Blocks require a mining tool to be mined. Some blocks can not be mined. When in doubt, just try out different mining tools on a block and see what happens.
 
-Mineable blocks have mining properties (based on groups) and a mining level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of mining ratings.
+Mineable blocks have mining properties (based on groups) and a toughness level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of mining ratings.
 
 In order to mine a block, these conditions need to be met:
 • The block and tool share at least one mining property for which they have a matching mining rating
-• The tool's mining level is equal or less than the block's mining level
+• The tool's toughness level is equal or less than the block's toughness level
 
-Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a mining level of 0 or larger.
+Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.
 
-The time it takes to mine a block depends on the mining ratings and the mining levels of both tool and block.
+The time it takes to mine a block depends on the mining ratings and the toguhness levels of both tool and block.
 • The mining time is the same for each tool/block combination
 • The base mining time depends on the mining ratings of the block and the mining speed of the tool
 • The mining speed of the tool differs for each mining property and its rating
-• The mining level further modifies the mining speed for this mining proeprty
+• The toguhness level further modifies the mining speed for this mining proeprty
 • The higher the block level, the higher the mining time
 • The higher the tool level, the lower the mining time
 
 The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time at block level 0 and the high number for the highest level the tool can mine.
 
-Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's mining level and the block's mining level. The higher the difference, the lower the wear. This means:
+Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:
 • High-level blocks wear off your tools faster
 • You can use high-level tools to compensate this
 • The highest wear is caused when the level of both tool and block are equal

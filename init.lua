@@ -289,44 +289,44 @@ doc.new_entry("basics", "mine", {
 	name = S("Mining"),
 	data = {
 		text =
-[=[Mining (or digging) is the process of breaking blocks to remove them. To mine a block, point it and hold down the left mouse button until it breaks.
+S("Mining (or digging) is the process of breaking blocks to remove them. To mine a block, point it and hold down the left mouse button until it breaks.").."\n\n"..
 
-Short explanation:
+S("Short explanation:").."\n\n"..
 
-Blocks require a mining tool to be mined. Different blocks are mined by different mining tools, and some blocks can not be mined by any tool. Blocks vary in toughness and tools vary in strength. Mining tools will wear off over time. The mining time and the tool wear depend on the block and the mining tool. The fastest way to find out how efficient your mining tools are is by just trying them out on various blocks. Any items you gather by mining go straight into your inventory.
+S("Blocks require a mining tool to be mined. Different blocks are mined by different mining tools, and some blocks can not be mined by any tool. Blocks vary in toughness and tools vary in strength. Mining tools will wear off over time. The mining time and the tool wear depend on the block and the mining tool. The fastest way to find out how efficient your mining tools are is by just trying them out on various blocks. Any items you gather by mining go straight into your inventory.") .. "\n\n"..
 
-Detailed explanation:
+S("Detailed explanation:").."\n\n"..
 
-Mineable blocks have mining properties (based on groups) and a toughness level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of ratings.
+S("Mineable blocks have mining properties (based on groups) and a toughness level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of ratings.").."\n\n"..
 
-In order to mine a block, these conditions need to be met:
-• The block and tool share at least one mining property for which they have a matching rating
-• The tool's toughness level is equal or less than the block's toughness level
+S("In order to mine a block, these conditions need to be met:").."\n"..
+S("• The block and tool share at least one mining property for which they have a matching rating").."\n"..
+S("• The tool's toughness level is equal or less than the block's toughness level").."\n\n"..
 
-Example: A block with the mining property “cracky”, rating 3 and toughness level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.
+S("Example: A block with the mining property “cracky”, rating 3 and toughness level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.").."\n\n"..
 
-The time it takes to mine a block depends on the ratings and the toughness levels of both tool and block.
-• The base mining time depends on the ratings of the block and the mining speed of the tool
-• The mining speed of the tool differs for each mining property and its rating
-• The toughness level further modifies the mining speed for this mining proeprty
-• A high difference in toughness levels decreases the mining time considerably
-• If the toughness level difference is 2, the mining time is half of the base mining time
-• If the a difference of 3, the mining time is a third, and so on
+S("The time it takes to mine a block depends on the ratings and the toughness levels of both tool and block.").."\n"..
+S("• The base mining time depends on the ratings of the block and the mining speed of the tool").."\n"..
+S("• The mining speed of the tool differs for each mining property and its rating").."\n"..
+S("• The toughness level further modifies the mining speed for this mining proeprty").."\n"..
+S("• A high difference in toughness levels decreases the mining time considerably").."\n"..
+S("• If the toughness level difference is 2, the mining time is half of the base mining time").."\n"..
+S("• If the a difference of 3, the mining time is a third, and so on").."\n\n"..
 
-The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time for toughness level 0 and the high number for the highest level the tool can mine.
+S("The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time for toughness level 0 and the high number for the highest level the tool can mine.").."\n\n"..
 
-Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:
-• High-level blocks wear off your tools faster
-• You can use high-level tools to compensate this
-• The highest wear is caused when the level of both tool and block are equal
+S("Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:").."\n"..
+S("• High-level blocks wear off your tools faster").."\n"..
+S("• You can use high-level tools to compensate this").."\n"..
+S("• The highest wear is caused when the level of both tool and block are equal").."\n\n"..
 
-After mining, a block may leave a “drop” behind. This is a number of items you get after mining. Most commonly, you will get the block itself. There are other possibilities for a drop which depends on the block type. The following drops are possible:
-• Always drops itself (the usual case)
-• Always drops the same items
-• Drops items based on probability
-• Drops nothing
+S("After mining, a block may leave a “drop” behind. This is a number of items you get after mining. Most commonly, you will get the block itself. There are other possibilities for a drop which depends on the block type. The following drops are possible:").."\n"..
+S("• Always drops itself (the usual case)").."\n"..
+S("• Always drops the same items").."\n"..
+S("• Drops items based on probability").."\n"..
+S("• Drops nothing").."\n\n"..
 
-The drop goes directly into your inventory, unless there's no more space left. In that case, the items literally drop on the floor.]=],
+S("The drop goes directly into your inventory, unless there's no more space left. In that case, the items literally drop on the floor."),
 		images = {{image="doc_basics_tools_mining.png"}},
 }})
 

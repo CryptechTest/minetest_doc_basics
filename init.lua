@@ -291,36 +291,42 @@ doc.new_entry("basics", "mine", {
 		text =
 [=[Mining (or digging) is the process of breaking blocks to remove them. To mine a block, point it and hold down the left mouse button until it breaks.
 
-Blocks require a mining tool to be mined. Some blocks can not be mined. When in doubt, just try out different mining tools on a block and see what happens.
+Short explanation:
 
-Mineable blocks have mining properties (based on groups) and a toughness level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of mining ratings.
+Blocks require a mining tool to be mined. Different blocks are mined by different mining tools, and some blocks can not be mined by any tool. Blocks vary in toughness and tools vary in strength. Mining tools will wear off over time. The mining time and the tool wear depend on the block and the mining tool. The fastest way to find out how efficient your mining tools are is by just trying them out on various blocks. Any items you gather by mining go straight into your inventory.
+
+Detailed explanation:
+
+Mineable blocks have mining properties (based on groups) and a toughness level. Mining tools have the same properties. Each mining property of a block also has a rating, while tools can be able to break blocks within a range of ratings.
 
 In order to mine a block, these conditions need to be met:
-• The block and tool share at least one mining property for which they have a matching mining rating
+• The block and tool share at least one mining property for which they have a matching rating
 • The tool's toughness level is equal or less than the block's toughness level
 
-Example: A block with the mining property “cracky”, rating 3 and level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.
+Example: A block with the mining property “cracky”, rating 3 and toughness level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.
 
-The time it takes to mine a block depends on the mining ratings and the toguhness levels of both tool and block.
-• The mining time is the same for each tool/block combination
-• The base mining time depends on the mining ratings of the block and the mining speed of the tool
+The time it takes to mine a block depends on the ratings and the toughness levels of both tool and block.
+• The base mining time depends on the ratings of the block and the mining speed of the tool
 • The mining speed of the tool differs for each mining property and its rating
-• The toguhness level further modifies the mining speed for this mining proeprty
-• The higher the block level, the higher the mining time
-• The higher the tool level, the lower the mining time
+• The toughness level further modifies the mining speed for this mining proeprty
+• A high difference in toughness levels decreases the mining time considerably
+• If the toughness level difference is 2, the mining time is half of the base mining time
+• If the a difference of 3, the mining time is a third, and so on
 
-The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time at block level 0 and the high number for the highest level the tool can mine.
+The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time for toughness level 0 and the high number for the highest level the tool can mine.
 
 Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:
 • High-level blocks wear off your tools faster
 • You can use high-level tools to compensate this
 • The highest wear is caused when the level of both tool and block are equal
 
-After mining, a block will leave a “drop” behind. This is a number of items you get after mining. The following drop types are possible:
-• Always drops itself (most common)
+After mining, a block may leave a “drop” behind. This is a number of items you get after mining. Most commonly, you will get the block itself. There are other possibilities for a drop which depends on the block type. The following drops are possible:
+• Always drops itself (the usual case)
 • Always drops the same items
 • Drops items based on probability
-• Drops nothing]=],
+• Drops nothing
+
+The drop goes directly into your inventory, unless there's no more space left. In that case, the items literally drop on the floor.]=],
 		images = {{image="doc_basics_tools_mining.png"}},
 }})
 

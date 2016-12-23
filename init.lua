@@ -132,13 +132,16 @@ S("• I: Show/hide inventory menu").."\n\n"..
 S("Inventory interaction:").."\n"..
 S("See the entry “Basics > Inventory”.").."\n\n"..
 
+S("Camera:").."\n"..
+S("• Z: Zoom (requires “zoom” privilege)").."\n"..
+S("• F7: Toggle camera mode").."\n"..
+S("• F8: Toggle cinematic mode").."\n\n"..
+
 S("Interface:").."\n"..
 S("• Esc: Open menu window (pauses in single-player mode) or close window").."\n"..
 S("• F1: Show/hide HUD").."\n"..
 S("• F2: Show/hide chat").."\n"..
-S("• F7: Toggle camera mode").."\n"..
-S("• F8: Toggle cinematic mode").."\n"..
-S("• F9: Toggle minimap, minimap mode and zoom").."\n"..
+S("• F9: Toggle minimap").."\n"..
 S("• Shift+F9: Toggle minimap rotation mode").."\n"..
 S("• F10: Open/close console/chat log").."\n"..
 S("• F12: Take a screenshot").."\n\n"..
@@ -258,11 +261,12 @@ S("Minetest has 3 different views which determine the way you see the world. The
 • 3: Third-person view from the front").."\n\n"..
 
 S("You can change the camera mode by pressing [F7].").."\n"..
-
-S("There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.").."\n\n"..
+S("There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.").."\n"..
+S("By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.").."\n\n"..
 
 S("• Switch camera mode: [F7]").."\n"..
-S("• Toggle Cinematic Mode: [F8]"),
+S("• Toggle Cinematic Mode: [F8]").."\n"..
+S("• Zoom: [Z]"),
 		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})
 

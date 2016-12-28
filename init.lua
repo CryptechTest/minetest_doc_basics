@@ -18,7 +18,7 @@ else
 	S = function(s) return s end
 end
 
-doc.new_category("basics",
+doc.add_category("basics",
 {
 	name = S("Basics"),
 	description = S("Everything you need to know about Minetest to get started with playing"),
@@ -27,7 +27,7 @@ doc.new_category("basics",
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
-doc.new_category("advanced",
+doc.add_category("advanced",
 {
 	name = S("Advanced usage"),
 	description = S("Advanced information about Minetest which may be nice to know, but is not crucial to gameplay"),
@@ -36,7 +36,7 @@ doc.new_category("advanced",
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
-doc.new_entry("basics", "quick_start", {
+doc.add_entry("basics", "quick_start", {
 	name = S("Quick start"),
 	data = { text =
 S("This is a very brief introduction to the basic gameplay:").."\n\n"..
@@ -58,7 +58,7 @@ S("• Read entries in this help to learn the rest").."\n"..
 S("• [Esc] to close this window")
 }})
 
-doc.new_entry("basics", "minetest", {
+doc.add_entry("basics", "minetest", {
 	name = S("Minetest"),
 	data = {
 		text =
@@ -77,7 +77,7 @@ S("Minetest as well as Minetest Game are both unfinished at the moment, so pleas
 {image="doc_basics_gameplay_hades.png"}, {image="doc_basics_gameplay_xtraores_xtension.png"},}
 }})
 
-doc.new_entry("basics", "sneak", {
+doc.add_entry("basics", "sneak", {
 	name = S("Sneaking"),
 	data = { text =
 S("Sneaking makes you walk slower and prevents you from falling off the edge of a block.").."\n"..
@@ -93,7 +93,7 @@ S("Sneaking might be disabled by mods. In this case, you still walk slower by sn
 		images = { { image = "doc_basics_sneak.png" } },
 }})
 
-doc.new_entry("basics", "controls", {
+doc.add_entry("basics", "controls", {
 	name = S("Controls"),
 	data = { text =
 S("These are the default controls:").."\n\n"..
@@ -160,7 +160,7 @@ S("• F6: Only useful for developers. Enables/disables profiler").."\n"..
 S("• P: Only useful for developers. Writes current stack traces")
 }})
 
-doc.new_entry("basics", "players", {
+doc.add_entry("basics", "players", {
 	name = S("Players"),
 	data = {
 		text =
@@ -187,7 +187,7 @@ S("In multi-player mode, the name of other players is written above their head."
 		images = {{image="doc_basics_players_sam.png"}, {image="doc_basics_players_lott.png"}, {image="doc_basics_players_flat.png"}},
 }})
 
-doc.new_entry("basics", "items", {
+doc.add_entry("basics", "items", {
 	name = S("Items"),
 	data = {
 		text =
@@ -206,7 +206,7 @@ S("A dropped item stack can be collected by punching it."),
 		images = {{image="doc_basics_inventory_detail.png"}, {image="doc_basics_items_dropped.png"}},
 }})
 
-doc.new_entry("basics", "tools", {
+doc.add_entry("basics", "tools", {
 	name = S("Tools"),
 	data = { text =
 S("Some items may serve as a tool when wielded. Any item which has some special use which can be directly used by its wielder is considered a tool.").."\n\n"..
@@ -219,7 +219,7 @@ S("Many tools will wear off when using them and may eventually get destroyed. Th
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
 }})
 
-doc.new_entry("basics", "weapons", {
+doc.add_entry("basics", "weapons", {
 	name = S("Weapons"),
 	data = { text =
 S("Some items are usable as a melee weapon when wielded. Weapons share most of the properties of tools.").."\n\n"..
@@ -238,7 +238,7 @@ S("There is a rule which sometimes makes attacks impossible: Players, animate ob
 }})
 
 
-doc.new_entry("basics", "point", {
+doc.add_entry("basics", "point", {
 	name = S("Pointing"),
 	data = {
 		text =
@@ -250,7 +250,7 @@ S("A few things can not be pointed. Most blocks are pointable. A few blocks, lik
 		images = {{ image = "doc_basics_pointing.png" }},
 }})
 
-doc.new_entry("basics", "cam", {
+doc.add_entry("basics", "cam", {
 	name = S("Camera"),
 	data = {
 		text =
@@ -270,7 +270,7 @@ S("• Zoom: [Z]"),
 		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})
 
-doc.new_entry("basics", "nodes", {
+doc.add_entry("basics", "nodes", {
 	name = S("Blocks"),
 	data = {
 		text =
@@ -289,7 +289,7 @@ S("• Group memberships: Group memberships are used to determine mining propert
 }})
 
 -- TODO: Oh jeez, this explanation is WAY too difficult. Maybe we need to find some way to make it easier to understand.
-doc.new_entry("basics", "mine", {
+doc.add_entry("basics", "mine", {
 	name = S("Mining"),
 	data = {
 		text =
@@ -334,7 +334,7 @@ S("The drop goes directly into your inventory, unless there's no more space left
 		images = {{image="doc_basics_tools_mining.png"}},
 }})
 
-doc.new_entry("basics", "build", {
+doc.add_entry("basics", "build", {
 	name = S("Building"),
 	data = {
 		text =
@@ -350,7 +350,7 @@ S("Normally, blocks are built in front of the pointed side of the pointed block.
 
 
 
-doc.new_entry("basics", "liquids", {
+doc.add_entry("basics", "liquids", {
 	name = S("Liquids"),
 	data = {
 		text =
@@ -397,7 +397,7 @@ S("Liquids are often not pointable. But some special items are able to point all
 	},
 })
 
-doc.new_entry("basics", "craft", {
+doc.add_entry("basics", "craft", {
 	name = S("Crafting"),
 	data = {
 		text =
@@ -428,7 +428,7 @@ S("Rarely, crafting recipes have replacements. This means, whenever you perform 
 		},
 }})
 
-doc.new_entry("basics", "cook", {
+doc.add_entry("basics", "cook", {
 	name = S("Cooking"),
 	data = {
 		text =
@@ -439,7 +439,7 @@ S("Each fuel item has a burning time. This is the time a single item of the fuel
 S("Each cookable item requires time to be cooked. This time is specific to the item type and the item must be “on fire” for the whole cooking time to actually yield the result.")
 }})
 
-doc.new_entry("basics", "hotbar", {
+doc.add_entry("basics", "hotbar", {
 	name = S("Hotbar"),
 	data = {
 		text =
@@ -454,7 +454,7 @@ S("The selected item is also your wielded item."),
 		images = {{image="doc_basics_hotbar.png"}, {image="doc_basics_hotbar_relations.png"}},
 }})
 
-doc.new_entry("basics", "minimap", {
+doc.add_entry("basics", "minimap", {
 	name = S("Minimap"),
 	data = {
 		text =
@@ -475,7 +475,7 @@ S("• Toggle minimap rotation mode: [Shift]+[F9]"),
 		images = {{image="doc_basics_minimap_map.png"}, {image="doc_basics_minimap_radar.png"}, {image="doc_basics_minimap_round.png"}},
 }})
 
-doc.new_entry("basics", "inventory", {
+doc.add_entry("basics", "inventory", {
 	name="Inventory",
 	data = {
 		text =
@@ -505,7 +505,7 @@ S("• Sneak+Left click: Automatically transfer item stack"),
 		images = {{image="doc_basics_inventory.png"}}
 }})
 
-doc.new_entry("advanced", "online", {
+doc.add_entry("advanced", "online", {
 	name = S("Online help"),
 	data = { text=
 S("You may want to check out these online resources related to Minetest:").."\n\n"..
@@ -523,7 +523,7 @@ S("Chat: <irc://irc.freenode.net#minetest>").."\n"..
 S("A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.")
 }})
 
-doc.new_entry("basics", "groups", {
+doc.add_entry("basics", "groups", {
 	name = S("Groups"),
 	data = {
 		text =
@@ -538,7 +538,7 @@ S("• Other uses").."\n\n"..
 S("In the item help, many important groups are usually mentioned and explained.")
 }})
 
-doc.new_entry("basics", "glossary", {
+doc.add_entry("basics", "glossary", {
 	name = S("Glossary"),
 	data = {
 		text =
@@ -604,7 +604,7 @@ S("• Privilege: Allows a player to do something").."\n"..
 S("• Node: Other word for “block”")
 }})
 
-doc.new_entry("advanced", "settings", {
+doc.add_entry("advanced", "settings", {
 	name = S("Settings"),
 	data = {
 		text =
@@ -619,7 +619,7 @@ S("• PvP (enable_pvp): Short for “Player vs Player”. If enabled, players c
 S("For a full list of all available settings, use the “Advanced settings” dialog in the main menu.")
 }})
 
-doc.new_entry("advanced", "movement_modes", {
+doc.add_entry("advanced", "movement_modes", {
 	name = S("Movement modes"),
 	data = { text =
 S("If you have the required privileges, you can use up to three special movement modes. Using these may be considered cheating.").."\n\n"..
@@ -640,7 +640,7 @@ S("• Default key: [H]").."\n"..
 S("• Required privilege: noclip")
 }})
 
-doc.new_entry("advanced", "console", {
+doc.add_entry("advanced", "console", {
 	name = S("Console"),
 	data = { text =
 S("With [F10] you can open and close the console. The main use of the console is to show the chat log and enter chat messages or server commands.").."\n"..
@@ -671,7 +671,7 @@ S("• [Up]: Go to previous entry in history").."\n"..
 S("• [Down]: Go to next entry in history")
 }})
 
-doc.new_entry("advanced", "commands", {
+doc.add_entry("advanced", "commands", {
 	name = S("Server commands"),
 	data = { text =
 S("Server commands (also called “chat commands”) are little helpers for advanced users. You don't need to use these commands when playing. But they might come in handy to perform some more technical tasks. Server commands work both in multi-player and single-player mode.").."\n\n"..
@@ -709,7 +709,7 @@ S("• For /give and /giveme, you need an itemstring. This is an internally used
 S("• For /spawnentity you need an entity name, which is another identifier")
 }})
 
-doc.new_entry("advanced", "privs", {
+doc.add_entry("advanced", "privs", {
 	name = S("Privileges"),
 	data = { text =
 S("Each player has a set of privileges, which differs from server to server. Your privileges determine what you can and can't do. Privileges can be granted and revoked from other players by any player who has the privilege called “privs”.").."\n\n"..
@@ -734,7 +734,7 @@ S("• /revoke <player> <privilege>: Revoke <privilege> from <player>").."\n\n".
 S("In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is often considered cheating).")
 }})
 
-doc.new_entry("basics", "light", {
+doc.add_entry("basics", "light", {
 	name = S("Light"),
 	data = { text =
 S("As the world is entirely block-based, so is the light in the world. Each block has its own brightness. The brightness of a block is expressed in a “light level” which ranges from 0 (total darkness) to 15 (as bright as the sun).").."\n\n"..
@@ -757,7 +757,7 @@ S("Note that “transparency” here only means that the block is able to carry 
 		images = {{image="doc_basics_light_torch.png"}, {image="doc_basics_light_test.png"}}
 }})
 
-doc.new_entry("advanced", "coordinates", {
+doc.add_entry("advanced", "coordinates", {
 	name = S("Coordinates"),
 	data = { text =
 S("The Minetest world is a large cube. And because of this, a position in the world can be easily expressed with Cartesian coordinates. That is, for each position in the world, there are 3 values X, Y and Z.").."\n\n"..

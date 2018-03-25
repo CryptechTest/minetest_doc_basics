@@ -1,6 +1,6 @@
 --[[
 - TODO: Allow to disable images to save bandwidth
-- TODO: Add API for subgame-specific changes so the entries are not too awfully generic
+- TODO: Add API for game-specific changes so the entries are not too awfully generic
    - Support for landing page
    - Support to modify some parts of existing entries
 - TODO: Add introduction to online play (if possible)
@@ -64,7 +64,7 @@ doc.add_entry("basics", "minetest", {
 		text =
 S("Minetest is a free software game engine for games based on voxel gameplay, inspired by InfiniMiner, Minecraft, and the like. Minetest was originally created by Perttu Ahola (alias “celeron55”).").."\n\n"..
 
-S("The player is thrown into a huge world made out of cubes or blocks. These cubes usually make the landscape they blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games in Minetest (also called “subgames”) can, however, be much more complex than this.").."\n\n"..
+S("The player is thrown into a huge world made out of cubes or blocks. These cubes usually make the landscape they blocks can be removed and placed almost entirely freely. Using the collected items, new tools and other items can be crafted. Games in Minetest can, however, be much more complex than this.").."\n\n"..
 
 S("A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or be very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.").."\n\n"..
 
@@ -177,7 +177,7 @@ S("Players can take damage for a variety of reasons, here are some:\
 • Being attacked by a computer enemy").."\n\n"..
 
 S("At a health of 0, the player dies. The player can just respawn in the world.").."\n"..
-S("Other consequences of death depend on the subgame. The player could lose all items, or lose the round in a competitive game.").."\n\n"..
+S("Other consequences of death depend on the game. The player could lose all items, or lose the round in a competitive game.").."\n\n"..
 
 S("Some blocks reduce breath. While being with the head in a block which causes drowning, the breath points are reduced by 1 for every 2 seconds. When all breath is gone, the player starts to suffer drowning damage. Breath is quickly restored in any other block.").."\n\n"..
 
@@ -407,7 +407,7 @@ S("To craft something, you need one or more items, a crafting grid (C) and a cra
 
 S("To complete the craft, take the result item from the output slot, which will consume items from the crafting grid and creates a new item. It is not possible to place items into the output slot.").."\n\n"..
 
-S("A description on how to craft an item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some subgames provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the online manual of the subgame (if one is available).").."\n\n"..
+S("A description on how to craft an item is called a “crafting recipe”. You need this knowledge to craft. There are multiple ways to learn crafting recipes. One way is by using a crafting guide, which contains a list of available crafting recipes. Some games provide crafting guides. There are also some mods which you can download online for installing a crafting guide. Another way is by reading the online manual of the game (if one is available).").."\n\n"..
 
 S("Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.").."\n\n"..
 
@@ -416,7 +416,7 @@ S("There are multiple types of crafting recipes:\
 • Shaped (image 2): Items need to be placed in a particular shape\
 • Shapeless (images 3 and 4): Items need to be placed somewhere in input (both images show the same recipe)\
 • Cooking: Explained in “Basics > Cooking”\
-• Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all subgames").."\n\n"..
+• Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all games").."\n\n"..
 
 S("In some crafting recipes, some input items do not need to be a concrete item, instead they need to be a member of a group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.").."\n\n"..
 
@@ -468,7 +468,7 @@ S("Radar mode (image 2) is more complicated. It displays the “denseness” of 
 
 S("There are also two different rotation modes. In “square mode”, the rotation of the minimap is fixed. If you press [Shift]+[F9] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.").."\n\n"..
 
-S("In some subgames, the minimap may be disabled.").."\n\n"..
+S("In some games, the minimap may be disabled.").."\n\n"..
 
 S("• Toggle minimap mode: [F9]").."\n"..
 S("• Toggle minimap rotation mode: [Shift]+[F9]"),
@@ -517,7 +517,7 @@ S("Community wiki: <http://wiki.minetest.net/>").."\n"..
 S("A community-based documentation website for Minetest. Anyone with an account can edit it! It also features a documentation of Minetest Game.").."\n\n"..
 
 S("Web forums: <http://forums.minetest.net/>").."\n"..
-S("A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and subgames are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.").."\n\n"..
+S("A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and games are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.").."\n\n"..
 
 S("Chat: <irc://irc.freenode.net#minetest>").."\n"..
 S("A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.")
@@ -597,9 +597,9 @@ S("• Protection: Mechanism to own areas of the world, which only allows the ow
 
 S("Technical terms:").."\n"..
 S("• Minetest: This game engine").."\n"..
-S("• Minetest Game: A subgame for Minetest by the Minetest developers").."\n"..
-S("• Subgame: A complete playing experience to be used in Minetest; such as a game or sandbox or similar").."\n"..
-S("• Mod: A single subsystem which adds or modifies functionality; is the basic building block of subgames and can be used to further enhance or modify them").."\n"..
+S("• Minetest Game: A game for Minetest by the Minetest developers").."\n"..
+S("• Game: A complete playing experience to be used in Minetest; such as a game or sandbox or similar").."\n"..
+S("• Mod: A single subsystem which adds or modifies functionality; is the basic building block of games and can be used to further enhance or modify them").."\n"..
 S("• Privilege: Allows a player to do something").."\n"..
 S("• Node: Other word for “block”")
 }})
@@ -613,7 +613,7 @@ S("There is a large variety of settings to configure Minetest. Pretty much every
 S("These are a few of the most important gameplay settings:").."\n\n"..
 
 S("• Damage enabled (enable_damage): Enables the health and breath attributes for all players. If disabled, players are immortal").."\n"..
-S("• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning depends on the subgame; usual changes are: Reduced dig times, easy access to almost all items, tools never wear off, etc.").."\n"..
+S("• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning depends on the game; usual changes are: Reduced dig times, easy access to almost all items, tools never wear off, etc.").."\n"..
 S("• PvP (enable_pvp): Short for “Player vs Player”. If enabled, players can deal damage to each other").."\n\n"..
 
 S("For a full list of all available settings, use the “Advanced settings” dialog in the main menu.")

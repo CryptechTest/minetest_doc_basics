@@ -148,7 +148,7 @@ S("• F12: Take a screenshot").."\n\n"..
 
 S("Server interaction:").."\n"..
 S("• T: Open chat window (chat requires the “shout” privilege)").."\n"..
-S("• /: Start issuing a server command)").."\n\n"..
+S("• /: Start issuing a server command").."\n\n"..
 
 S("Technical:").."\n"..
 S("• R: Toggle far view (disables all fog and allows viewing far away, can make game very slow)").."\n"..
@@ -229,7 +229,7 @@ S("• Single punch: Left-click once to deal a single punch").."\n"..
 S("• Quick punching: Hold down the left mouse button to deal quick repeated punches").."\n\n"..
 
 S("There are two core attributes of melee weapons:").."\n"..
-S("• Maximum damage: Damage which is dealt after a hit when the weapon was fully recovered)").."\n"..
+S("• Maximum damage: Damage which is dealt after a hit when the weapon was fully recovered").."\n"..
 S("• Full punch interval: Time it takes for fully recovering from a punch").."\n\n"..
 
 S("A weapon only deals full damage when it has fully recovered from a previous punch. Otherwise, the weapon will deal only reduced damage. This means, quick punching is very fast, but also deals rather low damage. Note the full punch interval does not limit how fast you can attack.").."\n\n"..
@@ -312,14 +312,14 @@ S("Example: A block with the mining property “cracky”, rating 3 and toughnes
 S("The time it takes to mine a block depends on the ratings and the toughness levels of both tool and block.").."\n"..
 S("• The base mining time depends on the ratings of the block and the mining speed of the tool").."\n"..
 S("• The mining speed of the tool differs for each mining property and its rating").."\n"..
-S("• The toughness level further modifies the mining speed for this mining proeprty").."\n"..
+S("• The toughness level further modifies the mining speed for this mining property").."\n"..
 S("• A high difference in toughness levels decreases the mining time considerably").."\n"..
 S("• If the toughness level difference is 2, the mining time is half of the base mining time").."\n"..
-S("• If the a difference of 3, the mining time is a third, and so on").."\n\n"..
+S("• With a difference of 3, the mining time is a third, and so on").."\n\n"..
 
 S("The item help shows the mining times of a tool listed by its mining properties and its ratings. The mining times are often expressed as a range. The low number stands for the mining time for toughness level 0 and the high number for the highest level the tool can mine.").."\n\n"..
 
-S("Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:").."\n"..
+S("Mining usually wears off tools. Each time you mine a block, your tool takes some damage until it is destroyed eventually. The wear per mined block is determined by the difference between the tool's toughness level and the block's toughness level. The higher the difference, the lower the wear. This means:").."\n"..
 S("• High-level blocks wear off your tools faster").."\n"..
 S("• You can use high-level tools to compensate this").."\n"..
 S("• The highest wear is caused when the level of both tool and block are equal").."\n\n"..
@@ -357,11 +357,11 @@ doc.add_entry("basics", "liquids", {
 S("Liquids are special dynamic blocks. Liquids like to spread and flow to their surrounding blocks. Players can swim and drown in them.").."\n\n"..
 
 S("Liquids usually come in two forms: In source form (S) and in flowing form (F).").."\n"..
-S("Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. A long it is left alone, a liquid source will normally keep its place and does not drain out.").."\n"..
+S("Liquid sources have the shape of a full cube. A liquid source will generate flowing liquids around it from time to time, and, if the liquid is renewable, it also generates liquid sources. A liquid source can sustain itself. As long it is left alone, a liquid source will normally keep its place and does not drain out.").."\n"..
 S("Flowing liquids take a sloped form. Flowing liquids spread around the world until they drain. A flowing liquid can not sustain itself and always comes from a liquid source, either directly or indirectly. Without a liquid source, a flowing liquid will eventually drain out and disappear.").."\n"..
 
 S("All liquids share the following properties:").."\n"..
-S("• All properties of blocks (including drowning damage").."\n"..
+S("• All properties of blocks (including drowning damage)").."\n"..
 S("• Renewability: Renewable liquids can create new sources").."\n"..
 S("• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will spread. Possible are ranges from 0 to 8. At 0, no flowing liquids will be created. Image 5 shows a liquid of flowing range 2").."\n"..
 S("• Viscosity: How slow players move through it and how slow the liquid spreads").."\n\n"..
@@ -742,7 +742,7 @@ S("As the world is entirely block-based, so is the light in the world. Each bloc
 S("There are two types of light: Sunlight and artificial light.").."\n\n"..
 
 S("Artificial light is emitted by luminous blocks. Artificial light has a light level from 1-14.").."\n"..
-S("Sunlight is the brightest light and always goes perfectly straight down from the sky at each time of the day. blocks. At night, the sunlight will become moonlight instead, which still provides a small amount of light. The light level of sunlight is 15.").."\n\n"..
+S("Sunlight is the brightest light and always goes perfectly straight down from the sky at each time of the day. At night, the sunlight will become moonlight instead, which still provides a small amount of light. The light level of sunlight is 15.").."\n\n"..
 
 S("Blocks have 3 levels of transparency:").."\n\n"..
 

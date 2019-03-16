@@ -47,7 +47,7 @@ S("• [I] for the inventory").."\n"..
 S("• First items in inventory appear in hotbar below").."\n"..
 S("• [F9] for the minimap").."\n"..
 S("• Put items into crafting grid (usually 3×3 grid) to craft").."\n"..
-S("• Use a crafting guide mod to learn crafting recipes or visit <http://wiki.minetest.net/wiki/Crafting>").."\n"..
+S("• Use a crafting guide mod to learn crafting recipes or visit <https://wiki.minetest.net/wiki/Crafting>").."\n"..
 S("• Read entries in this help to learn the rest").."\n"..
 S("• [Esc] to close this window")
 }})
@@ -504,13 +504,13 @@ doc.add_entry("advanced", "online", {
 	data = { text=
 S("You may want to check out these online resources related to Minetest:").."\n\n"..
 
-S("Official homepage of Minetest: <http://minetest.net/>").."\n"..
+S("Official homepage of Minetest: <https://minetest.net/>").."\n"..
 S("The main place to find the most recent version of Minetest.").."\n\n"..
 
-S("Community wiki: <http://wiki.minetest.net/>").."\n"..
+S("Community wiki: <https://wiki.minetest.net/>").."\n"..
 S("A community-based documentation website for Minetest. Anyone with an account can edit it! It also features a documentation of Minetest Game.").."\n\n"..
 
-S("Web forums: <http://forums.minetest.net/>").."\n"..
+S("Web forums: <https://forums.minetest.net/>").."\n"..
 S("A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and games are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.").."\n\n"..
 
 S("Chat: <irc://irc.freenode.net#minetest>").."\n"..

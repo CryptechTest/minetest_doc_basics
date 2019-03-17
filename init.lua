@@ -114,7 +114,7 @@ S("World interaction:").."\n"..
 S("• Left mouse button: Punch / mine blocks").."\n"..
 S("• Right mouse button: Build or use pointed block").."\n"..
 S("• Shift+Right mouse button: Build").."\n"..
-S("• Roll mouse wheel: Select next/previous item in hotbar").."\n"..
+S("• Roll mouse wheel / B / N: Select next/previous item in hotbar").."\n"..
 S("• 0-9: Select item in hotbar directly").."\n"..
 S("• Q: Drop item stack").."\n"..
 S("• Shift+Q: Drop 1 item").."\n"..
@@ -433,10 +433,10 @@ doc.add_entry("basics", "hotbar", {
 	data = {
 		text =
 S("At the bottom of the screen you see some squares. This is called the “hotbar”. The hotbar allows you to quickly access the first items from your player inventory.").."\n"..
-S("You can change the selected item with the mouse wheel or the number keys.").."\n\n"..
+S("You can change the selected item with the mouse wheel or the keyboard.").."\n\n"..
 
-S("• Select previous item in hotbar: [Mouse wheel up]").."\n"..
-S("• Select next item in hotbar: [Mouse wheel down]").."\n"..
+S("• Select previous item in hotbar: [Mouse wheel up] or [B]").."\n"..
+S("• Select next item in hotbar: [Mouse wheel down] or [N]").."\n"..
 S("• Select item in hotbar directly: [0]-[9]").."\n\n"..
 
 S("The selected item is also your wielded item."),
@@ -465,7 +465,7 @@ S("• Toggle minimap rotation mode: [Shift]+[F9]"),
 }})
 
 doc.add_entry("basics", "inventory", {
-	name="Inventory",
+	name=S("Inventory"),
 	data = {
 		text =
 S("Inventories are used to store item stacks. There are other uses, such as crafting. An inventory consists of a rectangular grid of item slots. Each item slot can either be empty or hold one item stack. Item stacks can be moved freely between most slots.").."\n"..
@@ -477,11 +477,12 @@ S("Inventory controls:").."\n\n"..
 S("Taking: You can take items from an occupied slot if the cursor holds nothing.").."\n"..
 S("• Left click: take entire item stack").."\n"..
 S("• Right click: take half from the item stack (rounded up)").."\n"..
-S("• Middle click: take 10 items from the item stack").."\n\n"..
+S("• Middle click: take 10 items from the item stack").."\n"..
+S("• Mouse wheel down: take 1 item from the item stack").."\n\n"..
 
 S("Putting: You can put items onto a slot if the cursor holds 1 or more items and the slot is either empty or contains an item stack of the same item type.").."\n"..
 S("• Left click: put entire item stack").."\n"..
-S("• Right click: put 1 item of the item stack").."\n"..
+S("• Right click or mouse wheel up: put 1 item of the item stack").."\n"..
 S("• Middle click: put 10 items of the item stack").."\n\n"..
 
 S("Exchanging: You can exchange items if the cursor holds 1 or more items and the destination slot is occupied by a different item type.").."\n"..
@@ -611,7 +612,12 @@ S("For a full list of all available settings, use the “All Settings” dialog 
 doc.add_entry("advanced", "movement_modes", {
 	name = S("Movement modes"),
 	data = { text =
-S("If you have the required privileges, you can use up to three special movement modes.").."\n\n"..
+S("You can enable some special movement modes that change how you move.").."\n\n"..
+
+S("Pitch movement mode:").."\n"..
+S("• Description: If this mode is activated, the movement keys will move you relative to your current view pitch (vertical look angle) when you're in a liquid or in fly mode.").."\n"..
+S("• Default key: [L]").."\n"..
+S("• No privilege required").."\n\n"..
 
 S("Fast mode:").."\n"..
 S("• Description: Allows you to move much faster. Hold down the the “Use” key [E] to move faster. In the client configuration, you can further customize fast mode.").."\n"..

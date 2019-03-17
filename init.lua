@@ -64,9 +64,8 @@ S("A core feature of Minetest is the built-in modding capability. Mods modify ex
 
 S("Minetest can be played alone or online together with multiple players. Online play will work out of the box with any mods, with no need for additional software as they are entirely provided by the server.").."\n\n"..
 
-S("Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.").."\n\n"..
+S("Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>."),
 
-S("Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly."),
 		images = {{image="doc_basics_gameplay_mtg_1.png"}, {image="doc_basics_gameplay_mtg_2.png"}, {image="doc_basics_gameplay_carbone_ng.png"}, {image="doc_basics_gameplay_lott.png"}, {image="doc_basics_gameplay_pixture.png"}, {image="doc_basics_gameplay_outback.png"}, {image="doc_basics_gameplay_moontest.png"},
 {image="doc_basics_gameplay_hades.png"}, {image="doc_basics_gameplay_xtraores_xtension.png"},}
 }})
@@ -80,8 +79,6 @@ S("To sneak, hold down the sneak key (default: [Shift]). When you release it, yo
 S("• Sneak: [Shift]").."\n\n"..
 
 S("Sneaking only works when you stand on solid ground, are not in a liquid and don't climb.").."\n\n"..
-
-S("If you jump while holding the sneak key, you also jump slightly higher than usual.").."\n\n"..
 
 S("Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be stopped at ledges."),
 		images = { { image = "doc_basics_sneak.png" } },
@@ -128,8 +125,7 @@ S("See the entry “Basics > Inventory”.").."\n\n"..
 
 S("Camera:").."\n"..
 S("• Z: Zoom (requires “zoom” privilege)").."\n"..
-S("• F7: Toggle camera mode").."\n"..
-S("• F8: Toggle cinematic mode").."\n\n"..
+S("• F7: Toggle camera mode").."\n\n"..
 
 S("Interface:").."\n"..
 S("• Esc: Open menu window (pauses in single-player mode) or close window").."\n"..
@@ -150,8 +146,7 @@ S("• +: Increase minimal viewing distance").."\n"..
 S("• -: Decrease minimal viewing distance").."\n"..
 S("• F3: Enable/disable fog").."\n"..
 S("• F5: Enable/disable debug screen which also shows your coordinates").."\n"..
-S("• F6: Only useful for developers. Enables/disables profiler").."\n"..
-S("• P: Only useful for developers. Writes current stack traces")
+S("• F6: Only useful for developers. Enables/disables profiler")
 }})
 
 doc.add_entry("basics", "players", {
@@ -256,11 +251,9 @@ S("• 2: Third-person view from behind").."\n"..
 S("• 3: Third-person view from the front").."\n\n"..
 
 S("You can change the camera mode by pressing [F7].").."\n"..
-S("There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.").."\n"..
 S("By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.").."\n\n"..
 
 S("• Switch camera mode: [F7]").."\n"..
-S("• Toggle Cinematic Mode: [F8]").."\n"..
 S("• Zoom: [Z]"),
 		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})

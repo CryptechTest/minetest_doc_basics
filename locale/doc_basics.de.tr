@@ -26,13 +26,11 @@ The player is thrown into a huge world made out of cubes or blocks. These cubes 
 A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or be very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.=Ein Hauptfeature in Minetest ist die eingebaute Modding-Funktionalität. Mods ändern das bestehende Spielgeschehen ab. Sie können recht einfach sein und einfach nur ein paar dekorative Blöcke hinzufügen oder sie können sehr komplex sein, indem sie z.B. völlig neue Spielkonzepte einführen, eine ganz andere Art Welt erschaffen, und viele andere Dinge.
 Minetest can be played alone or online together with multiple players. Online play will work out of the box with any mods, with no need for additional software as they are entirely provided by the server.=Minetest kann alleine oder online mit mehreren Spielern gespielt werden. Das Onlinespiel funktioniert mit beliebigen Mods, es muss keine Zusatzsoftware installiert werden, da die Mods komplett vom Server zur Verfügung gestellt werden.
 Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f@=48>.=Minetest wird normalerweise mit einem einfachen Standardspiel ausgeliefert, es heißt „Minetest Game“ (siehe Bilder 1 und 2). Sie haben es vielleicht schon. Andere Spiele für Minetest können von den offiziellen Minetest-Foren <https://forum.minetest.net/viewforum.php?f@=48> heruntergeladen werden.
-Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.=Minetest und Minetest Game sind beide unfertig im Moment, also vergeben Sie uns bitte, wenn alles nicht perfekt funktioniert. 
 Sneaking=Schleichen
 Sneaking makes you walk slower and prevents you from falling off the edge of a block.=Schleichen verlangsamt Ihre Schritte und hindert Sie daran, vom Rand eines Blocks zu fallen.
 To sneak, hold down the sneak key (default: [Shift]). When you release it, you stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!=Zum Schleichen halten Sie die Schleichtaste (Standard: [Umschalt]) gedrückt. Lassen Sie sie los, um nicht mehr zu schleichen. Vorsicht: Wenn sie die Taste an einer Kante loslassen, könnten sie stürzen!
 • Sneak: [Shift]=• Schleichen [Umschalt]
 Sneaking only works when you stand on solid ground, are not in a liquid and don't climb.=Schleichen funktioniert nur, wenn Sie auf festem Boden stehen, sich nicht in einer Flüssigkeit befinden und nicht klettern.
-If you jump while holding the sneak key, you also jump slightly higher than usual.=Wenn Sie springen, während Sie die Schleich-Taste gedrückt halten, springen Sie etwas höher.
 Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be stopped at ledges.=Schleichen kann von Mods deaktiviert werden. In diesem Fall gehen Sie immer noch langsamer, aber Sie werden an Kanten nicht mehr anhalten.
 Controls=Steuerung
 These are the default controls:=Dies ist die Standardsteuerung:
@@ -86,7 +84,6 @@ Technical:=Technisches:
 • F3: Enable/disable fog=• F3: Nebel umschalten
 • F5: Enable/disable debug screen which also shows your coordinates=• F5: Debug-Anzeige umschalten, was auch Ihre Koordinaten anzeigt
 • F6: Only useful for developers. Enables/disables profiler=• F6: Nur nützlich für Entwickler. Schaltet die Profiler-Anzeige um
-• P: Only useful for developers. Writes current stack traces=• P: Nur nützlich für Entwickler. Schreibt die aktuellen Stack-Traces
 Players=Spieler
 Players (actually: “player characters”) are the characters which users control.=Spieler (genauer: „Spielerfiguren“) sind die Figuren, die die Benutzer steuern.
 Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).=Spieler sind Lebewesen, die einen Platz von etwa 1×2×1 Würfeln einnehmen. Sie starten mit 20 Trefferpunkten (TP) und 10 Atempunkten.
@@ -121,10 +118,8 @@ To point something, it must be in the pointing range (also just called “range�
 A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.=Ein paar Dinge können nicht gezeigt werden. Die meisten Blöcke sind zeigbar. Ein paar Blöcke, wie Luft, können niemals gezeigt werden. Andere Blöcke, wie Flüssigkeiten können nur von besonderen Gegenständen gezeigt werden.
 Camera=Kamera
 You can change the camera mode by pressing [F7].=Sie wechseln den Kameramodus mit [F7].
-There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.=Es gibt auch den Kinomodus, der mit [F8] umgeschaltet werden kann. Wenn er aktiv ist, werden die Kamerabewegungen weicher sein. Einige Spieler mögen das nicht, das ist eine Geschmackssache.
 By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.=Wenn Sie [Z] gedrückt halten, zoomen Sie zum Fadenkreuz herein. Dafür brauchen Sie das „zoom“-Privileg.
 • Switch camera mode: [F7]=• Kameramodus wechseln: [F7]
-• Toggle Cinematic Mode: [F8]=• Kinomodus umschalten: [F8]
 • Zoom: [Z]=• Zoom: [Z]
 Blocks=Blöcke
 The world of Minetest is made entirely out of blocks (voxels, to be precise). Blocks can be added or removed with the correct tools.=Die Welt von Minetest besteht aus Blöcken (oder Voxeln, um genau zu sein). Blöcke können mit den richtigen Werkzeugen gebaut oder entfernt werden.

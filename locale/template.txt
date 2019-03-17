@@ -26,13 +26,11 @@ The player is thrown into a huge world made out of cubes or blocks. These cubes 
 A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or be very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.=
 Minetest can be played alone or online together with multiple players. Online play will work out of the box with any mods, with no need for additional software as they are entirely provided by the server.=
 Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f@=48>.=
-Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.=
 Sneaking=
 Sneaking makes you walk slower and prevents you from falling off the edge of a block.=
 To sneak, hold down the sneak key (default: [Shift]). When you release it, you stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!=
 • Sneak: [Shift]=
 Sneaking only works when you stand on solid ground, are not in a liquid and don't climb.=
-If you jump while holding the sneak key, you also jump slightly higher than usual.=
 Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be stopped at ledges.=
 Controls=
 These are the default controls:=
@@ -86,7 +84,6 @@ Technical:=
 • F3: Enable/disable fog=
 • F5: Enable/disable debug screen which also shows your coordinates=
 • F6: Only useful for developers. Enables/disables profiler=
-• P: Only useful for developers. Writes current stack traces=
 Players=
 Players (actually: “player characters”) are the characters which users control.=
 Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).=
@@ -121,10 +118,8 @@ To point something, it must be in the pointing range (also just called “range�
 A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items.=
 Camera=
 You can change the camera mode by pressing [F7].=
-There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.=
 By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.=
 • Switch camera mode: [F7]=
-• Toggle Cinematic Mode: [F8]=
 • Zoom: [Z]=
 Blocks=
 The world of Minetest is made entirely out of blocks (voxels, to be precise). Blocks can be added or removed with the correct tools.=

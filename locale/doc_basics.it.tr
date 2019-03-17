@@ -26,13 +26,11 @@ The player is thrown into a huge world made out of cubes or blocks. These cubes 
 A core feature of Minetest is the built-in modding capability. Mods modify existing gameplay. They can be as simple as adding a few decorational blocks or be very complex by e.g. introducing completely new gameplay concepts, generating a completely different kind of world, and many other things.=Una caratteristica centrale di Minetest è la capacità integrata di usare moduli. I moduli modificano l'esperienza di gioco esistente. Possono essere tanto semplici da aggiungere qualche blocco decorativo o essere molto complessi, per esempio introducendo concetti di gioco totalmente nuovi, generare un tipo di mondo completamente diverso, e molte altre cose.
 Minetest can be played alone or online together with multiple players. Online play will work out of the box with any mods, with no need for additional software as they are entirely provided by the server.=Minetest può essere giocato localmente o in rete assieme a più utenti. Il gioco in rete funzionerà immediatamente senza nessun modulo, senza bisogno di programmi aggiuntivi perché interamente forniti dal server.
 Minetest is usually bundled with a simple default game, named “Minetest Game” (shown in images 1 and 2). You probably already have it. Other games for Minetest can be downloaded from the official Minetest forums <https://forum.minetest.net/viewforum.php?f=48>.=Minetest generalmente include un gioco predefinito semplice, chiamato "Minetest Game" (mostrato nelle immagini 1 e 2). Probabilmente lo avete già. Altri giochi per Minetest possono essere scaricati dai forum ufficiali di Minetest <https://forum.minetest.net/viewforum.php?f=48>.
-Minetest as well as Minetest Game are both unfinished at the moment, so please forgive us when not everything works out perfectly.=Sia Minetest che Minetest Game al momento sono entrambi incompleti, perciò per favore perdonateci quando non tutto funziona perfettamente.
 Sneaking=Strisciare
 Sneaking makes you walk slower and prevents you from falling off the edge of a block.=Strisciare vi fa camminare più lentamente e vi impedisce di cadere dal bordo di un blocco.
 To sneak, hold down the sneak key (default: [Shift]). When you release it, you stop sneaking. Careful: When you release the sneak key at a ledge, you might fall!=Per strisciare, tenete premuto il tasto per strisciare (predefinito [Maiusc]). Quando lo rilasciate, smettete di strisciare. Fate attenzione: quando rilasciate il tasto per strisciare vicino a un orlo, potreste cadere!
 • Sneak: [Shift]=• Strisciare: [Maiusc]
 Sneaking only works when you stand on solid ground, are not in a liquid and don't climb.=È possibile strisciare solo quando siete su un terreno solido, non siete in un liquido e non vi state arrampicando.
-If you jump while holding the sneak key, you also jump slightly higher than usual.=Se saltate tenendo premuto il tasto per strisciare, saltate leggermente più in alto del solito.
 Sneaking might be disabled by mods. In this case, you still walk slower by sneaking, but you will no longer be stopped at ledges.=Lo strisciare potrebbe essere disabilitato da dei moduli. In questo caso, strisciando camminerete comunque più lentamente, ma non verrete più fermat* agli orli.
 Controls=Controlli
 These are the default controls:=Questi sono i controlli predefiniti:
@@ -86,7 +84,6 @@ Technical:=Tecnici:
 • F3: Enable/disable fog=• F3: abilita/disabilita la nebbia
 • F5: Enable/disable debug screen which also shows your coordinates=• F5: abilita/disabilita la schermata di debug che mostra anche le vostre coordinate
 • F6: Only useful for developers. Enables/disables profiler=• F6: utile solo per sviluppatori/trici. Abilita/disabilita il generatore di profili
-• P: Only useful for developers. Writes current stack traces=• P: utile solo per sviluppatori/trici. Scrive le tracce dello stack attuale
 Players=Utenti
 Players (actually: “player characters”) are the characters which users control.=Gli utenti (in realtà: “personaggi utente”) sono i personaggi controllati dagli/dalle utenti.
 Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).=Gli/le utenti sono entità viventi che occupano uno spazio di circa 1x2x1 cubi. Iniziano con venti punti salute (PS) e dieci punti ossigeno (PO).
@@ -124,10 +121,8 @@ A few things can not be pointed. Most blocks are pointable. A few blocks, like a
 Camera=Telecamera
 Minetest has 3 different views which determine the way you see the world. The modes are:\n\n• 1: First-person view (default)\n• 2: Third-person view from behind\n• 3: Third-person view from the front=Minetest possiede tre visuali diverse che stabiliscono il modo in cui vedete il mondo. Le modalità sono:\n\n• 1: Visuale in prima persona (predefinita)\n• 2: Visuale in terza persona da dietro\n• 3: Visuale in terza persona da davanti
 You can change the camera mode by pressing [F7].=Potete cambiare la modalità della telecamera premendo [F7].
-There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.=Esiste anche la modalità cinematic che può essere attivata/disattivata con [F8]. Con la modalità cinematic attivata i movimenti della telecamera diventano più fluidi. Ad alcun* utenti non piace, è una questione di gusti.
 By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.=Tenendo premuto il tasto [Z], potete ingrandire la visuale del vostro mirino. Per fare ciò vi serve il privilegio “zoom”.
 • Switch camera mode: [F7]=• Cambiare modalità della telecamera: [F7]
-• Toggle Cinematic Mode: [F8]=• Attivare/disattivare la modalità cinematic: [F8]
 • Zoom: [Z]=• Ingrandimento: [Z]
 Blocks=Blocchi
 The world of Minetest is made entirely out of blocks (voxels, to be precise). Blocks can be added or removed with the correct tools.=Il mondo di Minetest è fatto interamente di blocchi (voxel, per la precisione). I blocchi possono essere messi o tolti per mezzo degli strumenti adatti.

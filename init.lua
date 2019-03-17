@@ -163,12 +163,13 @@ S("Players (actually: “player characters”) are the characters which users co
 S("Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).").."\n"..
 S("Players are capable of walking, sneaking, jumping, climbing, swimming, diving, mining, building, fighting and using tools and blocks.").."\n"..
 
-S("Players can take damage for a variety of reasons, here are some:\
-• Taking fall damage\
-• Touching a block which causes direct damage\
-• Drowning\
-• Being attacked by another player\
-• Being attacked by a computer enemy").."\n\n"..
+S("Players can take damage for a variety of reasons, here are some:").."\n\n"..
+
+S("• Taking fall damage").."\n"..
+S("• Touching a block which causes direct damage").."\n"..
+S("• Drowning").."\n"..
+S("• Being attacked by another player").."\n"..
+S("• Being attacked by a computer enemy").."\n\n"..
 
 S("At a health of 0, the player dies. The player can just respawn in the world.").."\n"..
 S("Other consequences of death depend on the game. The player could lose all items, or lose the round in a competitive game.").."\n\n"..
@@ -189,12 +190,12 @@ S("Items are things you can carry along and store in inventories. They can be us
 
 S("An item stack is a collection of items of the same type which fits into a single item slot. Item stacks can be dropped on the ground. Items which drop into the same coordinates will form an item stack.").."\n\n"..
 
-S("Items have several properties, including the following:\
-\
-• Maximum stack size: Number of items which fit on 1 item stack\
-• Pointing range: How close things must be to be pointed while wielding this item\
-• Group memberships: See “Basics > Groups”\
-• May be used for crafting or cooking").."\n\n"..
+S("Items have several properties, including the following:").."\n\n"..
+
+S("• Maximum stack size: Number of items which fit on 1 item stack").."\n"..
+S("• Pointing range: How close things must be to be pointed while wielding this item").."\n"..
+S("• Group memberships: See “Basics > Groups”").."\n"..
+S("• May be used for crafting or cooking").."\n\n"..
 
 S("A dropped item stack can be collected by punching it."),
 		images = {{image="doc_basics_inventory_detail.png"}, {image="doc_basics_items_dropped.png"}},
@@ -248,11 +249,11 @@ doc.add_entry("basics", "cam", {
 	name = S("Camera"),
 	data = {
 		text =
-S("Minetest has 3 different views which determine the way you see the world. The modes are:\
-\
-• 1: First-person view (default)\
-• 2: Third-person view from behind\
-• 3: Third-person view from the front").."\n\n"..
+S("Minetest has 3 different views which determine the way you see the world. The modes are:").."\n\n"..
+
+S("• 1: First-person view (default)").."\n"..
+S("• 2: Third-person view from behind").."\n"..
+S("• 3: Third-person view from the front").."\n\n"..
 
 S("You can change the camera mode by pressing [F7].").."\n"..
 S("There is also Cinematic Mode which can be toggled with [F8]. With Cinematic Mode enabled, the camera movements become more smooth. Some players don't like it, it is a matter of taste.").."\n"..
@@ -360,10 +361,10 @@ S("• Renewability: Renewable liquids can create new sources").."\n"..
 S("• Flowing range: How many flowing liquids are created at maximum per liquid source, it determines how far the liquid will spread. Possible are ranges from 0 to 8. At 0, no flowing liquids will be created. Image 5 shows a liquid of flowing range 2").."\n"..
 S("• Viscosity: How slow players move through it and how slow the liquid spreads").."\n\n"..
 
-S("Renewable liquids create new liquid sources at open spaces (image 2). A new liquid source is created when:\
-• Two renewable liquid blocks of the same type touch each other diagonally\
-• These blocks are also on the same height\
-• One of the two “corners” is open space which allows liquids to flow in").."\n\n"..
+S("Renewable liquids create new liquid sources at open spaces (image 2). A new liquid source is created when:").."\n"..
+S("• Two renewable liquid blocks of the same type touch each other diagonally").."\n"..
+S("• These blocks are also on the same height").."\n"..
+S("• One of the two “corners” is open space which allows liquids to flow in").."\n\n"..
 
 S("When those criteria are met, the open space is filled with a new liquid source of the same type (image 3).").."\n\n"..
 
@@ -405,12 +406,12 @@ S("A description on how to craft an item is called a “crafting recipe”. You 
 
 S("Crafting recipes consist of at least one input item and exactly one stack of output items. When performing a single craft, it will consume exactly one item from each stack of the crafting grid, unless the crafting recipe defines replacements.").."\n\n"..
 
-S("There are multiple types of crafting recipes:\
-\
-• Shaped (image 2): Items need to be placed in a particular shape\
-• Shapeless (images 3 and 4): Items need to be placed somewhere in input (both images show the same recipe)\
-• Cooking: Explained in “Basics > Cooking”\
-• Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all games").."\n\n"..
+S("There are multiple types of crafting recipes:").."\n\n"..
+
+S("• Shaped (image 2): Items need to be placed in a particular shape").."\n"..
+S("• Shapeless (images 3 and 4): Items need to be placed somewhere in input (both images show the same recipe)").."\n"..
+S("• Cooking: Explained in “Basics > Cooking”").."\n"..
+S("• Repairing (image 5): Place two damaged tools into the crafting grid anywhere to get a tool which is repaired by a certain percentage. This recipe may not be available in all games").."\n\n"..
 
 S("In some crafting recipes, some input items do not need to be a concrete item, instead they need to be a member of a group (see “Basics > Groups”). These recipes offer a bit more freedom in the input items. Images 6-8 show the same group-based recipe. Here, 8 items of the “stone” group are required, which is true for all of the shown items.").."\n\n"..
 

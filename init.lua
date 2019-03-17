@@ -111,7 +111,7 @@ S("• H: Toggle noclip mode, makes you go through walls in fly mode (requires �
 S("• E: Walk fast in fast mode").."\n\n"..
 
 S("World interaction:").."\n"..
-S("• Left mouse button: Punch / mine blocks / take items").."\n"..
+S("• Left mouse button: Punch / mine blocks").."\n"..
 S("• Right mouse button: Build or use pointed block").."\n"..
 S("• Shift+Right mouse button: Build").."\n"..
 S("• Roll mouse wheel: Select next/previous item in hotbar").."\n"..
@@ -124,7 +124,7 @@ S("Inventory interaction:").."\n"..
 S("See the entry “Basics > Inventory”.").."\n\n"..
 
 S("Camera:").."\n"..
-S("• Z: Zoom (requires “zoom” privilege)").."\n"..
+S("• Z: Zoom").."\n"..
 S("• F7: Toggle camera mode").."\n\n"..
 
 S("Interface:").."\n"..
@@ -155,7 +155,7 @@ doc.add_entry("basics", "players", {
 		text =
 S("Players (actually: “player characters”) are the characters which users control.").."\n\n"..
 
-S("Players are living beings which occupy a space of about 1×2×1 cubes. They start with 20 health points (HP) and 10 breath points (BP).").."\n"..
+S("Players are living beings. They start with a number of health points (HP) and a number of breath points (BP).").."\n"..
 S("Players are capable of walking, sneaking, jumping, climbing, swimming, diving, mining, building, fighting and using tools and blocks.").."\n"..
 
 S("Players can take damage for a variety of reasons, here are some:").."\n\n"..
@@ -203,7 +203,7 @@ S("Some items may serve as a tool when wielded. Any item which has some special 
 
 S("A common tool in Minetest are, of course, mining tools. These are important to break all kinds of blocks. Weapons are a kind of tool in Minetest. There are of course many other possible tools. Special actions of tools are usually done by left-click or right-click.").."\n\n"..
 
-S("When nothing is wielded, players use their hand which may act as tool and weapon. The hand is capable of collecting dropped items by punching.").."\n\n"..
+S("When nothing is wielded, players use their hand which may act as tool and weapon.").."\n\n"..
 
 S("Many tools will wear off when using them and may eventually get destroyed. The damage is displayed in a damage bar below the tool icon. If no damage bar is shown, the tool is in mint condition. Tools may be repairable by crafting, see “Basics > Crafting”."),
 		images = {{image="doc_basics_tools.png"}, {image="doc_basics_tools_mining.png"}},
@@ -251,7 +251,8 @@ S("• 2: Third-person view from behind").."\n"..
 S("• 3: Third-person view from the front").."\n\n"..
 
 S("You can change the camera mode by pressing [F7].").."\n"..
-S("By holding down [Z], you can zoom the view at your crosshair. You need the “zoom” privilege to do this.").."\n\n"..
+S("You might be able to zoom with [Z] to zoom the view at the crosshair. This allows you to look further.").."\n"..
+S("Zooming is a gameplay feature that might be enabled or disabled by the game. By default, zooming is enabled when in Creative Mode but disabled otherwise.").."\n\n"..
 
 S("• Switch camera mode: [F7]").."\n"..
 S("• Zoom: [Z]"),
@@ -293,7 +294,7 @@ S("Mineable blocks have mining properties (based on groups) and a toughness leve
 
 S("In order to mine a block, these conditions need to be met:").."\n"..
 S("• The block and tool share at least one mining property for which they have a matching rating").."\n"..
-S("• The tool's toughness level is equal or less than the block's toughness level").."\n\n"..
+S("• The tool's toughness level is equal or greater than the block's toughness level").."\n\n"..
 
 S("Example: A block with the mining property “cracky”, rating 3 and toughness level 0 can only be broken by a tool which is able to break “cracky” blocks at rating 3 and it must have a toughness level of 0 or larger.").."\n\n"..
 
@@ -604,13 +605,13 @@ S("• Damage enabled (enable_damage): Enables the health and breath attributes 
 S("• Creative Mode (creative_mode): Enables sandbox-style gameplay focusing on creativity rather than a challenging gameplay. The meaning depends on the game; usual changes are: Reduced dig times, easy access to almost all items, tools never wear off, etc.").."\n"..
 S("• PvP (enable_pvp): Short for “Player vs Player”. If enabled, players can deal damage to each other").."\n\n"..
 
-S("For a full list of all available settings, use the “Advanced settings” dialog in the main menu.")
+S("For a full list of all available settings, use the “All Settings” dialog in the main menu.")
 }})
 
 doc.add_entry("advanced", "movement_modes", {
 	name = S("Movement modes"),
 	data = { text =
-S("If you have the required privileges, you can use up to three special movement modes. Using these may be considered cheating.").."\n\n"..
+S("If you have the required privileges, you can use up to three special movement modes.").."\n\n"..
 
 S("Fast mode:").."\n"..
 S("• Description: Allows you to move much faster. Hold down the the “Use” key [E] to move faster. In the client configuration, you can further customize fast mode.").."\n"..
@@ -719,7 +720,7 @@ S("Players with the “privs” privilege can modify privileges at will:").."\n\
 S("• /grant <player> <privilege>: Grant <privilege> to <player>").."\n"..
 S("• /revoke <player> <privilege>: Revoke <privilege> from <player>").."\n\n"..
 
-S("In single-player mode, you can use “/grant singleplayer all” to unlock all abilities (which is often considered cheating).")
+S("In single-player mode, you can use “/grantme all” to unlock all abilities.")
 }})
 
 doc.add_entry("basics", "light", {
@@ -764,5 +765,5 @@ S("• Follow the sun, then go right: Z increases").."\n"..
 S("• Follow the sun, then go left: Z decreases").."\n"..
 S("• The side length of a full cube is 1").."\n\n"..
 
-S("You can view your current position in the debug screen (open with [F5]). This is considered cheating in some games.")
+S("You can view your current position in the debug screen (open with [F5]).")
 }})

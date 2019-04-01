@@ -100,7 +100,7 @@ S("While standing on solid ground:").."\n"..
 S("• Space: Jump").."\n"..
 S("• Shift: Sneak").."\n\n"..
 
-S("While on a ladder, swimming in a liquid or fly mode is active").."\n"..
+S("While on a ladder, swimming in a liquid or fly mode is active:").."\n"..
 S("• Space: Move up").."\n"..
 S("• Shift: Move down").."\n\n"..
 

@@ -658,7 +658,7 @@ S("• [Ctrl]+[Delete]: Delete next word").."\n"..
 S("• [Ctrl]+[U]: Delete all text before the cursor").."\n"..
 S("• [Ctrl]+[K]: Delete all text after the cursor").."\n"..
 S("• [Page up]: Scroll up").."\n"..
-S("• [Page down]: Scroll down").."\n"..
+S("• [Page down]: Scroll down").."\n\n"..
 
 S("There is also an input history. Minetest saves your previous console inputs which you can quickly access later:").."\n\n"..
 

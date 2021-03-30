@@ -45,7 +45,7 @@ S("• Recover from swings to deal full damage").."\n"..
 S("• Right-click to build blocks and use things").."\n"..
 S("• [I] for the inventory").."\n"..
 S("• First items in inventory appear in hotbar below").."\n"..
-S("• [F9] for the minimap").."\n"..
+S("• [V] for the minimap").."\n"..
 S("• Put items into crafting grid (usually 3×3 grid) to craft").."\n"..
 S("• Use a crafting guide mod to learn crafting recipes or visit <https://wiki.minetest.net/wiki/Crafting>").."\n"..
 S("• Read entries in this help to learn the rest").."\n"..
@@ -125,14 +125,14 @@ S("See the entry “Basics > Inventory”.").."\n\n"..
 
 S("Camera:").."\n"..
 S("• Z: Zoom").."\n"..
-S("• F7: Toggle camera mode").."\n\n"..
+S("• C: Toggle camera mode").."\n\n"..
 
 S("Interface:").."\n"..
 S("• Esc: Open menu window (pauses in single-player mode) or close window").."\n"..
 S("• F1: Show/hide HUD").."\n"..
 S("• F2: Show/hide chat").."\n"..
-S("• F9: Toggle minimap").."\n"..
-S("• Shift+F9: Toggle minimap rotation mode").."\n"..
+S("• V: Toggle minimap").."\n"..
+S("• Shift+V: Toggle minimap rotation mode").."\n"..
 S("• F10: Open/close console/chat log").."\n"..
 S("• F12: Take a screenshot").."\n\n"..
 
@@ -250,11 +250,11 @@ S("• 1: First-person view (default)").."\n"..
 S("• 2: Third-person view from behind").."\n"..
 S("• 3: Third-person view from the front").."\n\n"..
 
-S("You can change the camera mode by pressing [F7].").."\n"..
+S("You can change the camera mode by pressing [C].").."\n"..
 S("You might be able to zoom with [Z] to zoom the view at the crosshair. This allows you to look further.").."\n"..
 S("Zooming is a gameplay feature that might be enabled or disabled by the game. By default, zooming is enabled when in Creative Mode but disabled otherwise.").."\n\n"..
 
-S("• Switch camera mode: [F7]").."\n"..
+S("• Switch camera mode: [C]").."\n"..
 S("• Zoom: [Z]"),
 		images = {{image="doc_basics_camera_ego.png"}, {image="doc_basics_camera_behind.png"}, {image="doc_basics_camera_front.png"}}
 }})
@@ -447,7 +447,7 @@ doc.add_entry("basics", "minimap", {
 	name = S("Minimap"),
 	data = {
 		text =
-S("Press [F9] to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to select different minimap modes and zoom levels. The minimap also shows the positions of other players.").."\n\n"..
+S("Press [V] to make a minimap appear on the top right. The minimap helps you to find your way around the world. Press it again to select different minimap modes and zoom levels. The minimap also shows the positions of other players.").."\n\n"..
 
 S("There are 2 minimap modes and 3 zoom levels.").."\n\n"..
 
@@ -455,12 +455,12 @@ S("Surface mode (image 1) is a top-down view of the world, roughly resembling th
 
 S("Radar mode (image 2) is more complicated. It displays the “denseness” of the area around you and changes with your height. Roughly, the more green an area is, the less “dense” it is. Black areas have many blocks. Use the radar to find caverns, hidden areas, walls and more. The rectangular shapes in image 2 clearly expose the position of a dungeon.").."\n\n"..
 
-S("There are also two different rotation modes. In “square mode”, the rotation of the minimap is fixed. If you press [Shift]+[F9] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.").."\n\n"..
+S("There are also two different rotation modes. In “square mode”, the rotation of the minimap is fixed. If you press [Shift]+[V] to switch to “circle mode”, the minimap will instead rotate with your looking direction, so “up” is always your looking direction.").."\n\n"..
 
 S("In some games, the minimap may be disabled.").."\n\n"..
 
-S("• Toggle minimap mode: [F9]").."\n"..
-S("• Toggle minimap rotation mode: [Shift]+[F9]"),
+S("• Toggle minimap mode: [V]").."\n"..
+S("• Toggle minimap rotation mode: [Shift]+[V]"),
 		images = {{image="doc_basics_minimap_map.png"}, {image="doc_basics_minimap_radar.png"}, {image="doc_basics_minimap_round.png"}},
 }})
 

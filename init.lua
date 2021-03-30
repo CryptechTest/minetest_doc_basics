@@ -234,7 +234,7 @@ doc.add_entry("basics", "point", {
 		text =
 S("“Pointing” means looking at something in range with the crosshair. Pointing is needed for interaction, like mining, punching, using, etc. Pointable things include blocks, players, computer enemies and objects.").."\n\n"..
 
-S("To point something, it must be in the pointing range (also just called “range”) of your wielded item. There's a default range when you are not wielding anything. A pointed thing will be outlined or highlighted (depending on your settings). Pointing is not possible with the 3rd person front camera.").."\n\n"..
+S("To point something, it must be in the pointing range (also just called “range”) of your wielded item. There's a default range when you are not wielding anything. A pointed block will be outlined or highlighted (depending on your settings). When you're pointing an object or a player, the crosshair will change its shape. Pointing is not possible with the 3rd person front camera.").."\n\n"..
 
 S("A few things can not be pointed. Most blocks are pointable. A few blocks, like air, can never be pointed. Other blocks, like liquids can only be pointed by special items."),
 		images = {{ image = "doc_basics_pointing.png" }},

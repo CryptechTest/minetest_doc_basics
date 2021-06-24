@@ -509,7 +509,7 @@ S("A community-based documentation website for Minetest. Anyone with an account 
 S("Web forums: <https://forums.minetest.net/>").."\n"..
 S("A web-based discussion platform where you can discuss everything related to Minetest. This is also a place where player-made mods and games are published and discussed. The discussions are mainly in English, but there is also space for discussion in other languages.").."\n\n"..
 
-S("Chat: <irc://irc.freenode.net#minetest>").."\n"..
+S("Chat: <irc://irc.libera.chat/#minetest>").."\n"..
 S("A generic Internet Relay Chat channel for everything related to Minetest where people can meet to discuss in real-time. If you do not understand IRC, see the Community Wiki for help.")
 }})
 
